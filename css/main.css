@@ -13,6 +13,10 @@ body {
   font-weight:400px;
 }
 
+footer {
+	display : none !important;
+}
+
 ul li {
   list-style: none;
 }

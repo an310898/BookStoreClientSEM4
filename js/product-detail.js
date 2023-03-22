@@ -13,7 +13,10 @@ fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
     })
     .then((res) => res.json())
     .then((x) => {
-        
+        const description = x["#result-set-1"].map(x=>{
+            return x.Description
+        }).join("");
+        console.log(description)
         const data = x["#result-set-1"]
         .map((y) => {
             return `<div class="col-sm-5">
@@ -40,10 +43,28 @@ fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
                 <p><b>Tác giả:</b> ${y.Author}</p>
                 <p><b>Nhà cung cấp</b> ${y.PublishingCompany}</p>
                 <p><b>Ngôn ngữ</b>:</b> ${y.Language}</p>
-                <a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
             </div><!--/product-information-->
         </div>`;
         })
         .join("");
         document.getElementById("item-details").innerHTML = data;
+
+        document.getElementById("details").innerText = description;
+    });
+
+    fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
+    method: "POST",
+    })
+    .then((res) => res.json())
+    .then((x) => {
+        const data = x["#result-set-1"]
+        .map((y) => {
+            return `<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title"><a href="#">${y.Name}</a></h4>
+			</div>
+		</div>`;
+        })
+        .join("");
+        document.getElementById("book-category").innerHTML = data;
     });
