@@ -1,0 +1,63 @@
+{
+  "editor.fontFamily": "'Jetbrains Mono', 'Consolas', Arial",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.fontLigatures": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Monokai",
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "gitlens.hovers.currentLine.over": "line",
+  "json.maxItemsComputed": 5000000,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.fontFamily": "Cascadia Code",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.useLocalIp": true,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 100,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.iconTheme": "vscode-icons",
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.largeFileOptimizations": false,
+  // "editor.codeActionsOnSave": {
+  //   "source.organizeImports": true
+  // },
+  "explorer.compactFolders": false,
+  "editor.lineHeight": 22,
+  "codesnap.shutterAction": "copy",
+  "codesnap.backgroundColor": "#1E1E1E",
+  "codesnap.boxShadow": "none",
+  "jupyter.interactiveWindowMode": "perFile",
+  "jupyter.askForKernelRestart": false,
+  "codesnap.showLineNumbers": false,
+  "codesnap.showWindowControls": false,
+  "codesnap.transparentBackground": true,
+  "codesnap.containerPadding": "10px",
+  "codesnap.roundedCorners": false
+}

@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
+  background:#ffffff;
   position: relative;
   font-weight:400px;
 }
@@ -903,7 +903,7 @@ h2.title {
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
+  opacity:1;
 }
 
 .single-products:hover .product-overlay {
@@ -2525,3 +2525,24 @@ h2.title {
 }
 
 
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.rating input:checked + label {
+  color: #f90;
+}
+
+.rating label.active {
+  color: #f90;
+}
