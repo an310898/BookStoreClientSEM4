@@ -1,0 +1,65 @@
+.form{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 50px;
+    flex-direction: column;
+    width: 100%;
+}
+.form > div input {
+    width: 255px;
+    padding: .375rem 1em;
+    font-size: 1.2em;
+    line-height: 2;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.form div {
+    margin-bottom: 20px;
+}
+
+.form > div label{
+    font-size: 1.2em;
+    color: #555555;
+    font-weight: normal;
+}
+
+#btn-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+
+}
+#btn-login button {
+    border-radius: 4px;
+    width: 150px;
+    width: 245px;
+    max-width: 100%;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+}
+#btn-register button {
+    border-radius: 4px;
+    width: 150px;
+    width: 245px;
+    max-width: 100%;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0;
+}
+
+::placeholder {
+    color: #495057;
+    line-height: 1;
+  }
+  ::-webkit-input-placeholder { /* Edge */
+    color: #5f6264;
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
