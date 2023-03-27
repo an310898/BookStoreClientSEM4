@@ -114,10 +114,12 @@ function submitReview() {
   const userComment = document.getElementById("userComment").value;
   const userRate = document.querySelector('input[name="rating"]:checked').value;
 
-  console.log(userName);
-  console.log(userEmail);
-  console.log(userComment);
-  console.log(userRate);
+  // console.log(userName);
+  // console.log(userEmail);
+  // console.log(userComment);
+  // console.log(userRate);
+
+  // console.log(isValidEmail(userEmail));
 
   if (
     userName.length == 0 ||
@@ -128,7 +130,7 @@ function submitReview() {
     if (userName.length == 0) {
       userNameReviewInput.style.border = "1px solid red";
     }
-    if (userEmail.length == 0 || isValidEmail(userEmail)) {
+    if (userEmail.length == 0 || !isValidEmail(userEmail)) {
       userNameEmailInput.style.border = "1px solid red";
     }
     if (userComment.length == 0) {

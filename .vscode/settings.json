@@ -15,7 +15,7 @@
   "vsicons.dontShowNewVersionMessage": true,
   "security.workspace.trust.untrustedFiles": "open",
   "explorer.confirmDragAndDrop": false,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },

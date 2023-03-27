@@ -98,7 +98,7 @@
                 <input type="password" id="password" placeholder="Mật khẩu" />
               </div>
               <div id="btn-login">
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-primary" onclick="login()">
                   <span>Đăng nhập</span>
                 </button>
               </div>
@@ -107,19 +107,37 @@
           <div class="tab-pane fade" id="register">
             <form class="form">
               <div>
+                <label for="nameRe">Họ và tên</label><br />
+                <input type="text" id="nameRe" placeholder="Họ và tên" />
+              </div>
+              <div>
                 <label for="userNameRe">Tên đăng nhập</label><br />
-                <input type="text" id="userNameRe" />
+                <input
+                  type="text"
+                  id="userNameRe"
+                  placeholder="Tên đăng nhập"
+                />
               </div>
               <div>
                 <label for="passwordRe">Mật khẩu</label><br />
-                <input type="password" id="passwordRe" />
+                <input type="password" id="passwordRe" placeholder="Mật khẩu" />
               </div>
               <div>
-                <label for="passwordRe">Nhập lại mật khẩu</label><br />
-                <input type="password" id="passwordRe" />
+                <label for="rePasswordRe">Nhập lại mật khẩu</label><br />
+                <input
+                  type="password"
+                  id="rePasswordRe"
+                  placeholder="Nhập lại mật khẩu"
+                  onkeyup="checkRePass()"
+                />
+                <div id="textRepassNotMatching"></div>
               </div>
               <div id="btn-register">
-                <button type="button" class="btn btn-primary">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="register()"
+                >
                   <span>Đăng ký</span>
                 </button>
               </div>
@@ -311,5 +329,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
