@@ -1,551 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Checkout | E-Shopper</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+	rel="stylesheet"
+	type="text/css"
+	href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082"
+	media="all"
+	/>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+	<link href="css/default.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="https://cdn0.fahasa.com/media/css_secure/d694102d9dd4baa3cdabd7aae770978f.css?q=102100" rel="stylesheet">
+  </head>
+  <body>
 
-<body>
-	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								<li><a href=""><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href=""><i class="fa fa-envelope"></i> info@domain.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-facebook"></i></a></li>
-								<li><a href=""><i class="fa fa-twitter"></i></a></li>
-								<li><a href=""><i class="fa fa-linkedin"></i></a></li>
-								<li><a href=""><i class="fa fa-dribbble"></i></a></li>
-								<li><a href=""><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header_top-->
-		
-		<div class="header-middle"><!--header-middle-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="logo pull-left">
-							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
-						</div>
-						<div class="btn-group pull-right">
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									USA
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="">Canada</a></li>
-									<li><a href="">UK</a></li>
-								</ul>
-							</div>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									DOLLAR
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="">Canadian Dollar</a></li>
-									<li><a href="">Pound</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-8">
-						<div class="shop-menu pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href=""><i class="fa fa-user"></i> Account</a></li>
-								<li><a href=""><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html" class="active"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header-middle-->
-	
-		<div class="header-bottom"><!--header-bottom-->
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-9">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<div class="mainmenu pull-left">
-							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html" class="active">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
-                                    </ul>
-                                </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
+    <section id="header" class="heaer">
+      <div class="fhs_header_desktop" style="background-color: white">
+        <div class="container">
+          <div class="fhs-header-top-second-bar" style="position: relative">
+            <div
+              class="icon_fahasa_logo fhs_mouse_point"
+              onclick="location.href = '/';"
+              title="FAHASA.COM"
+            ></div>
 
-	<section id="cart_items">
-		<div class="container">
-			<div class="breadcrumbs">
-				<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
-				  <li class="active">Check out</li>
-				</ol>
-			</div><!--/breadcrums-->
+            <div class="fhs_center_left">
+              <div class="box search_box">
+                <form
+                  id="search_mini_form_desktop"
+                  action="https://www.fahasa.com/catalogsearch/result/"
+                  method="get"
+                >
+                  <div class="search pull-left">
+                    <div class="form-search fhs_dropdown_hover_out">
+                      <input
+                        id="search_desktop"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search"
+                      />
+                      <span class="fhs_btn_default active button-search"
+                        ><span class="ico_search_white"></span
+                      ></span>
+                      <div class="form-search-form fhs_dropdown"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="fhs_center_space" style="padding-left: 24px">
+              <div class="cart-top no_cover fhs_dropdown_hover">
+               
+                <div class="fhs_top_cart" style="margin-right: 5px;">
+                  <a href="cart.html">
+                    <div class="heading heading-custom" style="display: flex;">
+                      <div class="fhs_center_center" style="margin-bottom: 3px">
+                        <div class="icon_cart_gray">
+                          <!-- <div
+                            class="top_menu_unseen fhs_center_center"
+                            style="visibility: visible"
+                          >
+                            <span
+                              class="cartmini_qty"
+                              style="visibility: visible"
+                              >2</span
+                            >
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="top-cart-button-label fhs_top_center" style="margin-top: 4px;">
+                        <div class="top_menu_label">Giỏ Hàng</div>
+                      </div>
+                    </div>
+                  </a>
 
-			<div class="step-one">
-				<h2 class="heading">Step1</h2>
-			</div>
-			<div class="checkout-options">
-				<h3>New User</h3>
-				<p>Checkout options</p>
-				<ul class="nav">
-					<li>
-						<label><input type="checkbox"> Register Account</label>
-					</li>
-					<li>
-						<label><input type="checkbox"> Guest Checkout</label>
-					</li>
-					<li>
-						<a href=""><i class="fa fa-times"></i>Cancel</a>
-					</li>
-				</ul>
-			</div><!--/checkout-options-->
+                </div>
+              </div>
 
-			<div class="register-req">
-				<p>Please use Register And Checkout to easily get access to your order history, or use Checkout as Guest</p>
-			</div><!--/register-req-->
+              <div
+                class="fhs_top_account no_cover fhs_dropdown_hover"
+                id="fhs_top_account_hover"
+              >
+                <a href="login.html">
+                  <div class="fhs_top_account_button" style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+                    <div
+                      class="icon_account_gray"
+                      style="margin-bottom: 3px"
+                    ></div>
+                    <div
+                      class="top_menu_label fhs_top_center fhs_nowrap_one"
+                      id="loginUser fhs_top_account_title"
+                    >
+                      Tài khoản
+                    </div>
+                  </div>
+                </a>
+                <div
+                  class="fhs_top_account_dropdown fhs_dropdown right guest"
+                  style="display: none"
+                >
+                  <div>
+                    <button
+                      type="button"
+                      onclick="fhs_account.showLoginPopup('login');"
+                      title="Đăng nhập"
+                      class="fhs_btn_default active"
+                    >
+                      <span>Đăng nhập</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      onclick="fhs_account.showLoginPopup('register')"
+                      title="Đăng ký"
+                      class="fhs_btn_default"
+                    >
+                      <span>Đăng ký</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      onclick="fhs_account.loginFB();"
+                      title="Đăng nhập bằng facebook"
+                      class="fhs_btn_default blue active"
+                    >
+                      <span
+                        class="icon_facebook"
+                        style="margin-right: 4px"
+                      ></span
+                      ><span>Đăng nhập bằng facebook</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fhs_header_mobile">
+        <div class="fhs-logo" style="text-align: center">
+          <a href="https://www.fahasa.com/" title="FAHASA.COM" class="logo"
+            ><strong class="logo-title">FAHASA.COM</strong
+            ><img
+              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+              alt="FAHASA.COM"
+          /></a>
+        </div>
+        <div class="fhs-header-top-bar">
+          <div class="search-mobile-header">
+            <div class="ves-autosearch">
+              <div class="box search_box">
+                <form
+                  id="search_mini_form_mobile"
+                  action="https://www.fahasa.com/catalogsearch/result/"
+                  method="get"
+                >
+                  <div class="search pull-left">
+                    <div class="form-search">
+                      <input
+                        id="search_mobile"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search"
+                      />
+                      <span class="button-search fa fa-search"></span>
+                      <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
+                      <div
+                        class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
+                        style="display: none"
+                      ></div>
+                      <div
+                        id="search_autocomplete"
+                        class="search-autocomplete"
+                      ></div>
+                      <div class="form-search-form fhs_dropdown"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+          <div class="icons-mobile-header" style="position: relative">
+              <div id="cart" class="clearfix">
+                <a href="https://www.fahasa.com/checkout/cart/">
+                  <div class="fhs_center_center">
+                    <div class="icon_cart_white" style="margin-right: 4px">
+                      <div>
+                        <div
+                          class="top_menu_unseen fhs_center_center cartmini_qty"
+                          style="visibility: visible"
+                        >
+                          2
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
 
-			<div class="shopper-informations">
-				<div class="row">
-					<div class="col-sm-3">
-						<div class="shopper-info">
-							<p>Shopper Information</p>
-							<form>
-								<input type="text" placeholder="Display Name">
-								<input type="text" placeholder="User Name">
-								<input type="password" placeholder="Password">
-								<input type="password" placeholder="Confirm password">
-							</form>
-							<a class="btn btn-primary" href="">Get Quotes</a>
-							<a class="btn btn-primary" href="">Continue</a>
-						</div>
-					</div>
-					<div class="col-sm-5 clearfix">
-						<div class="bill-to">
-							<p>Bill To</p>
-							<div class="form-one">
-								<form>
-									<input type="text" placeholder="Company Name">
-									<input type="text" placeholder="Email*">
-									<input type="text" placeholder="Title">
-									<input type="text" placeholder="First Name *">
-									<input type="text" placeholder="Middle Name">
-									<input type="text" placeholder="Last Name *">
-									<input type="text" placeholder="Address 1 *">
-									<input type="text" placeholder="Address 2">
-								</form>
-							</div>
-							<div class="form-two">
-								<form>
-									<input type="text" placeholder="Zip / Postal Code *">
-									<select>
-										<option>-- Country --</option>
-										<option>United States</option>
-										<option>Bangladesh</option>
-										<option>UK</option>
-										<option>India</option>
-										<option>Pakistan</option>
-										<option>Ucrane</option>
-										<option>Canada</option>
-										<option>Dubai</option>
-									</select>
-									<select>
-										<option>-- State / Province / Region --</option>
-										<option>United States</option>
-										<option>Bangladesh</option>
-										<option>UK</option>
-										<option>India</option>
-										<option>Pakistan</option>
-										<option>Ucrane</option>
-										<option>Canada</option>
-										<option>Dubai</option>
-									</select>
-									<input type="password" placeholder="Confirm password">
-									<input type="text" placeholder="Phone *">
-									<input type="text" placeholder="Mobile Phone">
-									<input type="text" placeholder="Fax">
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="order-message">
-							<p>Shipping Order</p>
-							<textarea name="message"  placeholder="Notes about your order, Special Notes for Delivery" rows="16"></textarea>
-							<label><input type="checkbox"> Shipping to bill address</label>
-						</div>	
-					</div>					
-				</div>
-			</div>
-			<div class="review-payment">
-				<h2>Review & Payment</h2>
-			</div>
+           
 
-			<div class="table-responsive cart_info">
-				<table class="table table-condensed">
-					<thead>
-						<tr class="cart_menu">
-							<td class="image">Item</td>
-							<td class="description"></td>
-							<td class="price">Price</td>
-							<td class="quantity">Quantity</td>
-							<td class="total">Total</td>
-							<td></td>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
+            <style>
+              .login-cutomer-icon {
+                position: inherit;
+                background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png)
+                  no-repeat center center;
+                background-size: 20px !important;
+              }
+              @media (max-width: 992px) {
+                #header .header1 .customer-top {
+                  margin-right: 5px;
+                  margin-left: 5px;
+                }
+              }
+              #header .header1 .customer-top {
+                padding-left: 0px;
+              }
+            </style>
+            <div id="mini_cart_block" class="customer-top">
+              <div>
+                <a href="https://www.fahasa.com/customer/account/">
+                  <div>
+                    <div
+                      class="login-cutomer-icon"
+                      style="width: 30px; height: 35px"
+                    ></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+   <div class="main-container col1-layout">
+    <div class="main">
+      <div style="margin-bottom: 5px;"></div>
+      <div class="col-main">
+        <div class="container">
+          <div class="container-inner">
+            <div id="fhs_checkout_block_address" class="fhs_checkout_block">
+              <div class="fhs_checkout_block_title">Địa chỉ giao hàng</div>
+              <div class="fhs_checkout_block_content">
+                  <div class="fhs_checkout_block_address_block">
+                  <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                  <label>Họ và tên người nhận</label>
+                  <div class="fhs-input-item">
+                <div class="fhs-input-group">
+                    <input class="fhs-textbox require_check check_shipping_address" type="text" validate_type="fullname" placeholder="Nhập họ và tên người nhận" id="fhs_shipping_fullname" name="fullname" value="" maxlength="100">
+                    <input type="hidden" id="fhs_shipping_firstname" name="firstname" value="">
+                    <input type="hidden" id="fhs_shipping_lastname" name="lastname" value="">
+                    <span class="fhs-input-icon fhs-textbox-alert"></span>
+                </div>
+                  </div>
+                  <div class="fhs-input-alert"></div>
+              </div>
+              <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                  <label>Email</label>
+                  <div class="fhs-input-item">
+                <div class="fhs-input-group">
+                    <input class="fhs-textbox require_check check_shipping_address" type="text" validate_type="email" placeholder="Nhập email" id="fhs_shipping_email" name="email" value="" maxlength="200">
+                    <span class="fhs-input-icon fhs-textbox-alert"></span>
+                </div>
+                  </div>
+                  <div class="fhs-input-alert"></div>
+              </div>
+              <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                  <label>Số điện thoại</label>
+                  <div class="fhs-input-item">
+                <div class="fhs-input-group">
+                    <input class="fhs-textbox require_check check_shipping_address" type="text" validate_type="shipping_telephone" placeholder="Ví dụ: 0979123xxx (10 ký tự số)" id="fhs_shipping_telephone" name="telephone" value="" maxlength="10">
+                    <span class="fhs-input-icon fhs-textbox-alert"></span>
+                </div>
+                  </div>
+                  <div class="fhs-input-alert"></div>
+              </div>
+              
+              
+              <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                <label>Tỉnh/Thành Phố</label>
+                <div class="fhs-input-item">
+                  <div class="fhs-input-group">
+                  <select id="fhs_shipping_city_select" class="fhs-input-select select2-hidden-accessible" data-select2-id="fhs_shipping_city_select" tabindex="-1" aria-hidden="true" onchange="DOMDistrictCity()">
+                  </select>
+                  
+              </div>
+                </div>
+                <div class="fhs-input-alert"></div>
+            </div>
 
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/two.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/three.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="4">&nbsp;</td>
-							<td colspan="2">
-								<table class="table table-condensed total-result">
-									<tr>
-										<td>Cart Sub Total</td>
-										<td>$59</td>
-									</tr>
-									<tr>
-										<td>Exo Tax</td>
-										<td>$2</td>
-									</tr>
-									<tr class="shipping-cost">
-										<td>Shipping Cost</td>
-										<td>Free</td>										
-									</tr>
-									<tr>
-										<td>Total</td>
-										<td><span>$61</span></td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="payment-options">
-					<span>
-						<label><input type="checkbox"> Direct Bank Transfer</label>
-					</span>
-					<span>
-						<label><input type="checkbox"> Check Payment</label>
-					</span>
-					<span>
-						<label><input type="checkbox"> Paypal</label>
-					</span>
-				</div>
-		</div>
-	</section> <!--/#cart_items-->
-
-	
-
-	<footer id="footer"><!--Footer-->
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
-						</div>
-					</div>
-					<div class="col-sm-7">
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-						
-						<div class="col-sm-3">
-							<div class="video-gallery text-center">
-								<a href="#">
-									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
-									</div>
-									<div class="overlay-icon">
-										<i class="fa fa-play-circle-o"></i>
-									</div>
-								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-3">
-						<div class="address">
-							<img src="images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-widget">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Service</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="">Online Help</a></li>
-								<li><a href="">Contact Us</a></li>
-								<li><a href="">Order Status</a></li>
-								<li><a href="">Change Location</a></li>
-								<li><a href="">FAQ’s</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Quock Shop</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="">T-Shirt</a></li>
-								<li><a href="">Mens</a></li>
-								<li><a href="">Womens</a></li>
-								<li><a href="">Gift Cards</a></li>
-								<li><a href="">Shoes</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>Policies</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="">Terms of Use</a></li>
-								<li><a href="">Privecy Policy</a></li>
-								<li><a href="">Refund Policy</a></li>
-								<li><a href="">Billing System</a></li>
-								<li><a href="">Ticket System</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-2">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<ul class="nav nav-pills nav-stacked">
-								<li><a href="">Company Information</a></li>
-								<li><a href="">Careers</a></li>
-								<li><a href="">Store Location</a></li>
-								<li><a href="">Affillate Program</a></li>
-								<li><a href="">Copyright</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-3 col-sm-offset-1">
-						<div class="single-widget">
-							<h2>About Shopper</h2>
-							<form action="#" class="searchform">
-								<input type="text" placeholder="Your email address" />
-								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-								<p>Get the most recent updates from <br />our site and be updated your self...</p>
-							</form>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
-				</div>
-			</div>
-		</div>
-		
-	</footer><!--/Footer-->
-	
-
-
+            <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+              <label>Quận/Huyện</label>
+              <div class="fhs-input-item">
+            <div class="fhs-input-group">
+                <select id="fhs_shipping_district_select" class="fhs-input-select select2-hidden-accessible" data-select2-id="fhs_shipping_district_select" tabindex="-1" aria-hidden="true" disabled></select>
+            </div>
+              </div>
+              <div class="fhs-input-alert"></div>
+          </div>
+              
+              <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                  <label>Địa chỉ nhận hàng</label>
+                  <div class="fhs-input-item">
+                    <div class="fhs-input-group">
+                      <input class="fhs-textbox require_check check_shipping_address" type="text" validate_type="text" placeholder="Nhập địa chỉ nhận hàng" id="fhs_shipping_street" name="street" value="" maxlength="200">
+                      <span class="fhs-input-icon fhs-textbox-alert"></span>
+                    </div>
+                  </div>
+                  <div class="fhs-input-alert"></div>
+              </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="fhs_checkout_block">
+            <div class="fhs_checkout_block_title">Kiểm tra lại đơn hàng</div>
+            <div class="fhs_checkout_block_content">
+          <div id="fhs_checkout_products" class="fhs_checkout_products">
+                  
+                  <!-- <div class="fhs_checkout_products_item">
+                <div class="fhs_checkout_products_item_img">
+              <img src="https://cdn0.fahasa.com/media/catalog/product//n/l/nldgx2.jpg">
+                </div>
+                <div class="fhs_checkout_products_item_detail">
+              <div class="fhs_checkout_products_item_name">
+                  <div>Người Lạ Dưới Gió Xuân - Tập 2 - Tặng Kèm 1 Bookmark + 1 Postcard + Bộ 6 Card Bo Góc Cán Màng Ánh Trai + 1 Sticker</div>
+                  
+                          <div class="notice">Ngày NXB dự kiến phát hành 30/04/2023</div>			    			    
+                        </div>
+              <div class="fhs_checkout_products_item_price">
+                                    <div>
+                                        78,400đ
+                                    </div>
+                                      
+                                    <div class="fhs_checkout_products_item_original_price">
+                                        98,000đ
+                                    </div>
+                                          </div>
+              <div class="fhs_checkout_products_item_qty">
+                  <span>Số lượng: </span>
+                  1			</div>
+              <div class="fhs_checkout_products_item_total">
+                  78,400đ
+              </div>
+                </div>
+            </div> -->
+                </div>
+          <div class="fhs_checkout_total fhs_checkout_total_mobile">
+              <div class="fhs_checkout_total_grand_total"></div>	</div>
+          <div class="fhs-bsidebar">
+              <div class="fhs-bsidebar-content">
+            <div class="container">
+                <div class="fhs_checkout_total fhs_checkout_total_desktop">
+              <div class="fhs_checkout_total_grand_total"></div>		    </div>
+                <div class="fhs_checkout_bottom">
+              <div>
+                  <div class="fhs_checkout_total_grand_total">
+                          </div>
+                  <div><a href="/checkout/cart/"><span style="padding-right: 8px;"><img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=102100"></span><span>Quay về giỏ hàng</span></a></div>
+              </div>
+              <div>
+                  <div class="fhs-btn-box">
+                <button type="button" title="Xác nhận thanh toán" class="fhs-btn-confirm fhs-btn-orderconfirm"><span>Xác nhận thanh toán</span></button>
+                  </div>
+              </div>
+                </div>
+            </div>
+              </div>
+          </div>
+          <div class="fhs_checkout_block_loading"><div><div id="default-icon-loading" style="height: 40px; width: 40px; background: url('https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fpointstore/loading.png?q=102100') no-repeat center center transparent; background-size: 40px;"></div></div></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+   </div>
+</div>
     <script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
-</body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+<script src="js/getCookie.js"></script>
+<script src="js/checkOut.js"></script>
+  </body>
 </html>

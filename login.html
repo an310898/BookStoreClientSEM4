@@ -102,10 +102,11 @@
                   <span>Đăng nhập</span>
                 </button>
               </div>
+              <div id="wrongAccount" style="color: red"></div>
             </form>
           </div>
           <div class="tab-pane fade" id="register">
-            <form class="form">
+            <form class="form" id="formRegister">
               <div>
                 <label for="nameRe">Họ và tên</label><br />
                 <input type="text" id="nameRe" placeholder="Họ và tên" />
@@ -116,11 +117,19 @@
                   type="text"
                   id="userNameRe"
                   placeholder="Tên đăng nhập"
+                  onkeyup="validUserName()"
                 />
+                <div id="validUserName"></div>
               </div>
               <div>
                 <label for="passwordRe">Mật khẩu</label><br />
-                <input type="password" id="passwordRe" placeholder="Mật khẩu" />
+                <input
+                  type="password"
+                  id="passwordRe"
+                  placeholder="Mật khẩu"
+                  onkeyup="checkPass()"
+                />
+                <div id="validPass"></div>
               </div>
               <div>
                 <label for="rePasswordRe">Nhập lại mật khẩu</label><br />
@@ -134,6 +143,8 @@
               </div>
               <div id="btn-register">
                 <button
+                  disabled
+                  id="btn-re"
                   type="button"
                   class="btn btn-primary"
                   onclick="register()"
@@ -330,5 +341,6 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/getCookie.js"></script>
   </body>
 </html>

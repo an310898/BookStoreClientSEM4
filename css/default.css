@@ -1,0 +1,1198 @@
+/* import Nunito sans font*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+/* UI default*/
+.fhs_bar_bottom{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #fff;
+    clear: both;
+}
+.fhs_bar_bottom a,
+.fhs_btn_default{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    color: #C92127;
+    background-color: #fff;
+    border: 2px solid #C92127;
+    font-size: 14px;
+    font-weight: 700;
+    width: 210px;
+    max-width: 100%;
+    height: 40px;
+    max-height: 100%;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    transition: all 0.5s;
+}
+.fhs_btn_default.blue{
+    color: #1478FC;
+    border: 2px solid #1478FC;
+}
+.fhs_btn_default.cancel{
+    width: auto;
+    color: #7A7E7F;
+    background-color: #fff;
+    border: none;
+}
+.fhs_bar_bottom a.active,
+.fhs_btn_default.active{
+    color: #fff;
+    background-color: #C92127;
+    border: 2px solid #C92127;
+}
+.fhs_btn_default.blue.active{
+    color: #fff;
+    background-color: #1478FC;
+    border: 2px solid #1478FC;
+}
+.fhs_bar_bottom a:disabled,
+.fhs_btn_default:disabled{
+    background: rgb(224,224,224);
+    background: -moz-linear-gradient(90deg, rgba(224,224,224,1) 0%, rgba(224,224,224,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(224,224,224,1) 0%, rgba(224,224,224,1) 100%);
+    background: linear-gradient(90deg, rgba(224,224,224,1) 0%, rgba(224,224,224,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e0e0e0",endColorstr="#e0e0e0",GradientType=1);
+    border: none;
+    color: #636363;
+}
+.fhs_bar_bottom a:enabled:active,
+.btn_post_review:enabled:active{
+    transform: scale(0.98);
+}
+.fhs_center_left{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.fhs_center_center{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.fhs_center_right{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+}
+.fhs_center_stretch{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: stretch;
+    justify-content: stretch;
+}
+.fhs_center_space{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.fhs_top_left{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.fhs_top_stretch{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -webkit-justify-content: stretch;
+    justify-content: stretch;
+}
+.fhs_top_space{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.fhs_top_center{
+    display: flex;
+    flex-direction: row;
+    /* display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; */
+    /* -webkit-justify-content: center; */
+    justify-content: center;
+    text-align: center;
+}
+.fhs_bottom_left{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+.fhs_bottom_center{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.fhs_bottom_stretch{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    -webkit-justify-content: stretch;
+    justify-content: stretch;
+}
+.fhs_bottom_space{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.fhs_stretch_left{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: stretch;
+    -webkit-align-items: stretch;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.fhs_stretch_stretch{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: stretch;
+    -webkit-align-items: stretch;
+    -webkit-justify-content: stretch;
+    justify-content: stretch;
+}
+.fhs_column_left{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+}
+.fhs_column_center{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.fhs_column_right{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+}
+.fhs_column_stretch{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items: stretch;
+    -webkit-align-items: stretch;
+}
+.fhs_column_space{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:column;
+    align-items: space-between;
+    -webkit-align-items: space-between;
+}
+.padding_small{padding: 4px;}
+.padding_normal{padding: 8px;}
+.padding_big{padding: 16px;}
+.padding_top_small{padding-top: 4px;}
+.padding_top_normal{padding-top: 8px;}
+.padding_top_big{padding-top: 16px;}
+.padding_right_small{padding-right: 4px;}
+.padding_right_normal{padding-right: 8px;}
+.padding_right_big{padding-right: 16px;}
+.padding_bottom_small{padding-bottom: 4px;}
+.padding_bottom_normal{padding-bottom: 8px;}
+.padding_bottom_big{padding-bottom: 16px;}
+.padding_left_small{padding-left: 4px;}
+.padding_left_normal{padding-left: 8px;}
+.padding_left_big{padding-left: 16px;}
+
+.margin_small{margin: 4px;}
+.margin_normal{margin: 8px;}
+.margin_big{margin: 16px;}
+.margin_top_small{margin-top: 4px;}
+.margin_top_normal{margin-top: 8px;}
+.margin_top_big{margin-top: 16px;}
+.margin_right_small{margin-right: 4px;}
+.margin_right_normal{margin-right: 8px;}
+.margin_right_big{margin-right: 16px;}
+.margin_bottom_small{margin-bottom: 4px;}
+.margin_bottom_normal{margin-bottom: 8px;}
+.margin_bottom_big{margin-bottom: 16px;}
+.margin_left_small{margin-left: 4px;}
+.margin_left_normal{margin-left: 8px;}
+.margin_left_big{margin-left: 16px;}
+
+.border_radius_small{border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;}
+.border_radius_normal{border-radius: 8px;-moz-border-radius: 8px;-webkit-border-radius: 8px;}
+.border_radius_big{border-radius: 16px;-moz-border-radius: 16px;-webkit-border-radius: 16px;}
+
+.fhs_mouse_point{
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.fhs_textbox_parent{
+    position: relative;
+}
+.fhs_textbox_child{
+    position:absolute;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.fhs_btn_io{
+    position: relative;
+    width: 31px;
+    height: 14px;
+    margin: 8px;
+    background-color:  #CDCFD0;
+    border-radius: 7px;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.fhs_btn_io.active{
+    background-color: rgba(36, 137, 244, 0.3);
+}
+.fhs_btn_io > span{
+    position:absolute;
+    left: 7px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color:  #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+    box-shadow: 0px 1px 2px #00000073;
+}
+.fhs_btn_io.active > span{
+    left: 24px;
+    background-color:  #2489F4;
+}
+.fhs_nowrap_one{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fhs_nowrap_two{
+    line-height: 1.4em;
+    word-break: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 2.8em;
+    max-height: 2.8em;
+}
+.fhs_height_normal{
+    line-height: normal;
+}
+.fhs_flex_grow{
+    flex-grow: 1;
+}
+.fhs_tooltip_asidebar{
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:row;
+    align-items: center;
+    -webkit-align-items: center;
+    white-space: nowrap;
+}
+
+.fhs_tooltip_asidebar.left{
+    left: -8px;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.fhs_tooltip_asidebar > div{
+    position: relative;
+    color: white;
+    padding: 4px 16px;
+}
+.fhs_tooltip_asidebar.right{
+    right: -8px;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.fhs_tooltip_asidebar.right > div{
+    padding: 4px 16px;
+}
+.fhs_tooltip_asidebar_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 100%;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+section::-webkit-scrollbar{
+    display: none;
+}
+.fhs_popup_full{
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    -webkit-box-shadow: 0px -2px 6px #0000001A;
+    -moz-box-shadow: 0px -2px 6px #0000001A;
+    box-shadow: 0px -2px 6px #0000001A;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    background-color: #fff; 
+    z-index: 99999;
+}
+.fhs_popup_full.left{
+    top:0;
+    left:0;
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+}
+.fhs_popup_full.right{
+    top:0;
+    right:0;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    -moz-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+}
+.fhs_popup_full.active{
+    display: block;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.fhs_popup_full_head{
+    height: 54px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.fhs_popup_full_head.red{
+    background-color:#C62128;
+    font-size: 1.39em;
+}
+.fhs_popup_full_head > div{
+    min-width: 56px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+}
+.fhs_popup_full_head > div:first-of-type{
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.fhs_popup_full_head > div:nth-of-type(2){
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+.fhs_popup_full_head > div:last-of-type{
+    -webkit-justify-content: space-between;
+    justify-content: flex-end;
+}
+.fhs_popup_full_body{
+    height: calc(100% - 49px - env(safe-area-inset-bottom,0));
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction:row;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-justify-content: stretch;
+    justify-content: stretch;
+    color: #212121;
+    overflow-y: auto;
+    background-color: #F2F4F5;
+}
+.fhs_popup_full_cover{
+    top:0;
+    left:0;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh);
+    background: #261E1E none repeat scroll 0% 0%;
+    opacity: 0.5;
+    z-index: 99998;
+}
+.fhs_dropdown_cover{
+    display: none;
+    width: 200vw;
+    height: calc(150vh + 100px);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    -webkit-transform: translate(50%, 100%);
+    -ms-transform: translate(50%, 100%);
+    -moz-transform: translate(50%, 100%);
+    transform: translate(50%, 100%);
+    background: #261E1E none repeat scroll 0% 0%;
+    opacity: 0.5;
+    z-index: 998;
+}
+.fhs_dropdown_cover_over{
+    margin-top: 150vh;
+    height: 100px;
+}
+.fhs_header_mobile .fhs_dropdown_cover{
+    bottom: -11px;
+}
+.fhs_dropdown{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    background-color: white;
+    z-index: 999;
+    white-space: nowrap;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    -moz-box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+    color: #7A7E7F;
+    max-width: 100vw;
+    cursor: default;
+}
+.fhs_header_mobile .fhs_dropdown{
+    bottom: -11px;
+}
+.fhs_dropdown.center{
+    right: 50%;
+    -webkit-transform: translate(50%, 100%);
+    -ms-transform: translate(50%, 100%);
+    -moz-transform: translate(50%, 100%);
+    transform: translate(50%, 100%);
+}
+.fhs_dropdown.left{
+    right: 100%;
+    -webkit-transform: translate(100%, 100%);
+    -ms-transform: translate(100%, 100%);
+    -moz-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+}
+
+.fhs_dropdown a{
+    color: #7A7E7F;
+}
+
+.fhs_dropdown > div.active{
+    background-color: #F2F4F5;
+}
+.fhs_dropdown .fhs_btn_default{
+    width: 100%;
+}
+
+/* croll bar */
+.fhs_scrollbar::-webkit-scrollbar {
+  width: 16px;
+}
+.fhs_scrollbar::-webkit-scrollbar-track {
+    background-color:rgba(0, 0, 0, 0);;
+}
+.fhs_scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+    border-radius: 8px;
+    border: solid rgba(0, 0, 0, 0);
+    border-width: 2px 3px 2px 3px;
+}
+.fhs_scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.fhs_block{
+    margin-top: 16px;
+    width: 100%;
+}
+.fhs_block > div{
+    background-color: #fff;
+}
+.fhs_block > .fhs_block_head{
+    padding: 16px;
+}
+.fhs_block > .fhs_block_head > .fhs_block_head_title{
+    font-size: 1.6em;
+    font-weight: bold;
+    color:#212121;
+    letter-spacing: 0px;
+}
+.fhs_block > .fhs_block_line{
+    padding: 0 16px;
+    background-color: #fff;
+}
+.fhs_block > .fhs_block_line > div{
+    width: 100%;
+    height: 1px;
+    background-color: #F2F4F5;
+}
+.fhs_block > .fhs_block_content{
+    padding: 17px 16px;
+}
+.fhs_block > div:first-of-type{
+    -moz-border-top-left-radius: 8px;
+    -moz-border-top-right-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+.fhs_block > div:last-of-type{
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+
+/* ICON */
+.icon_close_gray{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_delete_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+.icon_fahasa_logo{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo/fahasa_logo.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 220px;
+    height: 36px;
+}
+.icon_menu{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+}
+.icon_seemore_gray{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/icon_seemore_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+}
+.icon_seemore_gray.left{
+    transform: rotate(90deg);
+    transition: all 0.5s ease 0s;
+}
+.icon_seemore_gray.right{
+    transform: rotate(-90deg);
+    transition: all 0.5s ease 0s;
+}
+.icon_seemore_gray.up{
+    transform: rotate(180deg);
+    transition: all 0.5s ease 0s;
+}
+.icon_seemore_blue{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_seemore_blue.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 12px;
+    width: 16px;
+}
+.icon_seemore_blue.up{
+    transform: rotate(-90deg);
+    transition: all 0.5s ease 0s;
+}
+.icon_seemore_blue.down{
+    transform: rotate(90deg);
+    transition: all 0.5s ease 0s;
+}
+.icon_nofi_black {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_noti_black.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.icon_nofi_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_noti_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.icon_nofi_white{
+    background: url("https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_notif.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.icon_cart_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_cart_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.icon_cart_white{
+    background: url("https://cdn0.fahasa.com/skin/frontend/base/default/images/ico_shopping_cart_white.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.icon_account_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_account_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.icon_account_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_account_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.icon_store_default {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/default.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 37px;
+}
+.icon_store_english {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/store/english.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 37px;
+}
+.icon_facebook {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo/facebook_logo.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.icon_bill_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_bill_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.ico_fpoint_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_fpoint_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.ico_logout_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_logout_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.ico_voucher_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_voucher_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.ico_vip_diamond {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/vip/ico_vip_diamond.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 44px;
+    width: 44px;
+}
+.ico_vip_copper {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/vip/ico_vip_copper.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 44px;
+    width: 44px;
+}
+.ico_vip_gold {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/vip/ico_vip_gold.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 44px;
+    width: 44px;
+}
+.ico_fpoint_coin {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_fpoint_coin.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 22px;
+    width: 22px;
+}
+.ico_heart_gray {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico-heart-gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.ico_emptycart {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/checkout_cart/ico_emptycart_2.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+.ico_notlogin {
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_login.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+.ico_loading_cirle{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ring_loader.gif") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+.ico_dot_red{
+    position:absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    background-color: #F63B2F;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.ico_noti_bill{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_noti_bill.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+    position: relative;
+}
+.ico_noti_fpoint{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_noti_fpoint.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+    position: relative;
+}
+.ico_noti_promotion{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_noti_promotion.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+    position: relative;
+}
+.ico_noti_other{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/customer/ico_noti_other.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+    position: relative;
+}
+.ico_VPP{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_VPP.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_bachhoaonline{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_bachhoaonline.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_dochoi{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_dochoi.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_foreignbooks{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_foreignbooks.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_hanhtrangdentruong{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_hanhtrangdentruong.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_lamdepsuckhoe{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_lamdepsuckhoe.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_sachtrongnuoc{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/category/ico_sachtrongnuoc.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+.ico_arrow_gray{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_arrow_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 14.4px;
+    width: 14.4px;
+}
+.ico_menu_white{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu_white.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 34px;
+    width: 34px;
+}
+.ico_menu_red{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_menu_red.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+}
+
+.ico_arrow_gray.right{
+    transform: rotate(-180deg);
+}
+.ico_arrow_line_white{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_arrow_line_white.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+.ico_search_white{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_search_white.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    fill: #fff;
+}
+.ico_refresh_gray{
+    background: url("https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_refresh_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+}
+/*.ico_noti_bill.active::before,
+.ico_noti_fpoint.active::before,
+.ico_noti_promotion.active::before,
+.ico_noti_other.active::before{
+    content: '<i class="dot_red"></i>';
+}*/
+
+.fhs_c_sliver{
+    color: #9FA7AB;
+}
+.fhs_c_gray{
+    color: #7A7E7F;
+}
+.fhs_c_red{
+    color: #dc3545;
+}
+.fhs_c_orange{
+    color: #F39801;
+}
+.fhs_c_blue{
+    color: #007bff;
+}
+
+/* MOBILE */
+@media screen and (min-width: 992px) {
+    .desktop_only{
+	display: flex;
+    }
+    .mobile_only{
+	display: none !important;
+    }
+}
+@media screen and (max-width: 992px){
+    .desktop_only{
+	display: none !important;
+    }
+    .mobile_only{
+	display: flex;
+    }
+    .fhs_bar_bottom.mobile_link a,
+    .fhs_btn_default.mobile_link{
+	width: auto;
+	height: auto;
+	color: #2489F4;
+	background-color: #fff;
+	border: none;
+    }
+    
+   .fhs_bar_bottom.mobile_link{
+	padding: 8px 16px;
+    }
+    .fhs_bar_bottom a{
+        width: 140px;
+    }
+}

@@ -42,7 +42,7 @@ fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
                     </button>
                 </span>
                 <p><b>Tác giả:</b> ${y.Author}</p>
-                <p><b>Nhà cung cấp</b> ${y.PublishingCompany}</p>
+                <p><b>Nhà xuất bản:</b> ${y.PublishingCompany}</p>
                 <p><b>Ngôn ngữ</b>:</b> ${y.Language}</p>
             </div><!--/product-information-->
         </div>`;

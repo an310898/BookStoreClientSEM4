@@ -6,12 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background:#ffffff;
-  position: relative;
-  font-weight:400px;
-}
+
 
 footer {
 	/* display : none !important; */
@@ -256,7 +251,7 @@ a#scrollUp i{
 	color:#fdb45e;
 }
 
-.search_box input {
+/* .search_box input {
   background: #F0F0E9;
   border: medium none;
   color: #B2B2B2;
@@ -270,7 +265,7 @@ a#scrollUp i{
   background-image: url(../images/home/searchicon.png);
   background-repeat: no-repeat;
   background-position: 225px;
-}
+} */
 
 
 /*  Dropdown menu*/
@@ -668,7 +663,7 @@ ul.sub-menu {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  margin: 0 auto 30px;
+  margin: 0 auto ;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -853,6 +848,9 @@ h2.title {
 	border:1px solid #F7F7F5;
 	overflow: hidden;
 	margin-bottom:30px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .single-products {
@@ -943,21 +941,18 @@ h2.title {
   color: #fff;
 }
 
-
-
 .add-to-cart {
-  background:#F5F5ED;
-  border: 0 none;
+  background:#ffffff;
+  border: 1px solid #ca2128;
   border-radius: 0;
-  color: #696763;
+  color: #ca2128;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  margin-bottom: 25px;
 }
 
 .add-to-cart:hover {
   background: #ca2128;
-  border: 0 none;
+  border: 1px solid #ca2128;
   border-radius: 0;
   color: #FFFFFF;
 }
@@ -1536,7 +1531,7 @@ h2.title {
 
 .breadcrumbs .breadcrumb {
   background:transparent;
-  margin-bottom: 75px;
+  margin-bottom: 25px;
   padding-left: 0;
 }
 

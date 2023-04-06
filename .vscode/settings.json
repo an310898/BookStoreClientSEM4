@@ -23,7 +23,7 @@
   "json.maxItemsComputed": 5000000,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "Cascadia Code",
-  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.CustomBrowser": "microsoft-edge",
   "liveServer.settings.useLocalIp": true,
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,

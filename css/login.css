@@ -1,5 +1,5 @@
 .form{
-    display: flex !important;
+    display: flex ;
     justify-content: center !important;
     align-items: center !important;
     margin-top: 50px;
@@ -18,8 +18,8 @@
     border-radius: .25rem;
 }
 
-.form div {
-    margin-bottom: 20px;
+.form > div {
+    margin-bottom: 10px;
 }
 
 .form > div label{

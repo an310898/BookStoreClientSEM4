@@ -1,0 +1,32 @@
+.book-name{
+    height: 40px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.productinfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+.product-info{
+    display: flex;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0;
+}
+
+/* .product-image-wrapper{
+    max-width: 50%;
+} */
