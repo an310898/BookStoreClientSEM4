@@ -1,4 +1,7 @@
 function CheckOutCart() {
+  if (getCookie("arrayCart").length === 0) {
+    return;
+  }
   const formData = {
     ArrayCart: getCookie("arrayCart").slice(
       1,
@@ -98,6 +101,20 @@ function CheckOutCart() {
     });
 }
 function totalCart() {
+  if (getCookieArrayCart().length === 0) {
+    document.querySelectorAll(".btn-checkout").forEach((elem) => {
+      elem.classList.add("btn-checkout-disable");
+      elem.setAttribute("disabled", "");
+    });
+    document.querySelectorAll(".total-price").forEach((element) => {
+      element.innerText = "0 đ";
+    });
+    document.getElementsByClassName("total-price-mobile")[0].innerText = "0 đ";
+    return;
+  }
+  document.querySelectorAll(".btn-checkout").forEach((elem) => {
+    elem.classList.remove("btn-checkout-disable");
+  });
   const formData = {
     ArrayCart: getCookie("arrayCart").slice(
       1,

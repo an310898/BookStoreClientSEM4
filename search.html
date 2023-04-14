@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082"
+      media="all" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link
+      href="https://cdn0.fahasa.com/media/css_secure/d694102d9dd4baa3cdabd7aae770978f.css?q=102100"
+      rel="stylesheet" />
+      <link href="css/search.css" rel="stylesheet">
+  </head>
+  <body>
+    <section id="header" class="header">
+        <div class="fhs_header_desktop" style="background-color: white">
+          <div class="container">
+            <div class="fhs-header-top-second-bar" style="position: relative">
+              <div
+                class="icon_fahasa_logo fhs_mouse_point"
+                onclick="location.href = '/';"
+                title="FAHASA.COM"
+              ></div>
+  
+              <div class="fhs_center_left">
+                <div class="box search_box">
+                  <form
+                    id="search_mini_form_desktop"
+                    action="https://www.fahasa.com/catalogsearch/result/"
+                    method="get"
+                  >
+                    <div class="search pull-left">
+                      <div class="form-search fhs_dropdown_hover_out">
+                        <input
+                          id="search_desktop"
+                          type="text"
+                          name="q"
+                          autocomplete="off"
+                          placeholder="Tìm kiếm sản phẩm mong muốn..."
+                          value=""
+                          class="input-search"
+                        />
+                        <span class="fhs_btn_default active button-search"
+                          ><span class="ico_search_white"></span
+                        ></span>
+                        <div class="form-search-form fhs_dropdown"></div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="fhs_center_space" style="padding-left: 24px">
+                <div class="cart-top no_cover fhs_dropdown_hover">
+                 
+                  <div class="fhs_top_cart" style="margin-right: 5px;">
+                    <a href="cart.html">
+                      <div class="heading heading-custom" style="display: flex;">
+                        <div class="fhs_center_center" style="margin-bottom: 3px">
+                          <div class="icon_cart_gray">
+                            <!-- <div
+                              class="top_menu_unseen fhs_center_center"
+                              style="visibility: visible"
+                            >
+                              <span
+                                class="cartmini_qty"
+                                style="visibility: visible"
+                                >2</span
+                              >
+                            </div> -->
+                          </div>
+                        </div>
+                        <div class="top-cart-button-label fhs_top_center" style="margin-top: 4px;">
+                          <div class="top_menu_label">Giỏ Hàng</div>
+                        </div>
+                      </div>
+                    </a>
+  
+                  </div>
+                </div>
+  
+                <div
+                  class="fhs_top_account no_cover fhs_dropdown_hover"
+                  id="fhs_top_account_hover"
+                >
+                  <a href="login.html">
+                    <div class="fhs_top_account_button" style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+                      <div
+                        class="icon_account_gray"
+                        style="margin-bottom: 3px"
+                      ></div>
+                      <div
+                        class="top_menu_label fhs_top_center fhs_nowrap_one"
+                        id="loginUser fhs_top_account_title"
+                      >
+                        Tài khoản
+                      </div>
+                    </div>
+                  </a>
+                  <div
+                    class="fhs_top_account_dropdown fhs_dropdown right guest"
+                    style="display: none"
+                  >
+                    <div>
+                      <button
+                        type="button"
+                        onclick="fhs_account.showLoginPopup('login');"
+                        title="Đăng nhập"
+                        class="fhs_btn_default active"
+                      >
+                        <span>Đăng nhập</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        onclick="fhs_account.showLoginPopup('register')"
+                        title="Đăng ký"
+                        class="fhs_btn_default"
+                      >
+                        <span>Đăng ký</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        onclick="fhs_account.loginFB();"
+                        title="Đăng nhập bằng facebook"
+                        class="fhs_btn_default blue active"
+                      >
+                        <span
+                          class="icon_facebook"
+                          style="margin-right: 4px"
+                        ></span
+                        ><span>Đăng nhập bằng facebook</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fhs_header_mobile">
+          <div class="fhs-logo" style="text-align: center">
+            <a href="https://www.fahasa.com/" title="FAHASA.COM" class="logo"
+              ><strong class="logo-title">FAHASA.COM</strong
+              ><img
+                src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+                alt="FAHASA.COM"
+            /></a>
+          </div>
+          <div class="fhs-header-top-bar">
+            <div class="search-mobile-header">
+              <div class="ves-autosearch">
+                <div class="box search_box">
+                  <form
+                    id="search_mini_form_mobile"
+                    action="https://www.fahasa.com/catalogsearch/result/"
+                    method="get"
+                  >
+                    <div class="search pull-left">
+                      <div class="form-search">
+                        <input
+                          id="search_mobile"
+                          type="text"
+                          name="q"
+                          autocomplete="off"
+                          placeholder="Tìm kiếm sản phẩm mong muốn..."
+                          value=""
+                          class="input-search"
+                        />
+                        <span class="button-search fa fa-search"></span>
+                        <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
+                        <div
+                          class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
+                          style="display: none"
+                        ></div>
+                        <div
+                          id="search_autocomplete"
+                          class="search-autocomplete"
+                        ></div>
+                        <div class="form-search-form fhs_dropdown"></div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                
+              </div>
+            </div>
+            <div class="icons-mobile-header" style="position: relative">
+                <div id="cart" class="clearfix">
+                  <a href="https://www.fahasa.com/checkout/cart/">
+                    <div class="fhs_center_center">
+                      <div class="icon_cart_white" style="margin-right: 4px">
+                        <div>
+                          <div
+                            class="top_menu_unseen fhs_center_center cartmini_qty"
+                            style="visibility: visible"
+                          >
+                            2
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+  
+             
+  
+              <style>
+                .login-cutomer-icon {
+                  position: inherit;
+                  background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png)
+                    no-repeat center center;
+                  background-size: 20px !important;
+                }
+                @media (max-width: 992px) {
+                    .fhs-input-item{
+                        width: 100% !important;
+                    }
+                    .fhs_checkout_block_content{
+                        flex-direction: column;
+                    }
+                  #header .header1 .customer-top {
+                    margin-right: 5px;
+                    margin-left: 5px;
+                  }
+                }
+                #header .header1 .customer-top {
+                  padding-left: 0px;
+                }
+              </style>
+              <div id="mini_cart_block" class="customer-top">
+                <div>
+                  <a href="https://www.fahasa.com/customer/account/">
+                    <div>
+                      <div
+                        class="login-cutomer-icon"
+                        style="width: 30px; height: 35px"
+                      ></div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end header -->
+      <div class="main-container col1-layout">
+        <div class="main">
+          <div class="col-main">
+            <div class="container">
+              <div class="container-inner">
+                <div class="fhs_checkout_block">
+                  <div class="fhs_checkout_block_title">Tìm kiếm đơn hàng</div>
+                  <div class="fhs_checkout_block_content" style="display: flex;">
+                    <div class="fhs_checkout_block_address_block" style="flex-grow:1;max-width: 100%;" >
+                        <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                            <div class="fhs-input-item" style="width: 98%;">
+                          <div class="fhs-input-group"  >
+                              <input style="height: 40px;border-radius: 8px;border-color:#ebebeb ;" class="fhs-textbox require_check check_shipping_address" type="text" placeholder="Nhập mã đơn hàng hoặc số điện thoại để tìm kiếm" id="inputFindOrder" name="fullname" value="" maxlength="100">
+                              <span class="fhs-input-icon fhs-textbox-alert"></span>
+                          </div>
+                            </div>
+                            <div class="fhs-input-alert" id="inputFindAlert" style="margin: 6px 0 0 4px;color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="fhs-btn-box" style="flex-grow: 1;display: block;">
+                        <button onclick="findOrderByOrderIdOrPhoneNumber()">Tìm kiếm</button>
+                      </div>  
+                  </div>
+                </div>
+                <div id="searchDOM">
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/getCookie.js"></script>
+      <script src="js/search.js"></script>
+  </body>
+</html>

@@ -16,10 +16,11 @@
 	<link href="css/default.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
     <link href="https://cdn0.fahasa.com/media/css_secure/d694102d9dd4baa3cdabd7aae770978f.css?q=102100" rel="stylesheet">
+    <link href="css/checkout.css" rel="stylesheet">
   </head>
   <body>
 
-    <section id="header" class="heaer">
+    <section id="header" class="header">
       <div class="fhs_header_desktop" style="background-color: white">
         <div class="container">
           <div class="fhs-header-top-second-bar" style="position: relative">
@@ -250,12 +251,29 @@
       </div>
     </section>
     <!--  -->
+    <div class="main-container col1-layout" id="completeCheckout" style="display:none">
+      <div class="main">
+        <div class="col-main">
+          <div class="container">
+            <div class="container-inner">
+              <div class="fhs_checkout_block">
+                <div class="fhs_checkout_block_title">Đặt hàng thành công</div>
+                <div class="fhs_checkout_block_content">
+                  <div>Mã đơn hàng của bạn là: <span id="orderId"></span></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
    <div class="main-container col1-layout">
-    <div class="main">
+    <div class="main" style="padding-bottom: 150px;">
       <div style="margin-bottom: 5px;"></div>
       <div class="col-main">
         <div class="container">
-          <div class="container-inner">
+          <div class="container-inner" id="checkoutSection">
             <div id="fhs_checkout_block_address" class="fhs_checkout_block">
               <div class="fhs_checkout_block_title">Địa chỉ giao hàng</div>
               <div class="fhs_checkout_block_content">
@@ -270,7 +288,7 @@
                     <span class="fhs-input-icon fhs-textbox-alert"></span>
                 </div>
                   </div>
-                  <div class="fhs-input-alert"></div>
+                  <div class="fhs-input-alert" id="fullNameInput" style="color: red;"></div>
               </div>
               <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
                   <label>Email</label>
@@ -280,7 +298,7 @@
                     <span class="fhs-input-icon fhs-textbox-alert"></span>
                 </div>
                   </div>
-                  <div class="fhs-input-alert"></div>
+                  <div class="fhs-input-alert" id="emailInput"></div>
               </div>
               <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
                   <label>Số điện thoại</label>
@@ -290,7 +308,7 @@
                     <span class="fhs-input-icon fhs-textbox-alert"></span>
                 </div>
                   </div>
-                  <div class="fhs-input-alert"></div>
+                  <div class="fhs-input-alert" id="phoneInput"></div>
               </div>
               
               
@@ -303,7 +321,7 @@
                   
               </div>
                 </div>
-                <div class="fhs-input-alert"></div>
+                <div class="fhs-input-alert" id="cityInput"></div>
             </div>
 
             <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
@@ -313,7 +331,7 @@
                 <select id="fhs_shipping_district_select" class="fhs-input-select select2-hidden-accessible" data-select2-id="fhs_shipping_district_select" tabindex="-1" aria-hidden="true" disabled></select>
             </div>
               </div>
-              <div class="fhs-input-alert"></div>
+              <div class="fhs-input-alert" id="districtInput"></div>
           </div>
               
               <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
@@ -324,7 +342,7 @@
                       <span class="fhs-input-icon fhs-textbox-alert"></span>
                     </div>
                   </div>
-                  <div class="fhs-input-alert"></div>
+                  <div class="fhs-input-alert" id="addressInput"></div>
               </div>
                
               </div>
@@ -334,57 +352,28 @@
             <div class="fhs_checkout_block_title">Kiểm tra lại đơn hàng</div>
             <div class="fhs_checkout_block_content">
           <div id="fhs_checkout_products" class="fhs_checkout_products">
-                  
-                  <!-- <div class="fhs_checkout_products_item">
-                <div class="fhs_checkout_products_item_img">
-              <img src="https://cdn0.fahasa.com/media/catalog/product//n/l/nldgx2.jpg">
-                </div>
-                <div class="fhs_checkout_products_item_detail">
-              <div class="fhs_checkout_products_item_name">
-                  <div>Người Lạ Dưới Gió Xuân - Tập 2 - Tặng Kèm 1 Bookmark + 1 Postcard + Bộ 6 Card Bo Góc Cán Màng Ánh Trai + 1 Sticker</div>
-                  
-                          <div class="notice">Ngày NXB dự kiến phát hành 30/04/2023</div>			    			    
-                        </div>
-              <div class="fhs_checkout_products_item_price">
-                                    <div>
-                                        78,400đ
-                                    </div>
-                                      
-                                    <div class="fhs_checkout_products_item_original_price">
-                                        98,000đ
-                                    </div>
-                                          </div>
-              <div class="fhs_checkout_products_item_qty">
-                  <span>Số lượng: </span>
-                  1			</div>
-              <div class="fhs_checkout_products_item_total">
-                  78,400đ
-              </div>
-                </div>
-            </div> -->
+                 
                 </div>
           <div class="fhs_checkout_total fhs_checkout_total_mobile">
               <div class="fhs_checkout_total_grand_total"></div>	</div>
-          <div class="fhs-bsidebar">
-              <div class="fhs-bsidebar-content">
-            <div class="container">
-                <div class="fhs_checkout_total fhs_checkout_total_desktop">
-              <div class="fhs_checkout_total_grand_total"></div>		    </div>
-                <div class="fhs_checkout_bottom">
-              <div>
-                  <div class="fhs_checkout_total_grand_total">
-                          </div>
-                  <div><a href="/checkout/cart/"><span style="padding-right: 8px;"><img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=102100"></span><span>Quay về giỏ hàng</span></a></div>
-              </div>
-              <div>
-                  <div class="fhs-btn-box">
-                <button type="button" title="Xác nhận thanh toán" class="fhs-btn-confirm fhs-btn-orderconfirm"><span>Xác nhận thanh toán</span></button>
+              <div class="fhs-bsidebar">
+                <div class="fhs-bsidebar-content">
+              <div class="container">
+                  <div class="fhs_checkout_total fhs_checkout_total_desktop"><div class="fhs_checkout_total_subtotal"><div>Thành tiền</div><div class="total-money"></div></div><div class="fhs_checkout_total_grand_total"><div>Tổng Số Tiền (gồm VAT)</div><div class="total-money"></div></div></div>
+                  <div class="fhs_checkout_bottom">
+                <div>
+                    <div class="fhs_checkout_total_grand_total"><div>Tổng Số Tiền (gồm VAT)</div><div></div></div>
+                    <div><a href="/checkout/cart/"><span style="padding-right: 8px;"><img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=102116"></span><span>Quay về giỏ hàng</span></a></div>
+                </div>
+                <div>
+                    <div class="fhs-btn-box">
+                  <button onclick="postFormDataConfirmCheckout()" type="button" title="Xác nhận thanh toán" class="fhs-btn-confirm fhs-btn-orderconfirm"><span>Xác nhận thanh toán</span></button>
+                    </div>
+                </div>
                   </div>
               </div>
                 </div>
             </div>
-              </div>
-          </div>
           <div class="fhs_checkout_block_loading"><div><div id="default-icon-loading" style="height: 40px; width: 40px; background: url('https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fpointstore/loading.png?q=102100') no-repeat center center transparent; background-size: 40px;"></div></div></div>
             </div>
         </div>

@@ -79,7 +79,7 @@ function checkRePass() {
   if (rePassword !== password) {
     document.getElementById("textRepassNotMatching").style.marginTop = "10px";
     document.getElementById("textRepassNotMatching").innerHTML =
-      "<span>Mật khẩu không trùng khớp</span>";
+      "<span style='color:red'>Mật khẩu không trùng khớp</span>";
     document.getElementById("btn-re").disabled = true;
   } else {
     document.getElementById("textRepassNotMatching").style.marginTop = "0";
@@ -98,7 +98,7 @@ function validUserName() {
   if (userName.length < 6) {
     document.getElementById("validUserName").style.marginTop = "10px";
     document.getElementById("validUserName").innerHTML =
-      "<span>Tên tài khoản phải tối thiểu có 6 kí tự</span>";
+      "<span style='color:red'>Tên tài khoản phải tối thiểu có 6 kí tự</span>";
     document.getElementById("btn-re").disabled = true;
   } else {
     document.getElementById("validUserName").style.marginTop = "0";
@@ -115,7 +115,7 @@ function checkPass() {
   if (password.length < 6) {
     document.getElementById("validPass").style.marginTop = "10px";
     document.getElementById("validPass").innerHTML =
-      "<span>Mật khẩu phải tối thiểu có 6 kí tự</span>";
+      "<span style='color:red'>Mật khẩu phải tối thiểu có 6 kí tự</span>";
     document.getElementById("btn-re").disabled = true;
   } else {
     document.getElementById("validPass").style.marginTop = "0";

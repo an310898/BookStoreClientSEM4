@@ -27,7 +27,17 @@ function stayLogin() {
       "loginUser fhs_top_account_title"
     ).innerHTML = `<a href="user.html?id=${getCookie("userId")}"
     >Xin chào ${getCookie("fullName")}</a>`;
+    return getCookie("userId");
   }
+  return 0;
+}
+
+function deleteCookie(name) {
+  document.cookie = name + "=; Path=/; Expires=";
+}
+
+function getCookieArrayCart() {
+  return getCookie("arrayCart").slice(1, getCookie("arrayCart").length - 1);
 }
 
 $(document).ready(function () {
