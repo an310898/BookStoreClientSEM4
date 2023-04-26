@@ -1,28 +1,32 @@
-fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
-  method: "POST",
-})
-  .then((res) => res.json())
-  .then((x) => {
-    const data = x["#result-set-1"]
-      .map((y) => {
-        return `<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><a href="#">${y.Name}</a></h4>
-			</div>
-		</div>`;
-      })
-      .join("");
-    document.getElementById("book-category").innerHTML = data;
-  });
+Category();
 
-fetch("http://localhost:8080/api/dynamic-procedure/listNewBook", {
-  method: "POST",
-})
-  .then((res) => res.json())
-  .then((x) => {
-    const data = x["#result-set-1"]
-      .map((y) => {
-        return `<div class="col-sm-3">
+function Category() {
+  fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
+    method: "POST",
+  })
+    .then((res) => res.json())
+    .then((x) => {
+      const data = x["#result-set-1"]
+        .map((y) => {
+          return `	<a href="shop.html/?id=${y.Id}" class="fhs_column_center">
+					<img class=" lazyloaded" src="${y.ImageURL}" >
+					<div class="fhs_nowrap_two fhs_center_center" style="margin-top: 16px; font-size: 1.23em;">${y.Name}</div>
+					</a>`;
+        })
+        .join("");
+      document.getElementById("book-category").innerHTML = data;
+    });
+}
+
+function listNewBook() {
+  fetch("http://localhost:8080/api/dynamic-procedure/listNewBook", {
+    method: "POST",
+  })
+    .then((res) => res.json())
+    .then((x) => {
+      const data = x["#result-set-1"]
+        .map((y) => {
+          return `<div class="col-sm-3">
 		<div class="product-image-wrapper">
 			<a href="product-details.html?id=${y.Id}" class="single-products">
 					<div class="productinfo text-center">
@@ -40,8 +44,9 @@ fetch("http://localhost:8080/api/dynamic-procedure/listNewBook", {
 			<button onclick="addToCart(${y.Id})" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
 		</div>
 	</div>`;
-      })
-      .join("");
-    document.getElementById("new-item").innerHTML =
-      '<h2 class="title text-center">Sản phẩm mới</h2>' + data;
-  });
+        })
+        .join("");
+      document.getElementById("new-item").innerHTML =
+        '<h2 class="title text-center">Sản phẩm mới</h2>' + data;
+    });
+}
