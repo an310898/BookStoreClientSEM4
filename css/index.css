@@ -1,32 +1,94 @@
-.book-name{
-    height: 40px;
-    word-wrap: break-word;
-    white-space: normal;
-    overflow: hidden;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+.book-name {
+  height: 40px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .productinfo {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
-.product-info{
-    display: flex;
-    word-wrap: break-word;
-    white-space: normal;
-    overflow: hidden;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    margin-bottom: 0;
+.product-info {
+  display: flex;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 0;
 }
 
 /* .product-image-wrapper{
     max-width: 50%;
+} */
+
+.ts-header-cus > a {
+  border: none !important;
+  background-color: white !important;
+}
+.ts-header-cus > a:hover,
+.ts-header-cus > a:focus {
+  background-color: white !important;
+  color: #f7931e !important;
+  transform: none;
+  transition: none;
+}
+.tab-title ul li.active a {
+  color: #f7931e !important;
+}
+.price {
+  line-height: 1.65rem;
+  font-size: 1.65rem !important;
+  color: #c92127;
+  font-weight: 600;
+}
+.ma-box-content {
+  display: flex;
+}
+
+.fhs_product_basic {
+  /* width: 383px; */
+  margin-right: 8px;
+  /* display: inline-block; */
+}
+/* 
+@media (max-width: 1200px) {
+  .fhs_product_basic {
+    width: 340px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .fhs_product_basic {
+    width: 297px;
+  }
+}
+@media (max-width: 991px) {
+  .fhs_product_basic {
+    width: 340px;
+  }
+}
+@media (max-width: 733) {
+  .fhs_product_basic {
+    width: 241px;
+  }
+}
+@media (max-width: 543px) {
+  .fhs_product_basic {
+    width: 241px;
+  }
+}
+@media (max-width: 425px) {
+  .fhs_product_basic {
+    width: 185px;
+  }
 } */

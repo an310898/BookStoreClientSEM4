@@ -50,3 +50,11 @@ function listNewBook() {
         '<h2 class="title text-center">Sản phẩm mới</h2>' + data;
     });
 }
+
+function addActive(elem) {
+  const liElements = elem.getElementsByTagName("li");
+  for (let i = 0; i < liElements.length; i++) {
+    liElements[i].classList.remove("active");
+  }
+  // elem.target.classList.add("active");
+}
