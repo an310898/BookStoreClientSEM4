@@ -49,15 +49,5 @@
   //   "source.organizeImports": true
   // },
   "explorer.compactFolders": false,
-  "editor.lineHeight": 22,
-  "codesnap.shutterAction": "copy",
-  "codesnap.backgroundColor": "#1E1E1E",
-  "codesnap.boxShadow": "none",
-  "jupyter.interactiveWindowMode": "perFile",
-  "jupyter.askForKernelRestart": false,
-  "codesnap.showLineNumbers": false,
-  "codesnap.showWindowControls": false,
-  "codesnap.transparentBackground": true,
-  "codesnap.containerPadding": "10px",
-  "codesnap.roundedCorners": false
+  "editor.lineHeight": 22
 }
