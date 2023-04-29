@@ -50,11 +50,73 @@ function listNewBook() {
         '<h2 class="title text-center">Sản phẩm mới</h2>' + data;
     });
 }
+function CategoryTabData(categoryId) {
+  const formData = {
+    CategoryId: categoryId,
+  };
 
-function addActive(elem) {
-  const liElements = elem.getElementsByTagName("li");
-  for (let i = 0; i < liElements.length; i++) {
-    liElements[i].classList.remove("active");
-  }
-  // elem.target.classList.add("active");
+  fetch("http://localhost:8080/api/dynamic-procedure/CategoryTabData", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  })
+    .then((res) => res.json())
+    .then((x) => {
+      const data1 = x["#result-set-1"]
+        .map((y) => {
+          return `
+             <div class="col-6">
+                        <li
+                          class="fhs_product_basic swiper-slide swiper-slide-active">
+                          <div class="item-inner">
+                            <div class="ma-box-content">
+                              <div class="products clear">
+                                <div class="product images-container">
+                                  <a
+                                    href="product-details.html?id=${y.Id}"
+                                    title="${y.Name}"
+                                    class="product-image"
+                                    ><div class="product-image">
+                                      <img
+                                        class="lazyloaded"
+                                        src="${y.Image}"
+                                        data-src="${y.Image}"
+                                        alt="${y.Name}" /></div
+                                  ></a>
+                                </div>
+                              </div>
+                              <div>
+                                <h2 class="product-name-no-ellipsis">
+                                  <a
+                                    href="https://www.fahasa.com/wolfoo-book-ngay-dau-tien-di-hoc.html"
+                                    title="${y.Name}"
+                                    >${y.Name}</a
+                                  >
+                                </h2>
+                                <div class="price-label">
+                                  <span
+                                    class="price m-price-font fhs_center_left"
+                                    >${y.Price} đ</span
+                                  >
+                                </div>
+                                <div class="fhs-rating-container">
+                                  <div class="ratings fhs-no-mobile-block">
+                                    <div class="rating-box">
+                                      <div
+                                        class="rating"
+                                        style="width: ${y.rate}%"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </div>
+        `;
+        })
+        .join("");
+    });
 }
+
+CategoryTabData(3);
