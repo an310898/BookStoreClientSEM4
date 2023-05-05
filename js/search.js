@@ -23,11 +23,11 @@ function findOrderByOrderIdOrPhoneNumber() {
       body: JSON.stringify(formData),
     }
   )
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       console.log(JSON.parse(x["#result-set-1"][0]["JSONOrder"]));
       const data = JSON.parse(x["#result-set-1"][0]["JSONOrder"])
-        .map((y) => {
+        .map(y => {
           // let formatTotalMoney = parseInt(y.TotalMoney).toLocaleString("vi-VN");
           console.log(y["OrderDetail"]);
           return (
@@ -37,7 +37,7 @@ function findOrderByOrderIdOrPhoneNumber() {
                     <div style="margin-top:10px;display:flex;flex-direction: column;">
                      ` +
             y["OrderDetail"]
-              .map((z) => {
+              .map(z => {
                 return `
               <div style="display:flex;justify-content: space-between;
               align-items: center;">

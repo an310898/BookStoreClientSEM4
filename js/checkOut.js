@@ -60,10 +60,10 @@ function itemCheckOut() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       const data = x["#result-set-1"]
-        .map((y) => {
+        .map(y => {
           let formatMoney = parseInt(y.ToMoney).toLocaleString("vi-VN");
           return `
           <div class="fhs_checkout_products_item">
@@ -105,12 +105,12 @@ function getCity() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       // console.log(x["#result-set-1"]);
 
       const data = x["#result-set-1"]
-        .map((y) => {
+        .map(y => {
           return `
         <option value="${y.Id}">${y.CityName}</option>
         `;
@@ -131,10 +131,10 @@ function GetDistrictByCityId(cityId) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       // console.log(x["#result-set-1"]);
-      const data = x["#result-set-1"].map((y) => {
+      const data = x["#result-set-1"].map(y => {
         return `
           <option value="${y.Id}">${y.DistrictName}</option>
         `;
@@ -186,17 +186,17 @@ async function getMoneyCart() {
 }
 
 async function totalMoneyCart() {
-  const money = await getMoneyCart().then((res) => {
+  const money = await getMoneyCart().then(res => {
     return res;
   });
 
-  document.querySelectorAll(".total-money").forEach((element) => {
+  document.querySelectorAll(".total-money").forEach(element => {
     element.innerText = parseInt(money).toLocaleString("vi-VN") + "đ";
   });
 }
 
 async function postFormDataConfirmCheckout() {
-  const money = await getMoneyCart().then((res) => {
+  const money = await getMoneyCart().then(res => {
     return res;
   });
   const userId = stayLogin();
@@ -227,8 +227,8 @@ async function postFormDataConfirmCheckout() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
-      .then((res) => res.json())
-      .then((x) => {
+      .then(res => res.json())
+      .then(x => {
         document.getElementById("checkoutSection").style.display = "none";
         document.getElementById("completeCheckout").style.display = "block";
         document.getElementById("orderId").innerText =

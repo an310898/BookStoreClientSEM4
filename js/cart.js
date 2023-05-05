@@ -14,10 +14,10 @@ function CheckOutCart() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       const data = x["#result-set-1"]
-        .map((y) => {
+        .map(y => {
           let formatMoney = parseInt(y.ToMoney).toLocaleString("vi-VN");
 
           return `<div class="item-product-cart">
@@ -102,17 +102,17 @@ function CheckOutCart() {
 }
 function totalCart() {
   if (getCookieArrayCart().length === 0) {
-    document.querySelectorAll(".btn-checkout").forEach((elem) => {
+    document.querySelectorAll(".btn-checkout").forEach(elem => {
       elem.classList.add("btn-checkout-disable");
       elem.setAttribute("disabled", "");
     });
-    document.querySelectorAll(".total-price").forEach((element) => {
+    document.querySelectorAll(".total-price").forEach(element => {
       element.innerText = "0 đ";
     });
     document.getElementsByClassName("total-price-mobile")[0].innerText = "0 đ";
     return;
   }
-  document.querySelectorAll(".btn-checkout").forEach((elem) => {
+  document.querySelectorAll(".btn-checkout").forEach(elem => {
     elem.classList.remove("btn-checkout-disable");
   });
   const formData = {
@@ -127,12 +127,12 @@ function totalCart() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       const formatMoney =
         x["#result-set-1"][0].totalMoney.toLocaleString("vi-VN");
 
-      document.querySelectorAll(".total-price").forEach((element) => {
+      document.querySelectorAll(".total-price").forEach(element => {
         element.innerText = formatMoney;
       });
       document.getElementsByClassName("total-price-mobile")[0].innerText =
