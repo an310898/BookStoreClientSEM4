@@ -1,140 +1,182 @@
 const bookId = window.location.href.split("?id=")[1];
 // console.log(bookId)
 
-fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    BookId: bookId,
-  }),
-})
-  .then((res) => res.json())
-  .then((x) => {
-    const description = x["#result-set-1"]
-      .map((x) => {
-        return x.Description;
-      })
-      .join("");
-    // console.log(description);
-    const data = x["#result-set-1"]
-      .map((y) => {
-        return `<div class="col-sm-5">
-            <div class="view-product">
-                <img src="${y.Image}" alt="" />
-            </div>
-           
+function subtractQty() {
+  let qty = parseInt(document.querySelectorAll(".qty")[0].value);
+  if (qty > 1) {
+    document.querySelectorAll(".qty")[0].value = qty - 1;
+    document.querySelectorAll(".qty")[1].value = qty - 1;
+  } else {
+    document.querySelectorAll(".qty")[0].value = 1;
+    document.querySelectorAll(".qty")[1].value = 1;
+  }
+}
+function addQty() {
+  let qty = parseInt(document.querySelectorAll(".qty")[0].value);
+  document.querySelectorAll(".qty")[0].value = qty + 1;
+  document.querySelectorAll(".qty")[1].value = qty + 1;
+}
+const dataBook = findBookById();
 
-        </div>
-        <div class="col-sm-7">
-            <div class="product-information"><!--/product-information-->
-                <img src="images/product-details/new.jpg" class="newarrival" alt="" />
-                <h2>${y.Name}</h2>
-                <p>Book ID: ${bookId}</p>
-                <img src="images/product-details/rating.png" alt="" />
-                <span style="display:flex">
-                    <span>${y.Price} đ</span>
-                   
-                    <button type="button" class="btn btn-fefault cart">
-                        <i class="fa fa-shopping-cart"></i>
-                        Add to cart
-                    </button>
-                </span>
-                <p><b>Tác giả:</b> ${y.Author}</p>
-                <p><b>Nhà xuất bản:</b> ${y.PublishingCompany}</p>
-                <p><b>Ngôn ngữ</b>:</b> ${y.Language}</p>
-            </div><!--/product-information-->
-        </div>`;
-      })
-      .join("");
-    document.getElementById("item-details").innerHTML = data;
+function findBookById() {
+  return fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      BookId: bookId,
+    }),
+  })
+    .then(res => res.json())
+    .then(x => {
+      return x["#result-set-1"][0];
+    });
+}
 
-    document.getElementById("details").innerText = description;
-  });
+dataBook.then(x => {
+  //   console.log(x);
+  const image = document.querySelector("#image");
+  const name = document.querySelector("h1");
+  const nxb = document.querySelector("#nxb");
+  const author = document.querySelector("#author");
+  const desc = document.querySelectorAll("#desc_content");
+  const bookid = document.querySelector(".data_sku");
+  const age = document.querySelector(".data_age");
+  const dataAuthor = document.querySelector(".data_author");
+  const dataPublisher = document.querySelector(".data_publisher");
+  const dataLanguages = document.querySelector(".data_languages");
+  const dataWeight = document.querySelector(".data_weight");
+  const dataSize = document.querySelector(".data_size");
+  const dataQtyOfPage = document.querySelector(".data_qty_of_page");
+  const dataBookLayout = document.querySelector(".data_book_layout");
+  document
+    .querySelector(".btn-cart-to-cart")
+    .setAttribute("onclick", `addToCart(${bookId})`);
+  image.src = x.Image;
+  image.title = x.Name;
+  image.alt = x.Name;
+  name.innerText = x.Name;
+  nxb.innerText = x.PublishingCompany;
+  author.innerText = x.Author;
+  desc[0].innerHTML = x.Description;
+  desc[1].innerHTML = x.Description;
+  // DOM thông tin chi tiết sản phẩm
 
-fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
-  method: "POST",
-})
-  .then((res) => res.json())
-  .then((x) => {
-    const data = x["#result-set-1"]
-      .map((y) => {
-        return `<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><a href="#">${y.Name}</a></h4>
-			</div>
-		</div>`;
-      })
-      .join("");
-    document.getElementById("book-category").innerHTML = data;
-  });
+  bookid.innerText = x.Id;
+  age.innerText = x.Age;
+  if (parseInt(x.Age) === 0) {
+    age.parentElement.style = "display:none";
+  }
+  dataAuthor.innerText = x.Author;
+  dataPublisher.innerText = x.PublishingCompany;
+  dataLanguages.innerText = x.Language;
+  dataWeight.innerText = x.Weight;
+  dataSize.innerText = x.Size;
+  dataQtyOfPage.innerText = x.Pages;
+  dataBookLayout.innerText = x.CoverType;
+});
 
-fetch("http://localhost:8080/api/dynamic-procedure/GetBookCommentByBoodId", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    BookId: bookId,
-  }),
-})
-  .then((res) => res.json())
-  .then((x) => {
-    const data = x["#result-set-1"]
-      .map((y) => {
-        const date = new Date(y.CreatedDate);
-        return `<div class="col-sm-12" style="margin-bottom:20px">
-            <ul>
-                <li><a href=""><i class="fa fa-user"></i>${y.UserName}</a></li>
-                <li><a href=""><i class="fa fa-calendar-o"></i>${(dateFormat =
-                  date.getHours() +
-                  ":" +
-                  date.getMinutes() +
-                  ", " +
-                  date.toDateString())}</a></li>
-            </ul>
-            <p>${y.Comment}</p>
-           
-        </div>`;
-      })
-      .join("");
-    document.getElementById("review").innerHTML = data;
-  });
+// fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
+//   method: "POST",
+// })
+//   .then((res) => res.json())
+//   .then((x) => {
+//     const data = x["#result-set-1"]
+//       .map((y) => {
+//         return `<div class="panel panel-default">
+// 			<div class="panel-heading">
+// 				<h4 class="panel-title"><a href="#">${y.Name}</a></h4>
+// 			</div>
+// 		</div>`;
+//       })
+//       .join("");
+//     document.getElementById("book-category").innerHTML = data;
+//   });
+function GetBookCommentByBoodId() {
+  fetch("http://localhost:8080/api/dynamic-procedure/GetBookCommentByBoodId", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      BookId: bookId,
+    }),
+  })
+    .then(res => res.json())
+    .then(x => {
+      const data = x["#result-set-1"]
+        .map(y => {
+          //   console.log(y);
+          const date = new Date(y.CreatedDate);
+          return `<li>
+                            <div>
+                              <div>${y.UserName}</div>
+                              <div>${(dateFormat = date.toLocaleDateString(
+                                "vi-VN",
+                                {
+                                  weekday: "short",
+                                  year: "numeric",
+                                  month: "long",
+                                  day: "numeric",
+                                }
+                              ))}</div>
+                            </div>
+                            <div>
+                              <div class="fhs_center_left">
+                                <div class="rating-box">
+                                  <div class="rating" style="width: ${
+                                    y.Rate * 20
+                                  }%"></div>
+                                </div>
+                                <div class="clear"></div>
+                              </div>
+                              <div>
+                                ${y.Comment}
+                              </div>
+                            </div>
+                          </li>
+                          `;
+        })
+        .join("");
+      document.querySelector("ul.comment_list").innerHTML = data;
+    });
+}
+GetBookCommentByBoodId();
+function SaveCommentByBook() {
+  const userNameReviewInput = document.getElementById("nickname_field");
+  const userNameCommentInput = document.getElementById("review_field");
+  const validUserNameText = document.getElementById(
+    "advice-required-entry-nickname_field"
+  );
+  const validCommentText = document.getElementById(
+    "advice-validate-length-minimum-10-review_field"
+  );
+  userNameReviewInput.classList.remove("validation-failed");
+  userNameCommentInput.classList.remove("validation-failed");
+  validUserNameText.style.display = "none";
+  validCommentText.style.display = "none";
 
-function submitReview() {
-  const userNameReviewInput = document.getElementById("userNameReview");
-  userNameReviewInput.style.border = "none";
-  const userNameEmailInput = document.getElementById("userEmailReview");
-  userNameEmailInput.style.border = "none";
-  const userNameCommentInput = document.getElementById("userComment");
-  userNameCommentInput.style.border = "none";
-  const userName = document.getElementById("userNameReview").value;
-  const userEmail = document.getElementById("userEmailReview").value;
-  const userComment = document.getElementById("userComment").value;
-  const userRate = document.querySelector('input[name="rating"]:checked').value;
+  const userName =
+    document.getElementById("nickname_field")?.value.trim() || "";
 
-  // console.log(userName);
-  // console.log(userEmail);
-  // console.log(userComment);
-  // console.log(userRate);
+  const userComment =
+    document.getElementById("review_field")?.value.trim() || "";
 
-  // console.log(isValidEmail(userEmail));
+  const userRate = document.querySelectorAll(".rating_item.active").length || 0;
 
-  if (
-    userName.length == 0 ||
-    userEmail.length == 0 ||
-    userComment.length == 0 ||
-    isValidEmail(userEmail)
-  ) {
-    if (userName.length == 0) {
-      userNameReviewInput.style.border = "1px solid red";
+  console.log(userName);
+  console.log(userComment);
+  console.log(userRate);
+
+  if (userName.length < 6 || userComment.length < 20) {
+    if (userName.length < 6) {
+      userNameReviewInput.classList.add("validation-failed");
+      validUserNameText.style.display = "block";
     }
-    if (userEmail.length == 0 || !isValidEmail(userEmail)) {
-      userNameEmailInput.style.border = "1px solid red";
-    }
-    if (userComment.length == 0) {
-      userNameCommentInput.style.border = "1px solid red";
+    if (userComment.length < 20) {
+      userNameCommentInput.classList.add("validation-failed");
+      validCommentText.style.display = "block";
     }
     return;
   }
@@ -148,35 +190,126 @@ function submitReview() {
       BookId: bookId,
       Rate: userRate,
       UserName: userName,
-      UserEmail: userEmail,
       Comment: userComment,
     }),
   })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data["#result-set-1"]);
+    .then(res => res.json())
+    .then(data => {
+      GetBookCommentByBoodId();
+      domDataBookRate();
+      closeReview();
     });
 }
 
-const form = document.getElementById("rating-form");
-const labels = form.querySelectorAll(".rating label");
+$(".product_view_tab_content_ad_more").html(
+  $(".product_view_tab_content_ad").html()
+);
+$(document).ready(function () {
+  let h = document.querySelector(".product_view_tab_content_ad_more").height;
 
-labels.forEach(function (label) {
-  label.addEventListener("click", function () {
-    const rating = this.previousElementSibling.value;
+  if (h + 25 > 600) {
+    $("#desc_viewmore").fadeIn(0);
+  }
+  $(".rating_item").click(function () {
+    $(".rating_item").removeClass("active");
 
-    labels.forEach(function (label) {
-      label.classList.remove("active");
-    });
+    $(this).prevAll(".rating_item").addBack().addClass("active");
 
-    for (let i = 0; i < rating; i++) {
-      labels[i].classList.add("active");
+    $(".rating_item.active").attr("data", $(this).attr("data"));
+  });
+  $("#btn_showmore").click(function () {
+    let $btn_showmore = $(this);
+    if ($(".product_view_tab_content_ad_more").is(":visible")) {
+      $btn_showmore.html(
+        'Xem Thêm<span class="icon_seemore_blue mobile_only down" style="margin-left:4px;"></span>'
+      );
+    } else {
+      $btn_showmore.html(
+        'Rút Gọn<span class="icon_seemore_blue mobile_only up" style="margin-left:4px;"></span>'
+      );
     }
+    $(".product_view_tab_content_ad_more").slideToggle();
   });
 });
+function showReview() {
+  $(".youama-ajaxlogin-cover").fadeIn(0);
+  $("#popup_write_review").fadeIn(0);
+}
+function closeReview() {
+  $("#popup_write_review").fadeOut(0);
+  $(".youama-ajaxlogin-cover").fadeOut(0);
+}
 
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const bookRate = fetch("http://localhost:8080/api/dynamic-procedure/BookRate", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    BookId: bookId,
+  }),
+})
+  .then(res => res.json())
+  .then(x => {
+    return x["#result-set-1"].concat(x["#result-set-2"]);
+  });
 
-  return emailRegex.test(email);
+function domDataBookRate() {
+  bookRate.then(x => {
+    if (x[0].TotalComments === 0) {
+      return;
+    }
+    console.log(x[0]);
+    document.querySelector(
+      "#product_view_tab_content_review > div.product-view-tab-content-rating > div > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1)"
+    ).innerHTML = x[0].AverageRate + "<span>/5</span>";
+    document.querySelectorAll(".rating-total").forEach(y => {
+      y.style.width = x[0].AverageRate * 20 + "%";
+    });
+
+    document.querySelector(
+      "td.review-position > p > a"
+    ).innerText = `(${x[0].TotalComments} đánh giá)`;
+
+    document.querySelector(
+      "#product_view_tab_content_review > div.product-view-tab-content-rating > div > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(3)"
+    ).innerText = `(${x[0].TotalComments} đánh giá)`;
+
+    for (let i = 1; i < x.length; i++) {
+      const percent = roundFloat(x[i].Percentage);
+      if (x[i].Rate === 5) {
+        document.querySelector("#rate-5 div > div").style.width = `${percent}%`;
+        document.querySelector("#rate-5 > span:nth-child(3)").innerText =
+          percent + "%";
+      }
+      if (x[i].Rate === 4) {
+        document.querySelector("#rate-4 div > div").style.width = `${percent}%`;
+        document.querySelector("#rate-4 > span:nth-child(3)").innerText =
+          percent + "%";
+      }
+      if (x[i].Rate === 3) {
+        document.querySelector("#rate-3 div > div").style.width = `${percent}%`;
+        document.querySelector("#rate-3 > span:nth-child(3)").innerText =
+          percent + "%";
+      }
+      if (x[i].Rate === 2) {
+        document.querySelector("#rate-2 div > div").style.width = `${percent}%`;
+        document.querySelector("#rate-2 > span:nth-child(3)").innerText =
+          percent + "%";
+      }
+      if (x[i].Rate === 1) {
+        document.querySelector("#rate-1 div > div").style.width = `${percent}%`;
+        document.querySelector("#rate-1 > span:nth-child(3)").innerText =
+          percent + "%";
+      }
+    }
+  });
+}
+domDataBookRate();
+function roundFloat(num) {
+  if (num % 1 >= 0.5) {
+    return Math.ceil(num);
+  } else {
+    return Math.floor(num);
+  }
 }

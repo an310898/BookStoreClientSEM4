@@ -4,10 +4,10 @@ function Category() {
   fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       const data = x["#result-set-1"]
-        .map((y) => {
+        .map(y => {
           return `	<a href="shop.html/?id=${y.Id}" class="fhs_column_center">
 					<img class=" lazyloaded" src="${y.ImageURL}" >
 					<div class="fhs_nowrap_two fhs_center_center" style="margin-top: 16px; font-size: 1.23em;">${y.Name}</div>
@@ -22,10 +22,10 @@ function listNewBook() {
   fetch("http://localhost:8080/api/dynamic-procedure/listNewBook", {
     method: "POST",
   })
-    .then((res) => res.json())
-    .then((x) => {
+    .then(res => res.json())
+    .then(x => {
       const data = x["#result-set-1"]
-        .map((y) => {
+        .map(y => {
           return `<div class="col-sm-3">
 		<div class="product-image-wrapper">
 			<a href="product-details.html?id=${y.Id}" class="single-products">
@@ -60,10 +60,11 @@ function CategoryTabData(categoryId) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   })
-    .then((res) => res.json())
-    .then((x) => {
-      const data1 = x["#result-set-1"]
-        .map((y) => {
+    .then(res => res.json())
+    .then(x => {
+      const dataNewBook = x["#result-set-1"]
+        .map(y => {
+          //   console.log(y);
           return `
              <div class="col-6">
                         <li
@@ -88,7 +89,7 @@ function CategoryTabData(categoryId) {
                               <div>
                                 <h2 class="product-name-no-ellipsis">
                                   <a
-                                    href="https://www.fahasa.com/wolfoo-book-ngay-dau-tien-di-hoc.html"
+                                    href="product-details.html?id=${y.Id}"
                                     title="${y.Name}"
                                     >${y.Name}</a
                                   >
@@ -104,8 +105,11 @@ function CategoryTabData(categoryId) {
                                     <div class="rating-box">
                                       <div
                                         class="rating"
-                                        style="width: ${y.rate}%"></div>
+                                        style="width: ${y.rate * 20}%"></div>
                                     </div>
+                                    <div class="amount">(${
+                                      y.countComment
+                                    })</div>
                                   </div>
                                 </div>
                               </div>
@@ -116,7 +120,97 @@ function CategoryTabData(categoryId) {
         `;
         })
         .join("");
+      const dataFavBook = x["#result-set-2"]
+        .map(y => {
+          return `
+             <div class="col-6">
+                        <li
+                          class="fhs_product_basic swiper-slide swiper-slide-active">
+                          <div class="item-inner">
+                            <div class="ma-box-content">
+                              <div class="products clear">
+                                <div class="product images-container">
+                                  <a
+                                    href="product-details.html?id=${y.Id}"
+                                    title="${y.Name}"
+                                    class="product-image"
+                                    ><div class="product-image">
+                                      <img
+                                        class="lazyloaded"
+                                        src="${y.Image}"
+                                        data-src="${y.Image}"
+                                        alt="${y.Name}" /></div
+                                  ></a>
+                                </div>
+                              </div>
+                              <div>
+                                <h2 class="product-name-no-ellipsis">
+                                  <a
+                                    href="product-details.html?id=${y.Id}"
+                                    title="${y.Name}"
+                                    >${y.Name}</a
+                                  >
+                                </h2>
+                                <div class="price-label">
+                                  <span
+                                    class="price m-price-font fhs_center_left"
+                                    >${y.Price} đ</span
+                                  >
+                                </div>
+                                <div class="fhs-rating-container">
+                                  <div class="ratings fhs-no-mobile-block">
+                                    <div class="rating-box">
+                                      <div
+                                        class="rating"
+                                        style="width: ${y.rate * 20}%"></div>
+                                    </div>
+                                    <div class="amount">(${
+                                      y.countComment
+                                    })</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </div>
+        `;
+        })
+        .join("");
+      //   console.log(dataFavBook);
+      if (categoryId === 1) {
+        document.querySelector("#van-hoc-moi .row").innerHTML = dataNewBook;
+        document.querySelector("#van-hoc-danh-gia-cao .row").innerHTML =
+          dataFavBook;
+      }
+      if (categoryId === 2) {
+        document.querySelector("#nuoi-day-con-moi .row").innerHTML =
+          dataNewBook;
+        document.querySelector("#nuoi-day-con-danh-gia-cao .row").innerHTML =
+          dataFavBook;
+      }
+      if (categoryId === 3) {
+        document.querySelector("#thieu-nhi-moi .row").innerHTML = dataNewBook;
+        document.querySelector("#thieu-nhi-danh-gia-cao .row").innerHTML =
+          dataFavBook;
+      }
+      if (categoryId === 4) {
+        document.querySelector("#tam-ly-ky-nang-moi .row").innerHTML =
+          dataNewBook;
+        document.querySelector("#tam-ly-ky-nang-danh-gia-cao .row").innerHTML =
+          dataFavBook;
+      }
+      if (categoryId === 5) {
+        document.querySelector("#tieu-su-hoi-ky-moi .row").innerHTML =
+          dataNewBook;
+        document.querySelector("#tieu-su-hoi-ky-danh-gia-cao .row").innerHTML =
+          dataFavBook;
+      }
     });
 }
+CategoryTabData(1);
 
+CategoryTabData(2);
 CategoryTabData(3);
+CategoryTabData(4);
+CategoryTabData(5);

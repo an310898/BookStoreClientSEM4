@@ -1,563 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Product Details | E-Shopper</title>
+    <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/prettyPhoto.css" rel="stylesheet" />
-    <link href="css/price-range.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="images/ico/favicon.ico" />
     <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="images/ico/apple-touch-icon-144-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="images/ico/apple-touch-icon-114-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="images/ico/apple-touch-icon-72-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="images/ico/apple-touch-icon-57-precomposed.png"
-    /></head
-  ><!--/head-->
-
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082"
+      media="all" />
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/product-details.css" rel="stylesheet" />
+  </head>
   <body>
-    <header id="header">
-      <!--header-->
-      <!--header_top-->
-
-      <!-- <div class="header_top">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div> 
-		</div> -->
-
-      <!--/header_top-->
-
-      <div class="header-middle">
-        <!--header-middle-->
+    <section id="header" class="heaer">
+      <div class="fhs_header_desktop" style="background-color: white">
         <div class="container">
-          <div class="row" style="display: flex; align-items: center">
-            <div class="col-sm-4">
-              <div class="logo pull-left">
-                <a href="index.html"
-                  ><img
-                    style="width: 100%; display: block"
-                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
-                    alt="FAHASA.COM"
-                /></a>
+          <div class="fhs-header-top-second-bar" style="position: relative">
+            <div
+              class="icon_fahasa_logo fhs_mouse_point"
+              onclick="location.href = '/';"
+              title="FAHASA.COM"></div>
+
+            <div class="fhs_center_left">
+              <div class="box search_box">
+                <form
+                  id="search_mini_form_desktop"
+                  action="https://www.fahasa.com/catalogsearch/result/"
+                  method="get">
+                  <div class="search pull-left">
+                    <div class="form-search fhs_dropdown_hover_out">
+                      <input
+                        id="search_desktop"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search" />
+                      <span class="fhs_btn_default active button-search"
+                        ><span class="ico_search_white"></span
+                      ></span>
+                      <div class="form-search-form fhs_dropdown"></div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="col-sm-8">
-              <div class="shop-menu pull-right">
-                <ul class="nav navbar-nav">
-                  <!-- <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-                  <li>
-                    <a href="cart.html"
-                      ><i class="fa fa-shopping-cart"></i> Giỏ hàng</a
-                    >
-                  </li>
-                  <li id="loginUser">
-                    <a href="login.html"
-                      ><i class="fa fa-user"></i> Đăng nhập / Đăng ký</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/header-middle-->
-
-      <div class="header-bottom">
-        <!--header-bottom-->
-        <div class="container">
-          <div class="row">
-            <!-- <div class="col-sm-3">
-						 <div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div> -->
-            <!-- <div class="mainmenu pull-left">
-							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html" class="active">Home</a></li>
-								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
-                                    </ul>
-                                </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
-							</ul>
-						</div> 
-					</div>-->
-            <div>
-              <div class="search_box pull-right">
-                <input
-                  style="width: 250px"
-                  type="text"
-                  placeholder="Tìm kiếm"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/header-bottom-->
-    </header>
-    <!--/header-->
-
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="left-sidebar">
-              <h2>Danh mục sách</h2>
-              <div class="panel-group category-products" id="book-category">
-                <!--category-productsr-->
-              </div>
-              <!--/category-products-->
-
-              <div>
-                <!--shipping-->
-                <img
-                  style="width: 100%; height: auto"
-                  src="https://cdn0.fahasa.com/media/wysiwyg/Thang-01-2023/BannerBlock10_ThieuNhi_350x415.jpg"
-                  alt=""
-                />
-              </div>
-              <!--/shipping-->
-            </div>
-          </div>
-
-          <div class="col-sm-9 padding-right">
-            <div id="item-details" class="product-details">
-              <!--product-details-->
-            </div>
-            <!--/product-details-->
-
-            <div class="category-tab shop-details-tab">
-              <!--category-tab-->
-              <div class="col-sm-12">
-                <ul class="nav nav-tabs">
-                  <li class="active">
-                    <a href="#reviews" data-toggle="tab">Đánh giá</a>
-                  </li>
-                  <li>
-                    <a href="#details" data-toggle="tab">Mô tả</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-content">
-                <div class="tab-pane fade" style="padding: 0 25px" id="details">
-                  <!-- DOM JS  -->
-                </div>
-
-                <div class="tab-pane fade active in" id="reviews">
-                  <div id="review"></div>
-                  <div>
-                    <p><b>Viết đánh giá của bạn về sách</b></p>
-                    <form>
-                      <span>
-                        <input
-                          id="userNameReview"
-                          type="text"
-                          placeholder="Tên"
-                        />
-                        <input
-                          id="userEmailReview"
-                          type="email"
-                          placeholder="Địa chỉ Email"
-                        />
-                      </span>
-                      <textarea id="userComment" name=""></textarea>
-                      <b>Rating: </b>
-                      <div class="rating" id="rating-form">
-                        <input
-                          type="radio"
-                          id="star1"
-                          name="rating"
-                          value="1"
-                          checked
-                        />
-                        <label for="star1" title="1 star">&#9733;</label>
-                        <input
-                          type="radio"
-                          id="star2"
-                          name="rating"
-                          value="2"
-                        />
-                        <label for="star2" title="2 stars">&#9733;</label>
-                        <input
-                          type="radio"
-                          id="star3"
-                          name="rating"
-                          value="3"
-                        />
-                        <label for="star3" title="3 stars">&#9733;</label>
-                        <input
-                          type="radio"
-                          id="star4"
-                          name="rating"
-                          value="4"
-                        />
-                        <label for="star4" title="4 stars">&#9733;</label>
-                        <input
-                          type="radio"
-                          id="star5"
-                          name="rating"
-                          value="5"
-                        />
-                        <label for="star5" title="5 stars">&#9733;</label>
+            <div class="fhs_center_space" style="padding-left: 24px">
+              <div class="cart-top no_cover fhs_dropdown_hover">
+                <div class="fhs_top_cart" style="margin-right: 5px">
+                  <a href="cart.html">
+                    <div class="heading heading-custom" style="display: flex">
+                      <div class="fhs_center_center" style="margin-bottom: 3px">
+                        <div class="icon_cart_gray">
+                          <!-- <div
+							  class="top_menu_unseen fhs_center_center"
+							  style="visibility: visible"
+							>
+							  <span
+								class="cartmini_qty"
+								style="visibility: visible"
+								>2</span
+							  >
+							</div> -->
+                        </div>
                       </div>
-                      <button
-                        type="button"
-                        class="btn btn-default pull-right"
-                        onclick="submitReview()"
-                      >
-                        Submit
-                      </button>
-                    </form>
+                      <div
+                        class="top-cart-button-label fhs_top_center"
+                        style="margin-top: 4px">
+                        <div class="top_menu_label">Giỏ Hàng</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="fhs_top_account no_cover fhs_dropdown_hover"
+                id="fhs_top_account_hover">
+                <a href="login.html">
+                  <div
+                    class="fhs_top_account_button"
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                    ">
+                    <div
+                      class="icon_account_gray"
+                      style="margin-bottom: 3px"></div>
+                    <div
+                      class="top_menu_label fhs_top_center fhs_nowrap_one"
+                      id="loginUser fhs_top_account_title">
+                      Tài khoản
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fhs_header_mobile">
+        <div class="fhs-logo" style="text-align: center">
+          <a href="https://www.fahasa.com/" title="FAHASA.COM" class="logo"
+            ><strong class="logo-title">FAHASA.COM</strong
+            ><img
+              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+              alt="FAHASA.COM"
+          /></a>
+        </div>
+        <div class="fhs-header-top-bar">
+          <div class="search-mobile-header">
+            <div class="ves-autosearch">
+              <div class="box search_box">
+                <form
+                  id="search_mini_form_mobile"
+                  action="https://www.fahasa.com/catalogsearch/result/"
+                  method="get">
+                  <div class="search pull-left">
+                    <div class="form-search">
+                      <input
+                        id="search_mobile"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search" />
+                      <span class="button-search fa fa-search"></span>
+                      <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
+                      <div
+                        class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
+                        style="display: none"></div>
+                      <div
+                        id="search_autocomplete"
+                        class="search-autocomplete"></div>
+                      <div class="form-search-form fhs_dropdown"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="icons-mobile-header" style="position: relative">
+            <div id="cart" class="clearfix">
+              <a href="https://www.fahasa.com/checkout/cart/">
+                <div class="fhs_center_center">
+                  <div class="icon_cart_white" style="margin-right: 4px">
+                    <div>
+                      <div
+                        class="top_menu_unseen fhs_center_center cartmini_qty"
+                        style="visibility: visible">
+                        2
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-            <!--/category-tab-->
+          </div>
 
-            <div class="recommended_items">
-              <!--recommended_items-->
-              <h2 class="title text-center">Sách liên quan</h2>
-
-              <!-- <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="item active">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="item">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend2.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="images/home/recommend3.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							  </a>			
-						</div> -->
+          <style>
+            .login-cutomer-icon {
+              position: inherit;
+              background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png)
+                no-repeat center center;
+              background-size: 20px !important;
+            }
+            @media (max-width: 992px) {
+              #header .header1 .customer-top {
+                margin-right: 5px;
+                margin-left: 5px;
+              }
+            }
+            #header .header1 .customer-top {
+              padding-left: 0px;
+            }
+          </style>
+          <div id="mini_cart_block" class="customer-top">
+            <div>
+              <a href="https://www.fahasa.com/customer/account/">
+                <div>
+                  <div
+                    class="login-cutomer-icon"
+                    style="width: 30px; height: 35px"></div>
+                </div>
+              </a>
             </div>
-            <!--/recommended_items-->
           </div>
         </div>
       </div>
     </section>
 
-    <footer id="footer">
-      <!--Footer-->
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2">
-              <div class="companyinfo">
-                <h2><span>e</span>-shopper</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed
-                  do eiusmod tempor
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-7">
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe1.png" alt="" />
-                    </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
-                    </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
+    <div class="main-container col1-layout no-margin-top">
+      <div class="main">
+        <div style="margin-bottom: 5px"></div>
+        <div class="col-main">
+          <div class="container">
+            <div class="container-inner">
+              <div class="youama-ajaxlogin-cover" style="display: none"></div>
+              <div class="product-view kasitoo">
+                <!--begin web UI-->
+                <div class="product-essential">
+                  <div class="product-essential-media">
+                    <div class="product-view-image">
+                      <div
+                        class="product-view-image-product fhs_img_frame_container"
+                        img_index="0">
+                        <img
+                          id="image"
+                          class="fhs-p-img lazyloaded"
+                          src=""
+                          alt=""
+                          title="" />
+                      </div>
+                      <div class="clear"></div>
 
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe2.png" alt="" />
+                      <!-- Initialize Swiper -->
+                      <div class="clear"></div>
                     </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
-                    </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
+                  </div>
+                  <div class="product-essential-detail">
+                    <h1></h1>
 
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe3.png" alt="" />
+                    <div class="product-view-sa">
+                      <div class="product-view-sa_one">
+                        <div class="product-view-sa-supplier">
+                          <span>Nhà xuất bản:</span> <span id="nxb"></span>
+                        </div>
+                        <div class="product-view-sa-author">
+                          <!-- <span>Tác giả:</span><span>Soubee Amako</span> -->
+                        </div>
+                      </div>
+                      <div class="product-view-sa_two">
+                        <div class="product-view-sa-supplier">
+                          <span>Tác giả:</span><span id="author"></span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
+                    <div class="view-rate" style="">
+                      <div class="view-rate-left" style="padding: 0px">
+                        <div class="ratings">
+                          <div class="rating-content">
+                            <table class="ratings-desktop">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a
+                                      onclick="prodComment.choiceTab('review');"
+                                      ><div class="rating-box">
+                                        <div
+                                          class="rating rating-total"
+                                          style="width: 0%"></div></div
+                                    ></a>
+                                  </td>
+                                  <td class="review-position">
+                                    <p class="rating-links">
+                                      <a
+                                        onclick="prodComment.choiceTab('review');"
+                                        >(0 đánh giá)
+                                      </a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <!-- <table class="ratings-mobile ratings-short">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a
+                                      onclick="prodComment.choiceTab('review');"
+                                      ><div class="icon-star deactive"></div>
+                                      <div class="icon-star-text"></div
+                                    ></a>
+                                  </td>
+                                  <td class="review-position">
+                                    <p class="rating-links">
+                                      <a
+                                        style="cursor: pointer"
+                                        onclick="prodComment.choiceTab('review');"
+                                        >(0)</a
+                                      >
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table> -->
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
 
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe4.png" alt="" />
+                    <div class="col-md-12 price-block">
+                      <div
+                        id="catalog-product-details-price"
+                        class="product_price price-block-left"
+                        style="">
+                        <div class="price-box">
+                          <p class="special-price">
+                            <span class="price-label">Special Price</span>
+                            <span class="price" id="product-price-427928"
+                              >36.000&nbsp;đ</span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div class="clear"></div>
+                      <div class="price-block-right">
+                        <ui class="fhs_addon fhs_addon_desktop">
+                          <li class="fhs_addon_topvote" style="display: none">
+                            <span class="fhs_addon_topvote_icon"></span>
+                            <span class="fhs_addon_topvote_text fhs_nowrap_one"
+                              >Bình chọn</span
+                            >
+                          </li>
+                          <li
+                            class="fhs_addon_wishlist"
+                            style="display: none"></li>
+                        </ui>
+                      </div>
                     </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
+
+                    <div class="clear"></div>
+
+                    <div class="clear"></div>
+                    <div id="catalog-product-details-discount">
+                      <div class="product-view-quantity-box">
+                        <label for="qty">Số lượng:</label>
+                        <div class="product-view-quantity-box-block">
+                          <a class="btn-subtract-qty" onclick="subtractQty();"
+                            ><img
+                              style="width: 12px; height: auto"
+                              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_minus2x.png"
+                          /></a>
+                          <input
+                            type="text"
+                            name="qty"
+                            id="qty"
+                            maxvalue="999"
+                            minvalue="1"
+                            align="center"
+                            value="1"
+                            title="SL"
+                            class="input-text qty" />
+                          <a class="btn-add-qty" onclick="addQty();"
+                            ><img
+                              style="width: 12px; height: auto"
+                              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_plus2x.png"
+                          /></a>
+                        </div>
+                      </div>
                     </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
+                    <div class="clear"></div>
+                    <div class="product_view_add_box">
+                      <button
+                        type="button"
+                        title="Thêm vào giỏ hàng"
+                        class="btn-cart-to-cart"
+                        onclick="addToCart()">
+                        <span class="fhs_icon_cart"></span
+                        ><span>Thêm vào giỏ hàng</span>
+                      </button>
+                    </div>
+                    <div
+                      class="policy-popup-background"
+                      id="policy-popup-background">
+                      <div class="policy-popup-content"></div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div class="clear"></div>
+                    <div class="fhs-bsidebar">
+                      <div class="fhs-bsidebar-tab">
+                        <ul class="fhs-bsidebar-tab-items">
+                          <li class="fhs-bsidebar-tab-items-qty">
+                            <div class="product-view-quantity-box">
+                              <div class="product-view-quantity-box-block">
+                                <a
+                                  class="btn-subtract-qty"
+                                  onclick="subtractQty();"
+                                  ><img
+                                    style="width: 12px; height: auto"
+                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_minus2x.png"
+                                /></a>
+                                <input
+                                  type="text"
+                                  name="qty"
+                                  id="qty_mobile"
+                                  maxvalue="999"
+                                  minvalue="1"
+                                  align="center"
+                                  value="1"
+                                  title="SL"
+                                  class="input-text qty" />
+                                <a class="btn-add-qty" onclick="addQty();"
+                                  ><img
+                                    style="width: 12px; height: auto"
+                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_plus2x.png"
+                                /></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="fhs-bsidebar-tab-items-addcart">
+                            <button
+                              type="button"
+                              title="Thêm vào giỏ hàng"
+                              class="btn-cart-to-cart"
+                              onclick="productAddToCartForm.submit(this); return false;">
+                              <span
+                                ><span>Thêm vào</span
+                                ><span>giỏ hàng</span></span
+                              >
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="clear"></div>
               </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="address">
-                <img src="images/home/map.png" alt="" />
-                <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+              <div class="product-collateral">
+                <div
+                  id="product_view_info"
+                  class="content product_view_content">
+                  <div class="product_view_content-title">
+                    Thông tin sản phẩm
+                  </div>
+                  <div class="product_view_tab_content_ad">
+                    <div class="product_view_tab_content_additional">
+                      <table class="data-table table-additional">
+                        <colgroup>
+                          <col width="25%" />
+                          <col />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th class="table-label">Mã hàng</th>
+                            <td class="data_sku"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">Độ Tuổi</th>
+                            <td class="data_age"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">Tác giả</th>
+                            <td class="data_author"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">NXB</th>
+                            <td class="data_publisher"></td>
+                          </tr>
+
+                          <tr>
+                            <th class="table-label">Ngôn Ngữ</th>
+                            <td class="data_languages"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">Trọng lượng (gr)</th>
+                            <td class="data_weight"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">Kích Thước Bao Bì</th>
+                            <td class="data_size"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">Số trang</th>
+                            <td class="data_qty_of_page"></td>
+                          </tr>
+                          <tr>
+                            <th class="table-label">Hình thức</th>
+                            <td class="data_book_layout"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="clear"></div>
+                    <div id="product_tabs_description_contents">
+                      <div id="desc_content" class="std">
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                  <div style="overflow-y: hidden">
+                    <div class="product_view_tab_content_ad_more" style="">
+                      <div class="clear"></div>
+                      <div id="product_tabs_description_contents">
+                        <div id="desc_content" class="std">
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="clear"></div>
+                  <div
+                    id="desc_viewmore"
+                    class="desc_viewmore"
+                    style="display: block">
+                    <div
+                      class="fhs_center_center"
+                      style="padding: 15px 0 8px 0">
+                      <a id="btn_showmore" class="fhs_btn_default mobile_link"
+                        >Xem Thêm<span
+                          class="icon_seemore_blue mobile_only down"
+                          style="margin-left: 4px"></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  id="product_view_review"
+                  class="content product_view_content">
+                  <div class="product_view_content-title">
+                    Đánh giá sản phẩm
+                  </div>
+                  <div
+                    id="product_view_tab_content_review"
+                    class="product_view_tab_content_review">
+                    <style></style>
+                    <div class="product-view-tab-content-rating">
+                      <div class="product-view-tab-content-rating-chart">
+                        <div>
+                          <div>
+                            <div>
+                              <div>0<span>/5</span></div>
+                              <div>
+                                <div class="rating-box">
+                                  <div
+                                    class="rating rating-total"
+                                    style="width: 0%"></div>
+                                </div>
+                                <div class="clear"></div>
+                              </div>
+                              <div>(0&nbsp;đánh giá)</div>
+                            </div>
+                          </div>
+                          <div>
+                            <div id="rate-5">
+                              <span>5 sao</span>
+                              <div class="review-rating">
+                                <div style="width: 0%"></div>
+                              </div>
+                              <span>0%</span>
+                            </div>
+                            <div id="rate-4">
+                              <span>4 sao</span>
+                              <div class="review-rating">
+                                <div style="width: 0%"></div>
+                              </div>
+                              <span>0%</span>
+                            </div>
+                            <div id="rate-3">
+                              <span>3 sao</span>
+                              <div class="review-rating">
+                                <div style="width: 0%"></div>
+                              </div>
+                              <span>0%</span>
+                            </div>
+                            <div id="rate-2">
+                              <span>2 sao</span>
+                              <div class="review-rating">
+                                <div style="width: 0%"></div>
+                              </div>
+                              <span>0%</span>
+                            </div>
+                            <div id="rate-1">
+                              <span>1 sao</span>
+                              <div class="review-rating">
+                                <div style="width: 0%"></div>
+                              </div>
+                              <span>0%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <button
+                            id="btn_review_write"
+                            type="button"
+                            title="Viết nhận xét của bạn"
+                            class="fhs_btn fhs_btn_write"
+                            onclick="showReview();">
+                            <span
+                              class="fhs-icon-write"
+                              style="margin-right: 4px"></span
+                            ><span>Viết đánh giá</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div class="product-view-tab-content-review-comment">
+                      <div class="comment_content">
+                        <ul class="comment_list"></ul>
+                      </div>
+                    </div>
+                    <div
+                      class="product-view-tab-content-review-comment"
+                      style="display: none">
+                      <div
+                        class="product-view-tab-content-review-comment_sort review_comment_tabs_swiper_container swiper-container-horizontal">
+                        <ul
+                          class="fhs-tabs review_comment_tabs swiper-wrapper"
+                          style="transition-duration: 0ms">
+                          <li
+                            class="active"
+                            onclick="prodComment.sort_change(this, 'last-review')">
+                            <a>Mới nhất</a>
+                            <hr />
+                          </li>
+                          <li
+                            onclick="prodComment.sort_change(this, 'best-like')">
+                            <a>Yêu thích nhất</a>
+                            <hr />
+                          </li>
+                        </ul>
+                        <span
+                          class="swiper-notification"
+                          aria-live="assertive"
+                          aria-atomic="true"></span>
+                      </div>
+                      <div class="comment_content" style="display: none">
+                        <ul class="comment_list"></ul>
+                      </div>
+                      <div class="toolbar toolbar-bottom">
+                        <div class="pager">
+                          <div class="pages" id="pagination"><ol></ol></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="popup-notification-msg">
+                      <div
+                        id="popup-fahasa-alert-logo"
+                        class="popup-fahasa-alert-logo">
+                        <center>
+                          <img
+                            src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo-alert-success.png?q=102163" />
+                        </center>
+                      </div>
+                      <div class="popup-fahasa-default-alert-content">
+                        <div
+                          id="popup-fahasa-default-content-text"
+                          class="popup-fahasa-default-content-text"
+                          style="padding: 0 10px"></div>
+                      </div>
+                      <div
+                        class="popup-fahasa-default-footer-small btn-submit col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <button
+                          type="button"
+                          onclick="prodComment.closeAlert();"
+                          class="popup-fahasa-default-alert-confirm lg-close">
+                          <span> Đã hiểu </span>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      id="popup_write_review"
+                      class="fhs_popup-default"
+                      style="width: 800px; height: 400px">
+                      <div class="fhs_popup-default-info-detail">
+                        <div class="fhs_popup-default-info-detail-title">
+                          <div class="fhs_popup-default-info-detail-title-text">
+                            <div
+                              class="fhs_popup-default-info-detail-title-left"></div>
+                            <div
+                              class="fhs_popup-default-info-detail-title-center">
+                              Viết đánh giá sản phẩm
+                            </div>
+                            <div
+                              class="fhs_popup-default-info-detail-title-right"
+                              onclick="closeReview();">
+                              <span class="icon_close_gray lg-close"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="fhs_popup-default-info-detail-content">
+                          <div class="product-view-tab-content-rating-review">
+                            <div class="rating_choice fhs_center_center">
+                              <span
+                                class="rating_item rating_item_1 active"
+                                data="1"></span>
+                              <span
+                                class="rating_item rating_item_2 active"
+                                data="2"></span>
+                              <span
+                                class="rating_item rating_item_3 active"
+                                data="3"></span>
+                              <span
+                                class="rating_item rating_item_4 active"
+                                data="4"></span>
+                              <span
+                                class="rating_item rating_item_5 active"
+                                data="5"></span>
+                            </div>
+                            <div>
+                              <div class="fhs_textbox_parent">
+                                <input
+                                  type="text"
+                                  id="nickname_field"
+                                  class="input-text required-entry full-width"
+                                  placeholder="Nhập tên sẽ hiển thị khi đánh giá" />
+                              </div>
+                              <div
+                                class="validation-advice"
+                                id="advice-required-entry-nickname_field"
+                                style="display: none">
+                                Vui lòng điền ít nhất 6 ký tự!
+                              </div>
+                            </div>
+                            <div>
+                              <textarea
+                                id="review_field"
+                                cols="5"
+                                rows="3"
+                                class="required-entry full-width validate-length-minimum-100"
+                                placeholder="Nhập nhận xét của bạn về sản phẩm"
+                                style="height: 122px; resize: none"></textarea>
+                              <div
+                                class="fhs_top_space"
+                                style="max-height: 25px">
+                                <div style="width: calc(100% - 40px)">
+                                  <div
+                                    class="validation-advice fhs_nowrap_one"
+                                    id="advice-validate-length-minimum-10-review_field"
+                                    style="display: none">
+                                    Vui lòng điền ít nhất 20 ký tự!
+                                  </div>
+                                </div>
+                                <div
+                                  id="count-message"
+                                  class="fhs_nowrap_one"
+                                  style="width: 40px"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="fhs_center_right" style="padding: 0 8px">
+                            <button
+                              type="button"
+                              class="fhs_btn_default cancel lg-close"
+                              style="margin-right: 20px"
+                              onclick="closeReview();">
+                              <span>Hủy</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="fhs_btn_default active btn_post_review"
+                              onclick="SaveCommentByBook();">
+                              <span>Gửi nhận xét</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="footer-widget">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Service</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">Online Help</a></li>
-                  <li><a href="">Contact Us</a></li>
-                  <li><a href="">Order Status</a></li>
-                  <li><a href="">Change Location</a></li>
-                  <li><a href="">FAQ’s</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Quock Shop</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">T-Shirt</a></li>
-                  <li><a href="">Mens</a></li>
-                  <li><a href="">Womens</a></li>
-                  <li><a href="">Gift Cards</a></li>
-                  <li><a href="">Shoes</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Policies</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">Terms of Use</a></li>
-                  <li><a href="">Privecy Policy</a></li>
-                  <li><a href="">Refund Policy</a></li>
-                  <li><a href="">Billing System</a></li>
-                  <li><a href="">Ticket System</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>About Shopper</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">Company Information</a></li>
-                  <li><a href="">Careers</a></li>
-                  <li><a href="">Store Location</a></li>
-                  <li><a href="">Affillate Program</a></li>
-                  <li><a href="">Copyright</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-3 col-sm-offset-1">
-              <div class="single-widget">
-                <h2>About Shopper</h2>
-                <form action="#" class="searchform">
-                  <input type="text" placeholder="Your email address" />
-                  <button type="submit" class="btn btn-default">
-                    <i class="fa fa-arrow-circle-o-right"></i>
-                  </button>
-                  <p>
-                    Get the most recent updates from <br />our site and be
-                    updated your self...
-                  </p>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <p class="pull-left">
-              Copyright © 2013 E-SHOPPER Inc. All rights reserved.
-            </p>
-            <p class="pull-right">
-              Designed by
-              <span
-                ><a target="_blank" href="http://www.themeum.com"
-                  >Themeum</a
-                ></span
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--/Footer-->
+    </div>
 
     <script src="js/jquery.js"></script>
-    <script src="js/price-range.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/product-detail.js"></script>
     <script src="js/getCookie.js"></script>
+    <script src="js/addcart.js"></script>
+    <script src="js/product-detail.js"></script>
     <script src="js/addcart.js"></script>
   </body>
 </html>

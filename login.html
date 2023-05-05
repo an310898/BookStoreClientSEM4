@@ -5,329 +5,915 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Login | E-Shopper</title>
+    <title>Đăng nhập</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link href="css/prettyPhoto.css" rel="stylesheet" />
-    <link href="css/price-range.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082"
+      media="all" />
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
     <link href="css/login.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="images/ico/favicon.ico" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="images/ico/apple-touch-icon-144-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="images/ico/apple-touch-icon-114-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="images/ico/apple-touch-icon-72-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="images/ico/apple-touch-icon-57-precomposed.png"
-    /></head
-  ><!--/head-->
+  </head>
 
   <body>
-    <header id="header">
-      <div class="header-middle">
-        <!--header-middle-->
+    <section id="header" class="heaer">
+      <div class="fhs_header_desktop" style="background-color: white">
         <div class="container">
-          <div class="row" style="display: flex; align-items: center">
-            <div class="col-sm-4">
-              <div class="logo pull-left">
-                <a href="index.html"
-                  ><img
-                    style="width: 100%; display: block"
-                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
-                    alt="FAHASA.COM"
-                /></a>
+          <div class="fhs-header-top-second-bar" style="position: relative">
+            <div
+              class="icon_fahasa_logo fhs_mouse_point"
+              onclick="location.href = '/';"
+              title="FAHASA.COM"></div>
+
+            <div class="fhs_center_left">
+              <div class="box search_box">
+                <form
+                  id="search_mini_form_desktop"
+                  action="https://www.fahasa.com/catalogsearch/result/"
+                  method="get">
+                  <div class="search pull-left">
+                    <div class="form-search fhs_dropdown_hover_out">
+                      <input
+                        id="search_desktop"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search" />
+                      <span class="fhs_btn_default active button-search"
+                        ><span class="ico_search_white"></span
+                      ></span>
+                      <div class="form-search-form fhs_dropdown"></div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="col-sm-8">
-              <div class="shop-menu pull-right">
-                <ul class="nav navbar-nav">
-                  <li>
-                    <a href="cart.html"
-                      ><i class="fa fa-shopping-cart"></i> Giỏ hàng</a
-                    >
-                  </li>
-                  <li>
-                    <a href="login.html"
-                      ><i class="fa fa-lock"></i> Đăng nhập / Đăng ký</a
-                    >
-                  </li>
-                </ul>
+            <div class="fhs_center_space" style="padding-left: 24px">
+              <div class="cart-top no_cover fhs_dropdown_hover">
+                <div class="fhs_top_cart" style="margin-right: 5px">
+                  <a href="cart.html">
+                    <div class="heading heading-custom" style="display: flex">
+                      <div class="fhs_center_center" style="margin-bottom: 3px">
+                        <div class="icon_cart_gray">
+                          <!-- <div
+							  class="top_menu_unseen fhs_center_center"
+							  style="visibility: visible"
+							>
+							  <span
+								class="cartmini_qty"
+								style="visibility: visible"
+								>2</span
+							  >
+							</div> -->
+                        </div>
+                      </div>
+                      <div
+                        class="top-cart-button-label fhs_top_center"
+                        style="margin-top: 4px">
+                        <div class="top_menu_label">Giỏ Hàng</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="fhs_top_account no_cover fhs_dropdown_hover"
+                id="fhs_top_account_hover">
+                <a href="login.html">
+                  <div
+                    class="fhs_top_account_button"
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                    ">
+                    <div
+                      class="icon_account_gray"
+                      style="margin-bottom: 3px"></div>
+                    <div
+                      class="top_menu_label fhs_top_center fhs_nowrap_one"
+                      id="loginUser fhs_top_account_title">
+                      Tài khoản
+                    </div>
+                  </div>
+                </a>
+                <div
+                  class="fhs_top_account_dropdown fhs_dropdown right guest"
+                  style="display: none">
+                  <div>
+                    <button
+                      type="button"
+                      onclick="fhs_account.showLoginPopup('login');"
+                      title="Đăng nhập"
+                      class="fhs_btn_default active">
+                      <span>Đăng nhập</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      onclick="fhs_account.showLoginPopup('register')"
+                      title="Đăng ký"
+                      class="fhs_btn_default">
+                      <span>Đăng ký</span>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--/header-middle-->
-    </header>
-    <!--/header-->
-
-    <section id="form">
-      <!--form-->
-      <div class="container">
-        <ul class="nav nav-tabs nav-justified">
-          <li class="active">
-            <a href="#login" data-toggle="tab">Đăng nhập</a>
-          </li>
-          <li>
-            <a href="#register" data-toggle="tab">Đăng ký</a>
-          </li>
-        </ul>
-        <div class="tab-content">
-          <div class="tab-pane fade active in" id="login">
-            <form class="form">
-              <div>
-                <label for="userName">Tên đăng nhập</label><br />
-                <input type="text" id="userName" placeholder="Tên đăng nhập" />
-              </div>
-              <div>
-                <label for="password">Mật khẩu</label><br />
-                <input type="password" id="password" placeholder="Mật khẩu" />
-              </div>
-              <div id="btn-login">
-                <button type="button" class="btn btn-primary" onclick="login()">
-                  <span>Đăng nhập</span>
-                </button>
-              </div>
-              <div id="wrongAccount" style="color: red"></div>
-            </form>
-          </div>
-          <div class="tab-pane fade" id="register">
-            <form class="form" id="formRegister">
-              <div>
-                <label for="nameRe">Họ và tên</label><br />
-                <input type="text" id="nameRe" placeholder="Họ và tên" />
-              </div>
-              <div>
-                <label for="userNameRe">Tên đăng nhập</label><br />
-                <input
-                  type="text"
-                  id="userNameRe"
-                  placeholder="Tên đăng nhập"
-                  onkeyup="validUserName()"
-                />
-                <div id="validUserName"></div>
-              </div>
-              <div>
-                <label for="passwordRe">Mật khẩu</label><br />
-                <input
-                  type="password"
-                  id="passwordRe"
-                  placeholder="Mật khẩu"
-                  onkeyup="checkPass()"
-                />
-                <div id="validPass"></div>
-              </div>
-              <div>
-                <label for="rePasswordRe">Nhập lại mật khẩu</label><br />
-                <input
-                  type="password"
-                  id="rePasswordRe"
-                  placeholder="Nhập lại mật khẩu"
-                  onkeyup="checkRePass()"
-                />
-                <div id="textRepassNotMatching"></div>
-              </div>
-              <div id="btn-register">
-                <button
-                  disabled
-                  id="btn-re"
-                  type="button"
-                  class="btn btn-primary"
-                  onclick="register()"
-                >
-                  <span>Đăng ký</span>
-                </button>
-              </div>
-            </form>
-          </div>
+      <div class="fhs_header_mobile">
+        <div class="fhs-logo" style="text-align: center">
+          <a href="https://www.fahasa.com/" title="FAHASA.COM" class="logo"
+            ><strong class="logo-title">FAHASA.COM</strong
+            ><img
+              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+              alt="FAHASA.COM"
+          /></a>
         </div>
-      </div>
-    </section>
-    <!--/form-->
-
-    <footer id="footer">
-      <!--Footer-->
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2">
-              <div class="companyinfo">
-                <h2><span>e</span>-shopper</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed
-                  do eiusmod tempor
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-7">
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe1.png" alt="" />
+        <div class="fhs-header-top-bar">
+          <div class="search-mobile-header">
+            <div class="ves-autosearch">
+              <div class="box search_box">
+                <form
+                  id="search_mini_form_mobile"
+                  action="https://www.fahasa.com/catalogsearch/result/"
+                  method="get">
+                  <div class="search pull-left">
+                    <div class="form-search">
+                      <input
+                        id="search_mobile"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search" />
+                      <span class="button-search fa fa-search"></span>
+                      <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
+                      <div
+                        class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
+                        style="display: none"></div>
+                      <div
+                        id="search_autocomplete"
+                        class="search-autocomplete"></div>
+                      <div class="form-search-form fhs_dropdown"></div>
                     </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
-                    </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
-
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe2.png" alt="" />
-                    </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
-                    </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
-
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe3.png" alt="" />
-                    </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
-                    </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
-
-              <div class="col-sm-3">
-                <div class="video-gallery text-center">
-                  <a href="#">
-                    <div class="iframe-img">
-                      <img src="images/home/iframe4.png" alt="" />
-                    </div>
-                    <div class="overlay-icon">
-                      <i class="fa fa-play-circle-o"></i>
-                    </div>
-                  </a>
-                  <p>Circle of Hands</p>
-                  <h2>24 DEC 2014</h2>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="address">
-                <img src="images/home/map.png" alt="" />
-                <p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-widget">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Service</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">Online Help</a></li>
-                  <li><a href="">Contact Us</a></li>
-                  <li><a href="">Order Status</a></li>
-                  <li><a href="">Change Location</a></li>
-                  <li><a href="">FAQ’s</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Quock Shop</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">T-Shirt</a></li>
-                  <li><a href="">Mens</a></li>
-                  <li><a href="">Womens</a></li>
-                  <li><a href="">Gift Cards</a></li>
-                  <li><a href="">Shoes</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>Policies</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">Terms of Use</a></li>
-                  <li><a href="">Privecy Policy</a></li>
-                  <li><a href="">Refund Policy</a></li>
-                  <li><a href="">Billing System</a></li>
-                  <li><a href="">Ticket System</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2">
-              <div class="single-widget">
-                <h2>About Shopper</h2>
-                <ul class="nav nav-pills nav-stacked">
-                  <li><a href="">Company Information</a></li>
-                  <li><a href="">Careers</a></li>
-                  <li><a href="">Store Location</a></li>
-                  <li><a href="">Affillate Program</a></li>
-                  <li><a href="">Copyright</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-3 col-sm-offset-1">
-              <div class="single-widget">
-                <h2>About Shopper</h2>
-                <form action="#" class="searchform">
-                  <input type="text" placeholder="Your email address" />
-                  <button type="submit" class="btn btn-default">
-                    <i class="fa fa-arrow-circle-o-right"></i>
-                  </button>
-                  <p>
-                    Get the most recent updates from <br />our site and be
-                    updated your self...
-                  </p>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
+          <div class="icons-mobile-header" style="position: relative">
+            <div id="cart" class="clearfix">
+              <a href="https://www.fahasa.com/checkout/cart/">
+                <div class="fhs_center_center">
+                  <div class="icon_cart_white" style="margin-right: 4px">
+                    <div>
+                      <div
+                        class="top_menu_unseen fhs_center_center cartmini_qty"
+                        style="visibility: visible">
+                        2
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <style>
+            .login-cutomer-icon {
+              position: inherit;
+              background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png)
+                no-repeat center center;
+              background-size: 20px !important;
+            }
+            @media (max-width: 992px) {
+              #header .header1 .customer-top {
+                margin-right: 5px;
+                margin-left: 5px;
+              }
+            }
+            #header .header1 .customer-top {
+              padding-left: 0px;
+            }
+          </style>
+          <div id="mini_cart_block" class="customer-top">
+            <div>
+              <a href="https://www.fahasa.com/customer/account/">
+                <div>
+                  <div
+                    class="login-cutomer-icon"
+                    style="width: 30px; height: 35px"></div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
+    <!--/header-->
 
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <p class="pull-left">
-              Copyright © 2013 E-SHOPPER Inc. All rights reserved.
-            </p>
-            <p class="pull-right">
-              Designed by
-              <span
-                ><a target="_blank" href="http://www.themeum.com"
-                  >Themeum</a
-                ></span
-              >
-            </p>
+    <div class="main-container col1-layout no-margin-top">
+      <div class="main">
+        <div class="col-main">
+          <div class="container">
+            <div class="container-inner">
+              <div class="fhs_login_form">
+                <div class="fhs_login_form_content">
+                  <div class="youama-login-window">
+                    <div>
+                      <ul id="popup-login-tab_list" class="popup-login-tab">
+                        <li
+                          class="popup-login-tab-item popup-login-tab-login active"
+                          onclick="showLogin()">
+                          <a>Đăng nhập</a>
+                          <hr />
+                        </li>
+                        <li
+                          onclick="showRegister()"
+                          class="popup-login-tab-item popup-login-tab-register">
+                          <a>Đăng ký</a>
+                          <hr />
+                        </li>
+                      </ul>
+                      <div
+                        class="popup-change-title popup-login-title"
+                        style="display: none">
+                        Khôi phục mật khẩu
+                      </div>
+                    </div>
+                    <div class="popup-login-content" style="display: block">
+                      <form>
+                        <div class="fhs-input-box">
+                          <label>Tên tài khoản</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="text"
+                              placeholder="Nhập tên tài khoản"
+                              id="login_username"
+                              maxlength="200"
+                              name="youama-email"
+                              value="" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-alert"></span>
+                          </div>
+                          <div class="fhs-input-alert" id="login-user"></div>
+                        </div>
+                        <div class="fhs-input-box fhs-input-display">
+                          <div class="clear space"></div>
+                          <label>Mật khẩu</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="password"
+                              placeholder="Nhập mật khẩu"
+                              id="login_password"
+                              name="youama-password"
+                              maxlength="30"
+                              value="" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-showtext"
+                              onclick="displayPass(this)"
+                              >Hiện
+                            </span>
+                          </div>
+                          <div
+                            class="fhs-input-alert"
+                            id="login-password"></div>
+                        </div>
+                        <div class="fhs-input-box">
+                          <div class="fhs-forget-pass">
+                            <span>Quên mật khẩu?</span>
+                          </div>
+                        </div>
+
+                        <div class="fhs-input-box">
+                          <div class="fhs-btn-box">
+                            <button
+                              type="button"
+                              title="Đăng nhập"
+                              class="fhs-btn-login"
+                              onclick="login()">
+                              <span>Đăng nhập</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="fhs-popup-msg fhs-login-msg"></div>
+                      </form>
+                    </div>
+                    <div class="popup-register-content" style="display: none">
+                      <form>
+                        <div class="fhs-input-box fhs-input-send">
+                          <label>Tên tài khoản</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="text"
+                              placeholder="Nhập tên tài khoản"
+                              id="register_userName"
+                              value=""
+                              maxlength="10"
+                              autocomplete="off"
+                              onkeyup="validUserName()" />
+                          </div>
+                          <div class="fhs-input-alert" id="validUserName"></div>
+                        </div>
+                        <div class="fhs-input-box">
+                          <label>Email</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="text"
+                              placeholder="Địa chi email"
+                              id="register_email"
+                              value=""
+                              autocomplete="off"
+                              onkeyup="checkEmail()" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-alert"></span>
+                          </div>
+                          <div class="fhs-input-alert" id="validEmail"></div>
+                        </div>
+                        <div class="fhs-input-box fhs-input-display">
+                          <div class="clear space"></div>
+                          <label>Mật khẩu</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="password"
+                              placeholder="Nhập mật khẩu"
+                              id="register_password"
+                              name="youama-password"
+                              maxlength="30"
+                              value=""
+                              autocomplete="off"
+                              onkeyup="checkPass()" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-showtext"
+                              onclick="displayPass(this)"
+                              >Hiện
+                            </span>
+                          </div>
+                          <div class="fhs-input-alert" id="validPass"></div>
+                        </div>
+                        <div class="fhs-input-box fhs-input-display">
+                          <div class="clear space"></div>
+                          <label>Nhập lại mật khẩu</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="password"
+                              placeholder="Nhập mật khẩu"
+                              id="re_register_password"
+                              name="youama-password"
+                              maxlength="30"
+                              value=""
+                              onkeyup="checkRePass()" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-showtext"
+                              onclick="displayPass(this)"
+                              >Hiện
+                            </span>
+                          </div>
+                          <div
+                            class="fhs-input-alert"
+                            id="textRepassNotMatching"></div>
+                        </div>
+                        <div class="fhs-input-box">
+                          <div class="fhs-btn-box">
+                            <button
+                              type="button"
+                              title="Đăng ký"
+                              class="fhs-btn-register"
+                              id="btn-re"
+                              onclick="UserRegister()"
+                              disabled>
+                              <span>Đăng ký</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="fhs-popup-msg fhs-register-msg"></div>
+                        <div class="fhs-register-term">
+                          Bằng việc đăng ký, bạn đã đồng ý với Fahasa.com về<br />
+                          <a
+                            href="/dieu-khoan-su-dung"
+                            target="_blank"
+                            style="">
+                            Điều khoản dịch vụ</a
+                          >
+                          &nbsp;&amp;&nbsp;
+                          <a href="/chinh-sach-bao-mat" target="_blank" style=""
+                            >Chính sách bảo mật</a
+                          >
+                        </div>
+                      </form>
+                    </div>
+                    <div class="popup-recovery-content">
+                      <form>
+                        <div class="fhs-input-box fhs-input-send">
+                          <label>Số điện thoại/Email</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="text"
+                              placeholder="Nhập số điện thoại hoặc email"
+                              id="recovery_phone"
+                              name="youama-email"
+                              value=""
+                              maxlength="200"
+                              autocomplete="off"
+                              readonly="readonly" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-recoverysend"
+                              >Gửi mã OTP</span
+                            >
+                          </div>
+                          <div class="fhs-input-alert"></div>
+                        </div>
+                        <div class="fhs-input-box">
+                          <label>Mã xác nhận OTP</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="text"
+                              placeholder="6 ký tự"
+                              id="recovery_phone_otp"
+                              name="otpvalue"
+                              value=""
+                              maxlength="6"
+                              autocomplete="off"
+                              disabled="disabled"
+                              readonly="readonly" />
+                            <span
+                              class="fhs-input-icon fhs-textbox-alert"></span>
+                          </div>
+                          <div class="fhs-input-alert"></div>
+                        </div>
+                        <div class="fhs-input-box fhs-input-display">
+                          <div class="clear space"></div>
+                          <label>Mật khẩu</label>
+                          <div class="fhs-input-group">
+                            <input
+                              class="fhs-textbox"
+                              type="password"
+                              placeholder="Nhập mật khẩu"
+                              id="recovery_password"
+                              name="youama-password"
+                              maxlength="30"
+                              value=""
+                              autocomplete="off"
+                              disabled="disabled"
+                              readonly="readonly" />
+                            <span class="fhs-input-icon fhs-textbox-showtext"
+                              >Hiện
+                            </span>
+                          </div>
+                          <div class="fhs-input-alert"></div>
+                        </div>
+                        <div class="fhs-input-box">
+                          <div class="fhs-btn-box">
+                            <button
+                              type="button"
+                              title="Xác nhận"
+                              class="fhs-btn-recovery"
+                              disabled="">
+                              <span>Xác nhận</span>
+                            </button>
+                            <button
+                              type="button"
+                              title="Trở về"
+                              class="fhs-btn-backlogin lg-close">
+                              <span>Trở về</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="fhs-popup-msg fhs-recovery-msg"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="ma-block-link-follow">
+        <div class="block-link-follow hidden-xs">
+          <div class="container">
+            <div class="container-inner">
+              <div class="row">
+                <div class="f-col f-col-2 col-sm-8 col-md-12 col-sms-12">
+                  <div class="block-subscribe" style="text-align: center">
+                    <div style="display: inline-block">
+                      <div class="subscribe-title">
+                        <em
+                          class="fa fa-envelope-o fa-inverse"
+                          style="font-size: 20px"
+                          >&nbsp;</em
+                        >
+                        <h3>Newsletter</h3>
+                        <label for="newsletter">Đăng ký nhận bản tin</label>
+                      </div>
+                      <form
+                        action="https://www.fahasa.com/newsletter/subscriber/new/"
+                        method="post"
+                        id="newsletter-validate-detail">
+                        <div class="subscribe-content">
+                          <div
+                            class="actions"
+                            style="display: block !important">
+                            <button
+                              type="submit"
+                              title="Đăng ký"
+                              class="button">
+                              <span>Đăng ký</span>
+                            </button>
+                          </div>
+                          <div class="input-box">
+                            <input
+                              type="text"
+                              name="email"
+                              id="newsletter"
+                              title="Đăng ký nhận bản tin"
+                              class="input-text required-entry validate-email"
+                              placeholder="Nhập địa chỉ email của bạn" />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="f-col f-col-1 col-sm-4 col-md-4 col-sms-12"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ma-footer-static">
+        <div class="footer-static">
+          <div class="container">
+            <div class="container-inner">
+              <div class="row">
+                <style>
+                  .footer-image-container {
+                    margin: auto;
+                  }
+                </style>
+                <div class="col-md-4">
+                  <div style="border-right: 1px solid #cecece">
+                    <div>
+                      <div style="margin-bottom: 8px; padding: 10px 15px">
+                        <img
+                          alt="FAHASA.COM"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo.png" />
+                      </div>
+                      <div
+                        class="col-sm-12 col-md-12 col-xs-12 address-footer"
+                        style="font-size: 13px">
+                        Lầu 5, 387-389 Hai Bà Trưng Quận 3 TP HCM
+                      </div>
+                      <div
+                        class="col-sm-12 col-md-12 col-xs-12 address-footer"
+                        style="font-size: 13px">
+                        Công Ty Cổ Phần Phát Hành Sách TP HCM - FAHASA
+                      </div>
+                      <div
+                        class="col-sm-12 col-md-12 col-xs-12 address-footer"
+                        style="font-size: 13px">
+                        60 - 62 Lê Lợi, Quận 1, TP. HCM, Việt Nam
+                      </div>
+                      <div
+                        class="col-sm-12 col-md-12 col-xs-12 address-footer"
+                        style="font-size: 13px; padding-top: 5px">
+                        Fahasa.com nhận đặt hàng trực tuyến và giao hàng tận
+                        nơi. KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại văn
+                        phòng cũng như tất cả Hệ Thống Fahasa trên toàn quốc.
+                      </div>
+                      <div
+                        class="col-sm-12 col-md-12 col-xs-12 address-footer"
+                        style="margin: 15px 0px">
+                        <a
+                          target="_blank"
+                          href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=19176">
+                          <img
+                            src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/logo-bo-cong-thuong-da-thong-bao1.png"
+                            style="width: 100px"
+                            height="40px" />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      align="center"
+                      style="
+                        font-size: 14.5px;
+                        margin-bottom: 20px;
+                        margin-top: 10px;
+                        padding: 0px;
+                        text-align: left;
+                        margin-left: 10px;
+                      ">
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/fahasa/"
+                        title="Facebook">
+                        <img
+                          alt="Facebook"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/footer/Facebook-on.png" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/fahasa_official/"
+                        title="Instagram">
+                        <img
+                          alt="Instagram"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Insta-on.png" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://www.youtube.com/channel/UCUZcVOLSxK1q6RfgzQ9-HYQ"
+                        title="Youtube">
+                        <img
+                          alt="Youtube"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/Youtube-on.png" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://fahasa-blog.tumblr.com/"
+                        title="Tumblr">
+                        <img
+                          alt="Tumblr"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/tumblr-on.png" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://twitter.com/Fahasa_com"
+                        title="Twitter">
+                        <img
+                          alt="Twitter"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/twitter-on.png" />
+                      </a>
+                      <a
+                        target="_blank"
+                        href="https://www.pinterest.com/fahasaVN/"
+                        title="Pinterest">
+                        <img
+                          alt="Pinterest"
+                          src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images//footer/pinterest-on.png" />
+                      </a>
+                    </div>
+                    <div style="display: inline-block; text-align: left">
+                      <div
+                        class="col-sm-6 col-md-6 col-xs-6"
+                        style="text-align: right">
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.fahasa.android.fahasa">
+                          <img
+                            alt="FAHASA.COM"
+                            src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/android1.png"
+                            style="max-width: 110px" />
+                        </a>
+                      </div>
+                      <div
+                        class="col-sm-6 col-md-6 col-xs-6"
+                        style="padding-left: 5px">
+                        <a
+                          href="https://itunes.apple.com/app/id1227597830?mt=8">
+                          <img
+                            alt="FAHASA.COM"
+                            src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/appstore1.png"
+                            style="max-width: 110px" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4 col-sms-6 col-smb-12">
+                      <div class="footer-static-title">
+                        <h3>DỊCH VỤ</h3>
+                      </div>
+                      <div class="footer-static-content">
+                        <ul>
+                          <li class="first">
+                            <a href="https://www.fahasa.com/dieu-khoan-su-dung"
+                              >Điều khoản sử dụng</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.fahasa.com/chinh-sach-bao-mat"
+                              >Chính sách bảo mật thông tin cá nhân</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.fahasa.com/chinh-sach-bao-mat-thanh-toan"
+                              >Chính sách bảo mật thanh toán</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.fahasa.com/gioi-thieu-fahasa"
+                              >Giới thiệu Fahasa</a
+                            >
+                          </li>
+                          <li class="last">
+                            <a
+                              href="https://www.fahasa.com/he-thong-trung-tam-nha-sach"
+                              >Hệ thống trung tâm - nhà sách</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-sms-6 col-smb-12">
+                      <div class="footer-static-title">
+                        <h3>Hỗ trợ</h3>
+                      </div>
+                      <div class="footer-static-content">
+                        <ul>
+                          <li class="first">
+                            <a href="https://www.fahasa.com/doi-tra-hang"
+                              >Chính sách đổi - trả - hoàn tiền</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.fahasa.com/chinh-sach-bao-hanh-boi-hoan"
+                              >Chính sách bảo hành - bồi hoàn</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.fahasa.com/phuong-thuc-van-chuyen"
+                              >Chính sách vận chuyển</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.fahasa.com/chinh-sach-khach-si"
+                              >Chính sách khách sỉ</a
+                            >
+                          </li>
+                          <li class="last">
+                            <a
+                              href="https://www.fahasa.com/huong-dan-thanh-toan-va-xuat-hd"
+                              >Phương thức thanh toán và xuất HĐ</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-sms-6 col-smb-12">
+                      <div class="footer-static-title">
+                        <h3>Tài khoản của tôi</h3>
+                      </div>
+                      <div class="footer-static-content">
+                        <ul>
+                          <li class="first footer_login_link">
+                            <a
+                              href="https://www.fahasa.com/index.php/customer/account/login"
+                              onclick="return false;"
+                              >Đăng nhập/Tạo mới tài khoản</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.fahasa.com/index.php/customer/address"
+                              >Thay đổi địa chỉ khách hàng</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.fahasa.com/index.php/customer/account"
+                              >Chi tiết tài khoản</a
+                            >
+                          </li>
+                          <li class="last">
+                            <a
+                              href="https://www.fahasa.com/index.php/sales/order/history"
+                              >Lịch sử mua hàng</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-static-title" style="margin-top: 15px">
+                    <h3>Liên hệ</h3>
+                  </div>
+                  <div class="row" style="margin: 5px -5px">
+                    <div class="col-md-4">
+                      <em class="fa fa-map-marker" style="font-size: 18px"
+                        >&nbsp;</em
+                      >60-62 Lê Lợi, Q.1, TP. HCM
+                    </div>
+                    <div class="col-md-4">
+                      <em class="fa fa-envelope" style="font-size: 18px"
+                        >&nbsp;</em
+                      >cskh@fahasa.com.vn
+                    </div>
+                    <div class="col-md-4">
+                      <em class="fa fa-phone" style="font-size: 18px">&nbsp;</em
+                      >1900636467
+                    </div>
+                  </div>
+                  <div
+                    class="hidden-xs"
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      grid-gap: 25px;
+                      height: 80px;
+                      margin-right: 16px;
+                    ">
+                    <div class="footer-image-container">
+                      <img
+                        src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/vnpost1.png"
+                        width="100px" />
+                    </div>
+
+                    <div class="footer-image-container">
+                      <img
+                        src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/ahamove_logo3.png"
+                        width="160px" />
+                    </div>
+                    <div class="footer-image-container">
+                      <img
+                        src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/icon_giao_hang_nhanh1.png"
+                        width="150px" />
+                    </div>
+                    <div class="footer-image-container">
+                      <img
+                        src="https://cdn0.fahasa.com/media/wysiwyg/Logo-NCC/icon_snappy1.png"
+                        width="150px" />
+                    </div>
+                  </div>
+                  <div
+                    class="hidden-xs"
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(5, 1fr);
+                      grid-gap: 25px;
+                      height: 80px;
+                      margin-right: 16px;
+                      margin-top: 10px;
+                    ">
+                    <div class="footer-image-container">
+                      <img
+                        style="max-width: 120px"
+                        src="https://cdn0.fahasa.com/media//wysiwyg/Logo-NCC/vnpay_logo.png" />
+                    </div>
+                    <div class="footer-image-container">
+                      <img
+                        style="max-width: 120px"
+                        src="https://cdn0.fahasa.com/media//wysiwyg/Logo-NCC/ZaloPay-logo-130x83.png" />
+                    </div>
+                    <div class="footer-image-container">
+                      <img
+                        style="height: 50px"
+                        src="https://cdn0.fahasa.com/media//wysiwyg/Logo-NCC/momopay.png" />
+                    </div>
+                    <div class="footer-image-container">
+                      <img
+                        style="height: 44px"
+                        src="https://cdn0.fahasa.com/media//wysiwyg/Logo-NCC/shopeepay_logo1.png" />
+                    </div>
+                    <div class="footer-image-container">
+                      <img
+                        style="height: 65px"
+                        src="https://cdn0.fahasa.com/media//wysiwyg/Logo-NCC/logo_moca_120.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row"></div>
+              <div class="row" style="margin-top: 15px">
+                <div
+                  class="col-sm-12 col-md-12 col-xs-12"
+                  style="text-align: center">
+                  <ul>
+                    <li style="color: #adadad; padding-left: 14px">
+                      Giấy chứng nhận Đăng ký Kinh doanh số 0304132047 do Sở Kế
+                      hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 20/12/2005,
+                      đăng ký thay đổi lần thứ 10, ngày 20/05/2022.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -335,12 +921,8 @@
     <!--/Footer-->
 
     <script src="js/jquery.js"></script>
-    <script src="js/price-range.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/login.js"></script>
     <script src="js/getCookie.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

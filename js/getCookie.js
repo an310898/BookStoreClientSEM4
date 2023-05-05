@@ -18,15 +18,16 @@ function stayLogin() {
   // console.log("staylogin()");
   // console.log(document.getElementById("loginUser"));
 
-  if (
-    getCookie("userId").length > 0 &&
-    getCookie("userName").length > 0 &&
-    getCookie("fullName").length > 0
-  ) {
+  if (getCookie("userId").length > 0 && getCookie("userName").length > 0) {
+    let helloName = getCookie("fullName");
+
+    if (getCookie("fullName") === "null") {
+      helloName = getCookie("userName");
+    }
     document.getElementById(
       "loginUser fhs_top_account_title"
     ).innerHTML = `<a href="user.html?id=${getCookie("userId")}"
-    >Xin chào ${getCookie("fullName")}</a>`;
+    >Xin chào ${helloName}</a>`;
     return getCookie("userId");
   }
   return 0;

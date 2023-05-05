@@ -70,3 +70,39 @@
 .tab-title ul li {
   padding: 0;
 }
+.categorytab-slider .product-image {
+  width: 165px;
+  height: 165px;
+}
+
+@media screen and (max-width: 768px) {
+  .categorytab-slider .product-image {
+    width: 133px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 572px) {
+  .categorytab-slider .product-image {
+    width: 100px;
+    height: auto;
+  }
+  .ma-box-content .products {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .categorytab-slider .product-image {
+    width: 80px;
+    height: auto;
+  }
+  .ma-box-content .products {
+    margin: 0;
+  }
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.item-inner .price-label {
+  height: 2.5rem;
+}
