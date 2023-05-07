@@ -24,10 +24,18 @@ function stayLogin() {
     if (getCookie("fullName") === "null") {
       helloName = getCookie("userName");
     }
-    document.getElementById(
-      "loginUser fhs_top_account_title"
-    ).innerHTML = `<a href="user.html?id=${getCookie("userId")}"
-    >Xin chào ${helloName}</a>`;
+    document.getElementById("loginUser fhs_top_account_title").innerHTML = `
+    <a href="user.html?id=${getCookie("userId")}">
+                  <div class="fhs_top_account_button" style="
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                    ">
+                    <div class="icon_account_gray" style="margin-bottom: 3px"></div>
+                    <div class="top_menu_label fhs_top_center fhs_nowrap_one" id="loginUser fhs_top_account_title">Xin chào ${helloName}</div>
+                  </div>
+                </a>`;
     return getCookie("userId");
   }
   return 0;
