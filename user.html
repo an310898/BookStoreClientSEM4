@@ -13,6 +13,7 @@
       media="all" />
     <link href="css/default.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
+    <link href="css/user.css" rel="stylesheet" />
   </head>
   <body>
     <section id="header" class="heaer">
@@ -311,11 +312,7 @@
                                 name="telephone"
                                 value=""
                                 maxlength="11"
-                                readonly="true" />
-                              <span
-                                class="fhs-input-icon fhs-textbox-changephone"
-                                >Thay đổi</span
-                              >
+                                placeholder="Chưa có số điện thoại" />
                             </div>
                           </div>
                           <div class="fhs-input-alert"></div>
@@ -334,18 +331,12 @@
                                 name="email"
                                 noti="true"
                                 value=""
-                                maxlength="200"
-                                readonly="true" />
-                              <span
-                                class="fhs-input-icon fhs-textbox-changeemail"
-                                >Thêm mới</span
-                              >
+                                maxlength="200" />
                             </div>
                           </div>
                           <label class="fhs-input-description"></label>
                           <div class="fhs-input-alert"></div>
                         </div>
-
                         <div
                           class="fhs-input-box fhs-input-group-horizontal-account">
                           <label>Giới tính*</label>
@@ -353,7 +344,7 @@
                           <div
                             class="fhs-input-item"
                             style="display: -webkit-inline-box !important">
-                            <div class="fhs-input-group">
+                            <div class="fhs-input-group" id="gender">
                               <div>
                                 <label class="fhs-radio" style="margin-top: 2px"
                                   >Nam
@@ -361,7 +352,7 @@
                                     type="radio"
                                     class="gender-radio"
                                     name="gender-radio"
-                                    onchange="changeGender('1');" />
+                                    id="male" />
                                   <span class="radiomark"></span>
                                 </label>
                               </div>
@@ -372,7 +363,7 @@
                                     type="radio"
                                     class="gender-radio"
                                     name="gender-radio"
-                                    onchange="changeGender('2');" />
+                                    id="female" />
                                   <span class="radiomark"></span>
                                 </label>
                               </div>
@@ -393,76 +384,83 @@
                           <div class="fhs-input-alert"></div>
                         </div>
 
+                        <div class="field" style="padding-bottom: 5px">
+                          <label
+                            for="region_id"
+                            class="required"
+                            style="width: 150px"
+                            ><em>*</em>Tỉnh/Thành phố</label
+                          >
+                          <div class="input-box address-edit-dd">
+                            <select
+                              id="region_id"
+                              name="region_id"
+                              title="Tỉnh/Thành phố"
+                              class="validate-select required-entry"
+                              defaultvalue="0">
+                              <option value="">Vui lòng chọn</option>
+                            </select>
+                            <input
+                              type="text"
+                              maxlength="200"
+                              id="region"
+                              style="max-width: 254px; display: none"
+                              name="region"
+                              value=""
+                              title="Tỉnh/Thành phố"
+                              class="input-text regions required-entry" />
+                          </div>
+                        </div>
+                        <div class="field" style="padding-bottom: 5px">
+                          <label
+                            for="region_id"
+                            class="required"
+                            style="width: 150px"
+                            ><em>*</em>Quận / Huyện</label
+                          >
+                          <div class="input-box address-edit-dd">
+                            <select
+                              id="region_id"
+                              name="region_id"
+                              title="Tỉnh/Thành phố"
+                              class="validate-select required-entry"
+                              defaultvalue="0">
+                              <option value="">Vui lòng chọn</option>
+                            </select>
+                            <input
+                              type="text"
+                              maxlength="200"
+                              id="region"
+                              style="max-width: 254px; display: none"
+                              name="region"
+                              value=""
+                              title="Tỉnh/Thành phố"
+                              class="input-text regions required-entry" />
+                          </div>
+                        </div>
+
                         <div
                           class="fhs-input-box fhs-input-group-horizontal-account fhs-input-send">
-                          <label>Birthday*</label>
+                          <label>Địa chỉ</label>
                           <label class="fhs-input-description"></label>
-                          <div
-                            class="fhs-input-item"
-                            style="padding: 0 !important">
-                            <div class="fhs-input-group customer-dob">
-                              <div class="account-input-bod">
-                                <input
-                                  class="fhs_input_date_group_day account-input-birthday"
-                                  name="day"
-                                  type="text"
-                                  style="text-align: center"
-                                  maxlength="2"
-                                  placeholder="DD"
-                                  value="" />
-                              </div>
-                              <div class="account-input-bod">
-                                <input
-                                  class="fhs_input_date_group_month account-input-birthday"
-                                  name="month"
-                                  type="text"
-                                  style="text-align: center"
-                                  maxlength="2"
-                                  placeholder="MM"
-                                  value="" />
-                              </div>
-                              <div class="account-input-bod">
-                                <input
-                                  class="fhs_input_date_group_year account-input-birthday"
-                                  name="year"
-                                  type="text"
-                                  style="text-align: center"
-                                  maxlength="4"
-                                  placeholder="YYYY"
-                                  value="" />
-                              </div>
-                              <div class="dob-full" style="display: none">
-                                <input
-                                  type="hidden"
-                                  id="dob"
-                                  class="fhs_input_date_group_full"
-                                  value=""
-                                  name="dob" />
-                              </div>
+                          <div class="fhs-input-item">
+                            <div class="fhs-input-group">
+                              <input
+                                class="fhs-textbox"
+                                type="text"
+                                placeholder="Nhập địa chỉ"
+                                id="address"
+                                name="email"
+                                noti="true"
+                                value=""
+                                maxlength="200" />
                             </div>
                           </div>
                           <label class="fhs-input-description"></label>
                           <div class="fhs-input-alert"></div>
                         </div>
 
-                        <div
-                          class="fhs-input-box fhs-input-group-horizontal-account">
-                          <label>Mã VIP</label>
-                          <div class="fhs-input-item">
-                            <div class="fhs-input-group">
-                              <input
-                                class="fhs-textbox"
-                                type="text"
-                                placeholder="Nhập mã VIP để nhận ưu đãi*"
-                                id="company_id"
-                                name="company_id"
-                                value=""
-                                maxlength="200" />
-                            </div>
-                          </div>
-                          <div class="fhs-input-alert"></div>
-                        </div>
-                        <div class="account-row" style="margin-top: 10px">
+                        <!-- <div class="account-row" style="margin-top: 10px">
                           <label class="account-title"></label>
                           <div class="account-input">
                             <label class="fhs-checkbox"
@@ -538,14 +536,15 @@
                             </div>
                             <div class="fhs-input-alert"></div>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                       <div style="text-align: center; padding: 20px 0 10px 0">
                         <button
                           type="button"
                           title="Lưu thay đổi"
                           id="btn-save-account-info"
-                          class="btn-save-confirm">
+                          class="btn-save-confirm"
+                          onclick="SaveUserInformation() ">
                           <span><span>Lưu thay đổi</span></span>
                         </button>
                       </div>
@@ -562,5 +561,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/getCookie.js"></script>
+    <script src="js/user.js"></script>
   </body>
 </html>
