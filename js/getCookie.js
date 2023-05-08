@@ -24,8 +24,8 @@ function stayLogin() {
     if (getCookie("fullName") === "null") {
       helloName = getCookie("userName");
     }
-    document.getElementById("loginUser fhs_top_account_title").innerHTML = `
-    <a href="user.html?id=${getCookie("userId")}">
+    document.getElementById("fhs_top_account_hover").innerHTML = `
+    <a href="user.html">
                   <div class="fhs_top_account_button" style="
                       display: flex;
                       flex-direction: row;
@@ -52,3 +52,12 @@ function getCookieArrayCart() {
 $(document).ready(function () {
   stayLogin();
 });
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
