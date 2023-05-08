@@ -1,5 +1,3 @@
-Category();
-
 function Category() {
   fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
@@ -67,150 +65,172 @@ function CategoryTabData(categoryId) {
           //   console.log(y);
           return `
              <div class="col-6">
-                        <li
-                          class="fhs_product_basic swiper-slide swiper-slide-active">
-                          <div class="item-inner">
-                            <div class="ma-box-content">
-                              <div class="products clear">
-                                <div class="product images-container">
-                                  <a
-                                    href="product-details.html?id=${y.Id}"
-                                    title="${y.Name}"
-                                    class="product-image"
-                                    ><div class="product-image">
-                                      <img
-                                        class="lazyloaded"
-                                        src="${y.Image}"
-                                        data-src="${y.Image}"
-                                        alt="${y.Name}" /></div
-                                  ></a>
-                                </div>
-                              </div>
-                              <div>
-                                <h2 class="product-name-no-ellipsis">
-                                  <a
-                                    href="product-details.html?id=${y.Id}"
-                                    title="${y.Name}"
-                                    >${y.Name}</a
-                                  >
-                                </h2>
-                                <div class="price-label">
-                                  <span
-                                    class="price m-price-font fhs_center_left"
-                                    >${y.Price} đ</span
-                                  >
-                                </div>
-                                <div class="fhs-rating-container">
-                                  <div class="ratings fhs-no-mobile-block">
-                                    <div class="rating-box">
-                                      <div
-                                        class="rating"
-                                        style="width: ${y.rate * 20}%"></div>
-                                    </div>
-                                    <div class="amount">(${
-                                      y.countComment
-                                    })</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </div>
+      <li class="fhs_product_basic swiper-slide swiper-slide-active">
+        <div class="item-inner">
+          <div class="ma-box-content">
+            <div class="products clear">
+              <div class="product images-container">
+                <a
+                  href="product-details.html?id=${y.Id}"
+                  title="${y.Name}"
+                  class="product-image"
+                  ><div class="product-image">
+                    <img
+                      class="lazyloaded"
+                      src="${y.Image}"
+                      data-src="${y.Image}"
+                      alt="${y.Name}" /></div
+                ></a>
+              </div>
+            </div>
+            <div style="display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 10px;">
+              <div>
+                <h2 class="product-name-no-ellipsis">
+                  <a href="product-details.html?id=${y.Id}" title="${y.Name}"
+                    >${y.Name}</a
+                  >
+                </h2>
+                <div class="price-label">
+                  <span class="price m-price-font fhs_center_left"
+                    >${y.Price} đ</span
+                  >
+                </div>
+                <div class="fhs-rating-container">
+                  <div class="ratings fhs-no-mobile-block">
+                    <div class="rating-box">
+                      <div class="rating" style="width: ${y.rate * 20}%"></div>
+                    </div>
+                    <div class="amount">(${y.countComment})</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  onclick="addToCart(${y.Id}) "
+                  title="Thêm giỏ hàng"
+                  class="btn_add_cart"
+                  style="">
+                  <div class="btn_add_cart_icon"></div>
+                  <span> Thêm giỏ hàng </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
         `;
         })
         .join("");
       const dataFavBook = x["#result-set-2"]
         .map(y => {
           return `
-             <div class="col-6">
-                        <li
-                          class="fhs_product_basic swiper-slide swiper-slide-active">
-                          <div class="item-inner">
-                            <div class="ma-box-content">
-                              <div class="products clear">
-                                <div class="product images-container">
-                                  <a
-                                    href="product-details.html?id=${y.Id}"
-                                    title="${y.Name}"
-                                    class="product-image"
-                                    ><div class="product-image">
-                                      <img
-                                        class="lazyloaded"
-                                        src="${y.Image}"
-                                        data-src="${y.Image}"
-                                        alt="${y.Name}" /></div
-                                  ></a>
-                                </div>
-                              </div>
-                              <div>
-                                <h2 class="product-name-no-ellipsis">
-                                  <a
-                                    href="product-details.html?id=${y.Id}"
-                                    title="${y.Name}"
-                                    >${y.Name}</a
-                                  >
-                                </h2>
-                                <div class="price-label">
-                                  <span
-                                    class="price m-price-font fhs_center_left"
-                                    >${y.Price} đ</span
-                                  >
-                                </div>
-                                <div class="fhs-rating-container">
-                                  <div class="ratings fhs-no-mobile-block">
-                                    <div class="rating-box">
-                                      <div
-                                        class="rating"
-                                        style="width: ${y.rate * 20}%"></div>
-                                    </div>
-                                    <div class="amount">(${
-                                      y.countComment
-                                    })</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </div>
+            <div class="col-6">
+      <li class="fhs_product_basic swiper-slide swiper-slide-active">
+        <div class="item-inner">
+          <div class="ma-box-content">
+            <div class="products clear">
+              <div class="product images-container">
+                <a
+                  href="product-details.html?id=${y.Id}"
+                  title="${y.Name}"
+                  class="product-image"
+                  ><div class="product-image">
+                    <img
+                      class="lazyloaded"
+                      src="${y.Image}"
+                      data-src="${y.Image}"
+                      alt="${y.Name}" /></div
+                ></a>
+              </div>
+            </div>
+            <div style="display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 10px;">
+              <div>
+                <h2 class="product-name-no-ellipsis">
+                  <a href="product-details.html?id=${y.Id}" title="${y.Name}"
+                    >${y.Name}</a
+                  >
+                </h2>
+                <div class="price-label">
+                  <span class="price m-price-font fhs_center_left"
+                    >${y.Price} đ</span
+                  >
+                </div>
+                <div class="fhs-rating-container">
+                  <div class="ratings fhs-no-mobile-block">
+                    <div class="rating-box">
+                      <div class="rating" style="width: ${y.rate * 20}%"></div>
+                    </div>
+                    <div class="amount">(${y.countComment})</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  onclick="addToCart(${y.Id}) "
+                  title="Thêm giỏ hàng"
+                  class="btn_add_cart"
+                  style="">
+                  <div class="btn_add_cart_icon"></div>
+                  <span> Thêm giỏ hàng </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
         `;
         })
         .join("");
       //   console.log(dataFavBook);
-      if (categoryId === 1) {
-        document.querySelector("#van-hoc-moi .row").innerHTML = dataNewBook;
-        document.querySelector("#van-hoc-danh-gia-cao .row").innerHTML =
-          dataFavBook;
-      }
-      if (categoryId === 2) {
-        document.querySelector("#nuoi-day-con-moi .row").innerHTML =
-          dataNewBook;
-        document.querySelector("#nuoi-day-con-danh-gia-cao .row").innerHTML =
-          dataFavBook;
-      }
-      if (categoryId === 3) {
-        document.querySelector("#thieu-nhi-moi .row").innerHTML = dataNewBook;
-        document.querySelector("#thieu-nhi-danh-gia-cao .row").innerHTML =
-          dataFavBook;
-      }
-      if (categoryId === 4) {
-        document.querySelector("#tam-ly-ky-nang-moi .row").innerHTML =
-          dataNewBook;
-        document.querySelector("#tam-ly-ky-nang-danh-gia-cao .row").innerHTML =
-          dataFavBook;
-      }
-      if (categoryId === 5) {
-        document.querySelector("#tieu-su-hoi-ky-moi .row").innerHTML =
-          dataNewBook;
-        document.querySelector("#tieu-su-hoi-ky-danh-gia-cao .row").innerHTML =
-          dataFavBook;
+      switch (categoryId) {
+        case 1:
+          document.querySelector("#van-hoc-moi .row").innerHTML = dataNewBook;
+          document.querySelector("#van-hoc-danh-gia-cao .row").innerHTML =
+            dataFavBook;
+          break;
+        case 2:
+          document.querySelector("#nuoi-day-con-moi .row").innerHTML =
+            dataNewBook;
+          document.querySelector("#nuoi-day-con-danh-gia-cao .row").innerHTML =
+            dataFavBook;
+          break;
+        case 3:
+          document.querySelector("#thieu-nhi-moi .row").innerHTML = dataNewBook;
+          document.querySelector("#thieu-nhi-danh-gia-cao .row").innerHTML =
+            dataFavBook;
+          break;
+        case 4:
+          document.querySelector("#tam-ly-ky-nang-moi .row").innerHTML =
+            dataNewBook;
+          document.querySelector(
+            "#tam-ly-ky-nang-danh-gia-cao .row"
+          ).innerHTML = dataFavBook;
+          break;
+        case 5:
+          document.querySelector("#tieu-su-hoi-ky-moi .row").innerHTML =
+            dataNewBook;
+          document.querySelector(
+            "#tieu-su-hoi-ky-danh-gia-cao .row"
+          ).innerHTML = dataFavBook;
+          break;
       }
     });
 }
-CategoryTabData(1);
-
-CategoryTabData(2);
-CategoryTabData(3);
-CategoryTabData(4);
-CategoryTabData(5);
+$(document).ready(function () {
+  Category();
+  CategoryTabData(1);
+  CategoryTabData(2);
+  CategoryTabData(3);
+  CategoryTabData(4);
+  CategoryTabData(5);
+});
