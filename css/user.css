@@ -1,6 +1,48 @@
 .address-edit-dd {
+  width: calc(100% - 300px);
   display: inline-block !important;
   padding-left: 0;
   position: relative;
   right: 0;
+}
+#district_id,
+#city_id {
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+#city_id > option,
+#district_id > option {
+  line-height: 1.5;
+  color: #495057;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Open Sans";
+}
+.fhs-input-group-horizontal-account
+  > .fhs-input-item
+  > .fhs-input-group
+  > .fhs-textbox {
+  height: 36px;
+  font-weight: normal;
+}
+.change-password {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 0 !important;
+}
+#btn-change-account-pass:disabled {
+  border: none;
+  background: linear-gradient(
+    90deg,
+    rgba(224, 224, 224, 1) 0%,
+    rgba(224, 224, 224, 1) 100%
+  );
+
+  border: none;
+  color: #636363;
 }

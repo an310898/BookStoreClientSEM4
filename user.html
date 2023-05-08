@@ -92,6 +92,9 @@
                       align-items: center;
                     ">
                     <div
+                      class="icon_account_gray"
+                      style="margin-bottom: 3px"></div>
+                    <div
                       class="top_menu_label fhs_top_center fhs_nowrap_one"
                       id="loginUser fhs_top_account_title">
                       Tài khoản
@@ -230,21 +233,14 @@
                   </div>
                   <div class="block-content">
                     <ul>
-                      <li class="current">
-                        <strong
-                          ><a
-                            href="https://www.fahasa.com/customer/account/edit/"
-                            >Thông tin tài khoản</a
-                          ></strong
-                        >
+                      <li class="current" onclick="updateUserForm(this)">
+                        <strong><a href="#">Thông tin tài khoản</a></strong>
                       </li>
-                      <li>
-                        <strong
-                          ><a
-                            href="https://www.fahasa.com/customer/account/edit/"
-                            >Đổi mật khẩu</a
-                          ></strong
-                        >
+                      <li onclick="changePassForm(this)">
+                        <strong><a href="#">Đổi mật khẩu</a></strong>
+                      </li>
+                      <li onclick="logout()">
+                        <strong><a href="#">Đăng xuất</a></strong>
                       </li>
                     </ul>
                   </div>
@@ -269,11 +265,7 @@
                     <div class="page-title-2">
                       <h1>Thông tin tài khoản</h1>
                     </div>
-                    <form
-                      action="https://www.fahasa.com/customer/account/editPost/"
-                      method="post"
-                      id="form-account-info"
-                      autocomplete="off">
+                    <form id="form-account-info" autocomplete="off">
                       <div>
                         <input
                           name="form_key"
@@ -312,31 +304,13 @@
                                 name="telephone"
                                 value=""
                                 maxlength="11"
-                                placeholder="Chưa có số điện thoại" />
+                                placeholder="Chưa có số điện thoại"
+                                onkeypress="return isNumberKey(event)" />
                             </div>
                           </div>
                           <div class="fhs-input-alert"></div>
                         </div>
-                        <div
-                          class="fhs-input-box fhs-input-group-horizontal-account fhs-input-send">
-                          <label>Email</label>
-                          <label class="fhs-input-description"></label>
-                          <div class="fhs-input-item">
-                            <div class="fhs-input-group">
-                              <input
-                                class="fhs-textbox"
-                                type="text"
-                                placeholder="Chưa có email"
-                                id="email"
-                                name="email"
-                                noti="true"
-                                value=""
-                                maxlength="200" />
-                            </div>
-                          </div>
-                          <label class="fhs-input-description"></label>
-                          <div class="fhs-input-alert"></div>
-                        </div>
+
                         <div
                           class="fhs-input-box fhs-input-group-horizontal-account">
                           <label>Giới tính*</label>
@@ -383,27 +357,25 @@
                           <label class="fhs-input-description"></label>
                           <div class="fhs-input-alert"></div>
                         </div>
-
-                        <div class="field" style="padding-bottom: 5px">
+                        <div
+                          class="fhs-input-box fhs-input-group-horizontal-account fhs-input-send">
                           <label
-                            for="region_id"
+                            for="city_id"
                             class="required"
                             style="width: 150px"
-                            ><em>*</em>Tỉnh/Thành phố</label
+                            >Tỉnh/Thành phố<em>*</em></label
                           >
                           <div class="input-box address-edit-dd">
                             <select
-                              id="region_id"
-                              name="region_id"
+                              id="city_id"
+                              name="city_id"
                               title="Tỉnh/Thành phố"
                               class="validate-select required-entry"
-                              defaultvalue="0">
-                              <option value="">Vui lòng chọn</option>
-                            </select>
+                              defaultvalue="0"
+                              onchange="DOMDistrictCity(this)"></select>
                             <input
                               type="text"
                               maxlength="200"
-                              id="region"
                               style="max-width: 254px; display: none"
                               name="region"
                               value=""
@@ -411,26 +383,27 @@
                               class="input-text regions required-entry" />
                           </div>
                         </div>
-                        <div class="field" style="padding-bottom: 5px">
+                        <div
+                          class="fhs-input-box fhs-input-group-horizontal-account fhs-input-send">
                           <label
-                            for="region_id"
+                            for="district_id"
                             class="required"
                             style="width: 150px"
-                            ><em>*</em>Quận / Huyện</label
+                            >Quận / Huyện<em>*</em></label
                           >
                           <div class="input-box address-edit-dd">
                             <select
-                              id="region_id"
-                              name="region_id"
+                              id="district_id"
+                              name="district_id"
                               title="Tỉnh/Thành phố"
                               class="validate-select required-entry"
-                              defaultvalue="0">
-                              <option value="">Vui lòng chọn</option>
+                              defaultvalue="0"
+                              disabled>
+                              <option value="">Chọn Quận/huyện</option>
                             </select>
                             <input
                               type="text"
                               maxlength="200"
-                              id="region"
                               style="max-width: 254px; display: none"
                               name="region"
                               value=""
@@ -441,7 +414,7 @@
 
                         <div
                           class="fhs-input-box fhs-input-group-horizontal-account fhs-input-send">
-                          <label>Địa chỉ</label>
+                          <label>Địa chỉ<em>*</em></label>
                           <label class="fhs-input-description"></label>
                           <div class="fhs-input-item">
                             <div class="fhs-input-group">
@@ -459,84 +432,6 @@
                           <label class="fhs-input-description"></label>
                           <div class="fhs-input-alert"></div>
                         </div>
-
-                        <!-- <div class="account-row" style="margin-top: 10px">
-                          <label class="account-title"></label>
-                          <div class="account-input">
-                            <label class="fhs-checkbox"
-                              >Đổi mật khẩu
-                              <input
-                                type="checkbox"
-                                name="change_password"
-                                id="change_password"
-                                value="1"
-                                title="Đổi mật khẩu" />
-                              <span class="checkmark"></span>
-                            </label>
-                          </div>
-                          <div style="clear: both"></div>
-                        </div>
-                        <div
-                          class="fhs-edit-account-password-form"
-                          style="display: none">
-                          <div
-                            class="fhs-input-box fhs-input-group-horizontal-account">
-                            <label>Mật khẩu hiện tại*</label>
-                            <div class="fhs-input-item">
-                              <div class="fhs-input-group">
-                                <input
-                                  class="fhs-textbox"
-                                  type="password"
-                                  placeholder="Mật khẩu hiện tại"
-                                  name="current_password"
-                                  id="current_password"
-                                  value=""
-                                  maxlength="16" />
-                                <span
-                                  class="fhs-input-icon fhs-textbox-alert"></span>
-                              </div>
-                            </div>
-                            <div class="fhs-input-alert"></div>
-                          </div>
-                          <div
-                            class="fhs-input-box fhs-input-group-horizontal-account">
-                            <label>Mật khẩu mới*</label>
-                            <div class="fhs-input-item">
-                              <div class="fhs-input-group">
-                                <input
-                                  class="fhs-textbox"
-                                  type="password"
-                                  placeholder="Mật khẩu mới"
-                                  name="password"
-                                  id="password"
-                                  value=""
-                                  maxlength="16" />
-                                <span
-                                  class="fhs-input-icon fhs-textbox-alert"></span>
-                              </div>
-                            </div>
-                            <div class="fhs-input-alert"></div>
-                          </div>
-                          <div
-                            class="fhs-input-box fhs-input-group-horizontal-account">
-                            <label>Nhập lại mật khẩu mới*</label>
-                            <div class="fhs-input-item">
-                              <div class="fhs-input-group">
-                                <input
-                                  class="fhs-textbox"
-                                  type="password"
-                                  placeholder="Nhập lại mật khẩu mới"
-                                  name="confirmation"
-                                  id="confirmation"
-                                  value=""
-                                  maxlength="16" />
-                                <span
-                                  class="fhs-input-icon fhs-textbox-alert"></span>
-                              </div>
-                            </div>
-                            <div class="fhs-input-alert"></div>
-                          </div>
-                        </div> -->
                       </div>
                       <div style="text-align: center; padding: 20px 0 10px 0">
                         <button
@@ -549,6 +444,91 @@
                         </button>
                       </div>
                     </form>
+                  </div>
+                </div>
+                <div class="change-password">
+                  <div style="background-color: #fff">
+                    <div class="page-title-2">
+                      <h1>Đổi mật khẩu</h1>
+                    </div>
+                    <div>
+                      <div class="account-row" style="margin-top: 10px"></div>
+                      <div class="fhs-edit-account-password-form">
+                        <div
+                          class="fhs-input-box fhs-input-group-horizontal-account">
+                          <label>Mật khẩu hiện tại*</label>
+                          <div class="fhs-input-item">
+                            <div class="fhs-input-group">
+                              <input
+                                class="fhs-textbox"
+                                type="password"
+                                placeholder="Mật khẩu hiện tại"
+                                name="current_password"
+                                id="current_password"
+                                value=""
+                                maxlength="16" />
+                              <span
+                                class="fhs-input-icon fhs-textbox-alert"></span>
+                            </div>
+                          </div>
+                          <div
+                            class="fhs-input-alert"
+                            id="alert-current-pass"></div>
+                        </div>
+                        <div
+                          class="fhs-input-box fhs-input-group-horizontal-account">
+                          <label>Mật khẩu mới*</label>
+                          <div class="fhs-input-item">
+                            <div class="fhs-input-group">
+                              <input
+                                class="fhs-textbox"
+                                type="password"
+                                placeholder="Mật khẩu mới"
+                                name="password"
+                                id="password"
+                                value=""
+                                maxlength="50" />
+                              <span
+                                class="fhs-input-icon fhs-textbox-alert"></span>
+                            </div>
+                          </div>
+                          <div
+                            class="fhs-input-alert"
+                            id="alert-new-pass"></div>
+                        </div>
+                        <div
+                          class="fhs-input-box fhs-input-group-horizontal-account">
+                          <label>Nhập lại mật khẩu mới*</label>
+                          <div class="fhs-input-item">
+                            <div class="fhs-input-group">
+                              <input
+                                class="fhs-textbox"
+                                type="password"
+                                placeholder="Nhập lại mật khẩu mới"
+                                name="confirmation"
+                                id="confirmation"
+                                value=""
+                                maxlength="50"
+                                onkeyup="checkConfirmPass(this)" />
+                              <span
+                                class="fhs-input-icon fhs-textbox-alert"></span>
+                            </div>
+                          </div>
+                          <div class="fhs-input-alert" id="alert-confirm"></div>
+                        </div>
+                        <div style="text-align: center; padding: 20px 0 10px 0">
+                          <button
+                            type="button"
+                            title="Lưu thay đổi"
+                            id="btn-change-account-pass"
+                            class="btn-save-confirm"
+                            disabled
+                            onclick="changeUserPassword() ">
+                            <span><span>Lưu thay đổi</span></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
