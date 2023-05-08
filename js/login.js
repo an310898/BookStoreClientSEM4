@@ -21,23 +21,23 @@ function showRegister() {
   document.querySelector(".popup-register-content").style.display = "block";
 }
 function login() {
-  document.getElementById("login-user").innerHTML = ``;
-  document.getElementById("login-password").innerHTML = ``;
+  //   document.getElementById("login-user").innerHTML = ``;
+  //   document.getElementById("login-password").innerHTML = ``;
   const userName = document.getElementById("login_username")?.value || "";
   const password = document.getElementById("login_password")?.value || "";
-  if (userName.length < 6 || password.length < 6) {
-    if (userName.length < 6) {
-      document.getElementById(
-        "login-user"
-      ).innerHTML = `<div style="color:red;margin-top:5px">Tên tài khoan tối thiểu 6 kí tự</div>`;
-    }
-    if (password.length < 6) {
-      document.getElementById(
-        "login-password"
-      ).innerHTML = `<div style="color:red;margin-top:5px">Mật khẩu tối thiểu 6 kí tự</div>`;
-    }
-    return;
-  }
+  //   if (userName.length < 6 || password.length < 6) {
+  //     if (userName.length < 6) {
+  //       document.getElementById(
+  //         "login-user"
+  //       ).innerHTML = `<div style="color:red;margin-top:5px">Tên tài khoan tối thiểu 6 kí tự</div>`;
+  //     }
+  //     if (password.length < 6) {
+  //       document.getElementById(
+  //         "login-password"
+  //       ).innerHTML = `<div style="color:red;margin-top:5px">Mật khẩu tối thiểu 6 kí tự</div>`;
+  //     }
+  //     return;
+  //   }
 
   const formData = {
     UserName: userName,

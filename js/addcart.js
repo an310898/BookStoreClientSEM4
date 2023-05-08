@@ -10,6 +10,8 @@ function addToCart(bookId) {
     }
     document.cookie = `arrayCart=[${arrayBook}];expires=${date.toGMTString()};path=/`;
     // console.log(getCookie("arrayCart"));
+    alert("Thêm giỏ hành thành công");
+
     return;
   }
   arrayBook = [];
@@ -17,4 +19,5 @@ function addToCart(bookId) {
     arrayBook.push(bookId);
   }
   document.cookie = `arrayCart=[${arrayBook}];expires=${date.toGMTString()};path=/`;
+  alert("Thêm giỏ hành thành công");
 }
