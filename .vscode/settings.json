@@ -13,13 +13,11 @@
   "explorer.confirmDelete": false,
   "liveServer.settings.donotShowInfoMsg": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "security.workspace.trust.untrustedFiles": "open",
   "explorer.confirmDragAndDrop": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "gitlens.hovers.currentLine.over": "line",
   "json.maxItemsComputed": 5000000,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "Cascadia Code",
@@ -40,14 +38,10 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "material-icon-theme",
-  "bracket-pair-colorizer-2.depreciation-notice": false,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.largeFileOptimizations": false,
-  // "editor.codeActionsOnSave": {
-  //   "source.organizeImports": true
-  // },
   "explorer.compactFolders": false,
   "editor.lineHeight": 22
 }
