@@ -40,16 +40,16 @@ dataBook.then(x => {
   const name = document.querySelector("h1");
   const nxb = document.querySelector("#nxb");
   const author = document.querySelector("#author");
-  const desc = document.querySelectorAll("#desc_content");
-  const bookid = document.querySelector(".data_sku");
-  const age = document.querySelector(".data_age");
-  const dataAuthor = document.querySelector(".data_author");
-  const dataPublisher = document.querySelector(".data_publisher");
-  const dataLanguages = document.querySelector(".data_languages");
-  const dataWeight = document.querySelector(".data_weight");
-  const dataSize = document.querySelector(".data_size");
-  const dataQtyOfPage = document.querySelector(".data_qty_of_page");
-  const dataBookLayout = document.querySelector(".data_book_layout");
+  const desc = document.querySelectorAll(".desc_content");
+  const bookid = document.querySelectorAll(".data_sku");
+  const age = document.querySelectorAll(".data_age");
+  const dataAuthor = document.querySelectorAll(".data_author");
+  const dataPublisher = document.querySelectorAll(".data_publisher");
+  const dataLanguages = document.querySelectorAll(".data_languages");
+  const dataWeight = document.querySelectorAll(".data_weight");
+  const dataSize = document.querySelectorAll(".data_size");
+  const dataQtyOfPage = document.querySelectorAll(".data_qty_of_page");
+  const dataBookLayout = document.querySelectorAll(".data_book_layout");
   document
     .querySelector(".btn-cart-to-cart")
     .setAttribute("onclick", `addToCart(${bookId})`);
@@ -59,22 +59,23 @@ dataBook.then(x => {
   name.innerText = x.Name;
   nxb.innerText = x.PublishingCompany;
   author.innerText = x.Author;
-  desc[0].innerHTML = x.Description;
-  desc[1].innerHTML = x.Description;
-  // DOM thông tin chi tiết sản phẩm
 
-  bookid.innerText = x.Id;
-  age.innerText = x.Age;
-  if (parseInt(x.Age) === 0) {
-    age.parentElement.style = "display:none";
+  // DOM thông tin chi tiết sản phẩm
+  for (let i = 0; i < 2; i++) {
+    desc[i].innerHTML = x.Description;
+    bookid[i].innerText = x.Id;
+    age[i].innerText = x.Age;
+    if (parseInt(x.Age) === 0) {
+      age[i].parentElement.style = "display:none";
+    }
+    dataAuthor[i].innerText = x.Author;
+    dataPublisher[i].innerText = x.PublishingCompany;
+    dataLanguages[i].innerText = x.Language;
+    dataWeight[i].innerText = x.Weight;
+    dataSize[i].innerText = x.Size;
+    dataQtyOfPage[i].innerText = x.Pages;
+    dataBookLayout[i].innerText = x.CoverType;
   }
-  dataAuthor.innerText = x.Author;
-  dataPublisher.innerText = x.PublishingCompany;
-  dataLanguages.innerText = x.Language;
-  dataWeight.innerText = x.Weight;
-  dataSize.innerText = x.Size;
-  dataQtyOfPage.innerText = x.Pages;
-  dataBookLayout.innerText = x.CoverType;
 });
 
 // fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
