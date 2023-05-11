@@ -1,277 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082"
-      media="all" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082" media="all" />
     <link href="css/default.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
     <link href="css/product-details.css" rel="stylesheet" />
-  </head>
-  <body>
-    <section id="header" class="heaer">
-      <div class="fhs_header_desktop" style="background-color: white">
-        <div class="container">
-          <div class="fhs-header-top-second-bar" style="position: relative">
-            <div
-              class="icon_fahasa_logo fhs_mouse_point"
-              onclick="location.href = '/';"
-              title="FAHASA.COM"></div>
+</head>
 
-            <div class="fhs_center_left">
-              <div class="box search_box">
-                <form
-                  id="search_mini_form_desktop"
-                  action="https://www.fahasa.com/catalogsearch/result/"
-                  method="get">
-                  <div class="search pull-left">
-                    <div class="form-search fhs_dropdown_hover_out">
-                      <input
-                        id="search_desktop"
-                        type="text"
-                        name="q"
-                        autocomplete="off"
-                        placeholder="Tìm kiếm sản phẩm mong muốn..."
-                        value=""
-                        class="input-search" />
-                      <span class="fhs_btn_default active button-search"
-                        ><span class="ico_search_white"></span
-                      ></span>
-                      <div class="form-search-form fhs_dropdown"></div>
+<body>
+    <section id="header" class="header">
+        <div class="fhs_header_desktop" style="background-color: white">
+            <div class="container">
+                <div class="fhs-header-top-second-bar" style="position: relative">
+                    <div class="icon_fahasa_logo fhs_mouse_point" onclick="location.href = '/';" title="FAHASA.COM">
                     </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <div class="fhs_center_space" style="padding-left: 24px">
-              <div class="cart-top no_cover fhs_dropdown_hover">
-                <div class="fhs_top_cart" style="margin-right: 5px">
-                  <a href="cart.html">
-                    <div class="heading heading-custom" style="display: flex">
-                      <div class="fhs_center_center" style="margin-bottom: 3px">
-                        <div class="icon_cart_gray">
-                          <!-- <div
-							  class="top_menu_unseen fhs_center_center"
-							  style="visibility: visible"
-							>
-							  <span
-								class="cartmini_qty"
-								style="visibility: visible"
-								>2</span
-							  >
-							</div> -->
+                    <div class="fhs_center_right fhs_mouse_point fhs_dropdown_hover fhs_dropdown_click">
+                        <span class="icon_menu" onmouseover="displayCatalogCate()"></span>
+                        <span class="icon_seemore_gray" onmouseover="displayCatalogCate()"></span>
+                        <div class="catalog_menu_dropdown fhs_dropdown" onmouseleave="hideCatalogCate(this)">
+                            <div class="fhs_stretch_stretch">
+                                <div>
+                                    <div>
+                                        Danh mục sản phẩm </div>
+                                    <ul class="nav navbar-nav verticalmenu">
+                                        <!-- DOM DATA -->
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div
-                        class="top-cart-button-label fhs_top_center"
-                        style="margin-top: 4px">
-                        <div class="top_menu_label">Giỏ Hàng</div>
-                      </div>
                     </div>
-                  </a>
+                    <div class="fhs_center_left">
+                        <div class="box search_box">
+                            <form id="search_mini_form_desktop" action="https://www.fahasa.com/catalogsearch/result/"
+                                method="POST">
+                                <div class="search pull-left">
+                                    <div class="form-search fhs_dropdown_hover_out"> <input id="search_desktop"
+                                            type="text" name="q" autocomplete="off"
+                                            placeholder="Tìm kiếm sản phẩm mong muốn..." value=""
+                                            class="input-search" /> <span class="fhs_btn_default active button-search">
+                                            <span class="ico_search_white"></span> </span>
+                                        <div class="form-search-form fhs_dropdown"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="fhs_center_space" style="padding-left: 24px">
+                        <div class="cart-top no_cover fhs_dropdown_hover">
+                            <div class="fhs_top_cart" style="margin-right: 5px"> <a href="cart.html">
+                                    <div class="heading heading-custom" style="display: flex">
+                                        <div class="fhs_center_center" style="margin-bottom: 3px">
+                                            <div class="icon_cart_gray">
+                                                <!-- <div class="top_menu_unseen fhs_center_center" style="visibility: visible" > <span class="cartmini_qty" style="visibility: visible" >2</span > </div> -->
+                                            </div>
+                                        </div>
+                                        <div class="top-cart-button-label fhs_top_center" style="margin-top: 4px">
+                                            <div class="top_menu_label">Giỏ Hàng</div>
+                                        </div>
+                                    </div>
+                                </a> </div>
+                        </div>
+                        <div class="fhs_top_account no_cover fhs_dropdown_hover" id="fhs_top_account_hover"> <a
+                                href="login.html">
+                                <div class="fhs_top_account_button"
+                                    style=" display: flex; flex-direction: row; justify-content: center; align-items: center; ">
+                                    <div class="icon_account_gray" style="margin-bottom: 3px"></div>
+                                    <div class="top_menu_label fhs_top_center fhs_nowrap_one"
+                                        id="loginUser fhs_top_account_title"> Tài khoản </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div
-                class="fhs_top_account no_cover fhs_dropdown_hover"
-                id="fhs_top_account_hover">
-                <a href="login.html">
-                  <div
-                    class="fhs_top_account_button"
-                    style="
-                      display: flex;
-                      flex-direction: row;
-                      justify-content: center;
-                      align-items: center;
-                    ">
-                    <div
-                      class="icon_account_gray"
-                      style="margin-bottom: 3px"></div>
-                    <div
-                      class="top_menu_label fhs_top_center fhs_nowrap_one"
-                      id="loginUser fhs_top_account_title">
-                      Tài khoản
-                    </div>
-                  </div>
-                </a>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="fhs_header_mobile">
-        <div class="fhs-logo" style="text-align: center">
-          <a href="https://www.fahasa.com/" title="FAHASA.COM" class="logo"
-            ><strong class="logo-title">FAHASA.COM</strong
-            ><img
-              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
-              alt="FAHASA.COM"
-          /></a>
-        </div>
-        <div class="fhs-header-top-bar">
-          <div class="search-mobile-header">
-            <div class="ves-autosearch">
-              <div class="box search_box">
-                <form
-                  id="search_mini_form_mobile"
-                  action="https://www.fahasa.com/catalogsearch/result/"
-                  method="get">
-                  <div class="search pull-left">
-                    <div class="form-search">
-                      <input
-                        id="search_mobile"
-                        type="text"
-                        name="q"
-                        autocomplete="off"
-                        placeholder="Tìm kiếm sản phẩm mong muốn..."
-                        value=""
-                        class="input-search" />
-                      <span class="button-search fa fa-search"></span>
-                      <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
-                      <div
-                        class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
-                        style="display: none"></div>
-                      <div
-                        id="search_autocomplete"
-                        class="search-autocomplete"></div>
-                      <div class="form-search-form fhs_dropdown"></div>
+        <div class="fhs_header_mobile">
+            <div class="fhs-logo" style="text-align: center"> <a href="https://www.fahasa.com/" title="FAHASA.COM"
+                    class="logo"> <strong class="logo-title">FAHASA.COM</strong> <img
+                        src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+                        alt="FAHASA.COM" /> </a> </div>
+            <div class="fhs-header-top-bar">
+                <div class="fhs_center_center fhs_mouse_point fhs_popup_full_click"> <span class="ico_menu_white"
+                        style="margin: 0 4px"></span> </div>
+                <div class="search-mobile-header">
+                    <div class="ves-autosearch">
+                        <div class="box search_box">
+                            <form id="search_mini_form_mobile" action="https://www.fahasa.com/catalogsearch/result/"
+                                method="get">
+                                <div class="search pull-left">
+                                    <div class="form-search"> <input id="search_mobile" type="text" name="q"
+                                            autocomplete="off" placeholder="Tìm kiếm sản phẩm mong muốn..." value=""
+                                            class="input-search" /> <span class="button-search fa fa-search"></span>
+                                        <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
+                                        <div class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
+                                            style="display: none"></div>
+                                        <div id="search_autocomplete" class="search-autocomplete"></div>
+                                        <div class="form-search-form fhs_dropdown"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="icons-mobile-header" style="position: relative">
-            <div id="cart" class="clearfix">
-              <a href="https://www.fahasa.com/checkout/cart/">
-                <div class="fhs_center_center">
-                  <div class="icon_cart_white" style="margin-right: 4px">
-                    <div>
-                      <div
-                        class="top_menu_unseen fhs_center_center cartmini_qty"
-                        style="visibility: visible">
-                        2
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </a>
-            </div>
-          </div>
-
-          <style>
-            .login-cutomer-icon {
-              position: inherit;
-              background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png)
-                no-repeat center center;
-              background-size: 20px !important;
-            }
-            @media (max-width: 992px) {
-              #header .header1 .customer-top {
-                margin-right: 5px;
-                margin-left: 5px;
-              }
-            }
-            #header .header1 .customer-top {
-              padding-left: 0px;
-            }
-          </style>
-          <div id="mini_cart_block" class="customer-top">
-            <div>
-              <a href="https://www.fahasa.com/customer/account/">
                 <div>
-                  <div
-                    class="login-cutomer-icon"
-                    style="width: 30px; height: 35px"></div>
+                    <div class="icons-mobile-header" style="position: relative">
+                        <div id="cart" class="clearfix"> <a href="cart.html">
+                                <div class="fhs_center_center">
+                                    <div class="icon_cart_white" style="margin-right: 4px">
+                                        <!-- <div> <div class="top_menu_unseen fhs_center_center cartmini_qty" style="visibility: visible"> 0 </div> </div> -->
+                                    </div>
+                                </div>
+                            </a> </div>
+                    </div>
+                    <style>
+                        .login-cutomer-icon {
+                            position: inherit;
+                            background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png) no-repeat center center;
+                            background-size: 20px !important;
+                        }
+
+                        @media (max-width: 992px) {
+                            #header .header1 .customer-top {
+                                margin-right: 5px;
+                                margin-left: 5px;
+                            }
+                        }
+
+                        #header .header1 .customer-top {
+                            padding-left: 0px;
+                        }
+                    </style>
+                    <div id="mini_cart_block" class="customer-top">
+                        <div> <a href="user.html">
+                                <div>
+                                    <div class="login-cutomer-icon" style="width: 30px; height: 35px"></div>
+                                </div>
+                            </a> </div>
+                    </div>
                 </div>
-              </a>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <div class="main-container col1-layout no-margin-top">
-      <div class="main">
-        <div style="margin-bottom: 5px"></div>
-        <div class="col-main">
-          <div class="container">
-            <div class="container-inner">
-              <div class="youama-ajaxlogin-cover" style="display: none"></div>
-              <div class="product-view kasitoo">
-                <!--begin web UI-->
-                <div class="product-essential">
-                  <div class="product-essential-media">
-                    <div class="product-view-image">
-                      <div
-                        class="product-view-image-product fhs_img_frame_container"
-                        img_index="0">
-                        <img
-                          id="image"
-                          class="fhs-p-img lazyloaded"
-                          src=""
-                          alt=""
-                          title="" />
-                      </div>
-                      <div class="clear"></div>
+        <div class="main">
+            <div style="margin-bottom: 5px"></div>
+            <div class="col-main">
+                <div class="container">
+                    <div class="container-inner">
+                        <div class="youama-ajaxlogin-cover" style="display: none"></div>
+                        <div class="product-view kasitoo">
+                            <!--begin web UI-->
+                            <div class="product-essential">
+                                <div class="product-essential-media">
+                                    <div class="product-view-image">
+                                        <div class="product-view-image-product fhs_img_frame_container" img_index="0">
+                                            <img id="image" class="fhs-p-img lazyloaded" src="" alt="" title="" />
+                                        </div>
+                                        <div class="clear"></div>
 
-                      <!-- Initialize Swiper -->
-                      <div class="clear"></div>
-                    </div>
-                  </div>
-                  <div class="product-essential-detail">
-                    <h1></h1>
+                                        <!-- Initialize Swiper -->
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="product-essential-detail">
+                                    <h1></h1>
 
-                    <div class="product-view-sa">
-                      <div class="product-view-sa_one">
-                        <div class="product-view-sa-supplier">
-                          <span>Nhà xuất bản:</span> <span id="nxb"></span>
-                        </div>
-                        <div class="product-view-sa-author">
-                          <!-- <span>Tác giả:</span><span>Soubee Amako</span> -->
-                        </div>
-                      </div>
-                      <div class="product-view-sa_two">
-                        <div class="product-view-sa-supplier">
-                          <span>Tác giả:</span><span id="author"></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="view-rate" style="">
-                      <div class="view-rate-left" style="padding: 0px">
-                        <div class="ratings">
-                          <div class="rating-content">
-                            <table class="ratings-desktop">
-                              <tbody>
-                                <tr>
-                                  <td>
-                                    <a
-                                      onclick="prodComment.choiceTab('review');"
-                                      ><div class="rating-box">
-                                        <div
-                                          class="rating rating-total"
-                                          style="width: 0%"></div></div
-                                    ></a>
-                                  </td>
-                                  <td class="review-position">
-                                    <p class="rating-links">
-                                      <a
-                                        onclick="prodComment.choiceTab('review');"
-                                        >(0 đánh giá)
-                                      </a>
-                                    </p>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                            <!-- <table class="ratings-mobile ratings-short">
+                                    <div class="product-view-sa">
+                                        <div class="product-view-sa_one">
+                                            <div class="product-view-sa-supplier">
+                                                <span>Nhà xuất bản:</span> <span id="nxb"></span>
+                                            </div>
+                                            <div class="product-view-sa-author">
+                                                <!-- <span>Tác giả:</span><span>Soubee Amako</span> -->
+                                            </div>
+                                        </div>
+                                        <div class="product-view-sa_two">
+                                            <div class="product-view-sa-supplier">
+                                                <span>Tác giả:</span><span id="author"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="view-rate" style="">
+                                        <div class="view-rate-left" style="padding: 0px">
+                                            <div class="ratings">
+                                                <div class="rating-content">
+                                                    <table class="ratings-desktop">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <a onclick="prodComment.choiceTab('review');">
+                                                                        <div class="rating-box">
+                                                                            <div class="rating rating-total"
+                                                                                style="width: 0%"></div>
+                                                                        </div>
+                                                                    </a>
+                                                                </td>
+                                                                <td class="review-position">
+                                                                    <p class="rating-links">
+                                                                        <a onclick="prodComment.choiceTab('review');">(0
+                                                                            đánh giá)
+                                                                        </a>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- <table class="ratings-mobile ratings-short">
                               <tbody>
                                 <tr>
                                   <td>
@@ -293,538 +235,435 @@
                                 </tr>
                               </tbody>
                             </table> -->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="col-md-12 price-block">
-                      <div
-                        id="catalog-product-details-price"
-                        class="product_price price-block-left"
-                        style="">
-                        <div class="price-box">
-                          <p class="special-price">
-                            <span class="price-label">Special Price</span>
-                            <span class="price" id="product-price-427928"
-                              >36.000&nbsp;đ</span
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="clear"></div>
-                      <div class="price-block-right">
-                        <ui class="fhs_addon fhs_addon_desktop">
-                          <li class="fhs_addon_topvote" style="display: none">
-                            <span class="fhs_addon_topvote_icon"></span>
-                            <span class="fhs_addon_topvote_text fhs_nowrap_one"
-                              >Bình chọn</span
-                            >
-                          </li>
-                          <li
-                            class="fhs_addon_wishlist"
-                            style="display: none"></li>
-                        </ui>
-                      </div>
-                    </div>
+                                    <div class="col-md-12 price-block">
+                                        <div id="catalog-product-details-price" class="product_price price-block-left"
+                                            style="">
+                                            <div class="price-box">
+                                                <p class="special-price">
+                                                    <span class="price-label">Special Price</span>
+                                                    <span class="price" id="product-price-427928">36.000&nbsp;đ</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="price-block-right">
+                                            <ui class="fhs_addon fhs_addon_desktop">
+                                                <li class="fhs_addon_topvote" style="display: none">
+                                                    <span class="fhs_addon_topvote_icon"></span>
+                                                    <span class="fhs_addon_topvote_text fhs_nowrap_one">Bình chọn</span>
+                                                </li>
+                                                <li class="fhs_addon_wishlist" style="display: none"></li>
+                                            </ui>
+                                        </div>
+                                    </div>
 
-                    <div class="clear"></div>
+                                    <div class="clear"></div>
 
-                    <div class="clear"></div>
-                    <div id="catalog-product-details-discount">
-                      <div class="product-view-quantity-box">
-                        <label for="qty">Số lượng:</label>
-                        <div class="product-view-quantity-box-block">
-                          <a class="btn-subtract-qty" onclick="subtractQty();"
-                            ><img
-                              style="width: 12px; height: auto"
-                              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_minus2x.png"
-                          /></a>
-                          <input
-                            type="text"
-                            name="qty"
-                            id="qty"
-                            maxvalue="999"
-                            minvalue="1"
-                            align="center"
-                            value="1"
-                            title="SL"
-                            class="input-text qty" />
-                          <a class="btn-add-qty" onclick="addQty();"
-                            ><img
-                              style="width: 12px; height: auto"
-                              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_plus2x.png"
-                          /></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="product_view_add_box">
-                      <button
-                        type="button"
-                        title="Thêm vào giỏ hàng"
-                        class="btn-cart-to-cart"
-                        onclick="addToCart()">
-                        <span class="fhs_icon_cart"></span
-                        ><span>Thêm vào giỏ hàng</span>
-                      </button>
-                    </div>
-                    <div
-                      class="policy-popup-background"
-                      id="policy-popup-background">
-                      <div class="policy-popup-content"></div>
-                    </div>
+                                    <div class="clear"></div>
+                                    <div id="catalog-product-details-discount">
+                                        <div class="product-view-quantity-box">
+                                            <label for="qty">Số lượng:</label>
+                                            <div class="product-view-quantity-box-block">
+                                                <a class="btn-subtract-qty" onclick="subtractQty();"><img
+                                                        style="width: 12px; height: auto"
+                                                        src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_minus2x.png" /></a>
+                                                <input type="text" name="qty" id="qty" maxvalue="999" minvalue="1"
+                                                    align="center" value="1" title="SL" class="input-text qty" />
+                                                <a class="btn-add-qty" onclick="addQty();"><img
+                                                        style="width: 12px; height: auto"
+                                                        src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_plus2x.png" /></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="product_view_add_box">
+                                        <button type="button" title="Thêm vào giỏ hàng" class="btn-cart-to-cart"
+                                            onclick="addToCart()">
+                                            <span class="fhs_icon_cart"></span><span>Thêm vào giỏ hàng</span>
+                                        </button>
+                                    </div>
+                                    <div class="policy-popup-background" id="policy-popup-background">
+                                        <div class="policy-popup-content"></div>
+                                    </div>
 
-                    <div class="clear"></div>
+                                    <div class="clear"></div>
 
-                    <div class="clear"></div>
-                    <div class="fhs-bsidebar">
-                      <div class="fhs-bsidebar-tab">
-                        <ul class="fhs-bsidebar-tab-items">
-                          <li class="fhs-bsidebar-tab-items-qty">
-                            <div class="product-view-quantity-box">
-                              <div class="product-view-quantity-box-block">
-                                <a
-                                  class="btn-subtract-qty"
-                                  onclick="subtractQty();"
-                                  ><img
-                                    style="width: 12px; height: auto"
-                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_minus2x.png"
-                                /></a>
-                                <input
-                                  type="text"
-                                  name="qty"
-                                  id="qty_mobile"
-                                  maxvalue="999"
-                                  minvalue="1"
-                                  align="center"
-                                  value="1"
-                                  title="SL"
-                                  class="input-text qty" />
-                                <a class="btn-add-qty" onclick="addQty();"
-                                  ><img
-                                    style="width: 12px; height: auto"
-                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_plus2x.png"
-                                /></a>
-                              </div>
+                                    <div class="clear"></div>
+                                    <div class="fhs-bsidebar">
+                                        <div class="fhs-bsidebar-tab">
+                                            <ul class="fhs-bsidebar-tab-items">
+                                                <li class="fhs-bsidebar-tab-items-qty">
+                                                    <div class="product-view-quantity-box">
+                                                        <div class="product-view-quantity-box-block">
+                                                            <a class="btn-subtract-qty" onclick="subtractQty();"><img
+                                                                    style="width: 12px; height: auto"
+                                                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_minus2x.png" /></a>
+                                                            <input type="text" name="qty" id="qty_mobile" maxvalue="999"
+                                                                minvalue="1" align="center" value="1" title="SL"
+                                                                class="input-text qty" />
+                                                            <a class="btn-add-qty" onclick="addQty();"><img
+                                                                    style="width: 12px; height: auto"
+                                                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/ico_plus2x.png" /></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="fhs-bsidebar-tab-items-addcart">
+                                                    <button type="button" title="Thêm vào giỏ hàng"
+                                                        class="btn-cart-to-cart"
+                                                        onclick="productAddToCartForm.submit(this); return false;">
+                                                        <span><span>Thêm vào</span><span>giỏ hàng</span></span>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </li>
-                          <li class="fhs-bsidebar-tab-items-addcart">
-                            <button
-                              type="button"
-                              title="Thêm vào giỏ hàng"
-                              class="btn-cart-to-cart"
-                              onclick="productAddToCartForm.submit(this); return false;">
-                              <span
-                                ><span>Thêm vào</span
-                                ><span>giỏ hàng</span></span
-                              >
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="clear"></div>
-              </div>
-              <div class="product-collateral">
-                <div
-                  id="product_view_info"
-                  class="content product_view_content">
-                  <div class="product_view_content-title">
-                    Thông tin sản phẩm
-                  </div>
-                  <div class="product_view_tab_content_ad">
-                    <div class="product_view_tab_content_additional">
-                      <table class="data-table table-additional">
-                        <colgroup>
-                          <col width="25%" />
-                          <col />
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th class="table-label">Mã hàng</th>
-                            <td class="data_sku"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">Độ Tuổi</th>
-                            <td class="data_age"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">Tác giả</th>
-                            <td class="data_author"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">NXB</th>
-                            <td class="data_publisher"></td>
-                          </tr>
-
-                          <tr>
-                            <th class="table-label">Ngôn Ngữ</th>
-                            <td class="data_languages"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">Trọng lượng (gr)</th>
-                            <td class="data_weight"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">Kích Thước Bao Bì</th>
-                            <td class="data_size"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">Số trang</th>
-                            <td class="data_qty_of_page"></td>
-                          </tr>
-                          <tr>
-                            <th class="table-label">Hình thức</th>
-                            <td class="data_book_layout"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-
-                    <div class="clear"></div>
-                    <div id="product_tabs_description_contents">
-                      <div class="std desc_content">
-                        <div class="clear"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="clear"></div>
-                  <div style="overflow-y: hidden">
-                    <div class="product_view_tab_content_ad_more" style="">
-                      <div class="product_view_tab_content_additional">
-                        <table class="data-table table-additional">
-                          <colgroup>
-                            <col width="25%" />
-                            <col />
-                          </colgroup>
-                          <tbody>
-                            <tr>
-                              <th class="table-label">Mã hàng</th>
-                              <td class="data_sku"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">Độ Tuổi</th>
-                              <td class="data_age"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">Tác giả</th>
-                              <td class="data_author"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">NXB</th>
-                              <td class="data_publisher"></td>
-                            </tr>
-
-                            <tr>
-                              <th class="table-label">Ngôn Ngữ</th>
-                              <td class="data_languages"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">Trọng lượng (gr)</th>
-                              <td class="data_weight"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">Kích Thước Bao Bì</th>
-                              <td class="data_size"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">Số trang</th>
-                              <td class="data_qty_of_page"></td>
-                            </tr>
-                            <tr>
-                              <th class="table-label">Hình thức</th>
-                              <td class="data_book_layout"></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="clear"></div>
-                      <div id="product_tabs_description_contents">
-                        <div class="std desc_content">
-                          <div class="clear"></div>
+                            <div class="clear"></div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
+                        <div class="product-collateral">
+                            <div id="product_view_info" class="content product_view_content">
+                                <div class="product_view_content-title">
+                                    Thông tin sản phẩm
+                                </div>
+                                <div class="product_view_tab_content_ad">
+                                    <div class="product_view_tab_content_additional">
+                                        <table class="data-table table-additional">
+                                            <colgroup>
+                                                <col width="25%" />
+                                                <col />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="table-label">Mã hàng</th>
+                                                    <td class="data_sku"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">Độ Tuổi</th>
+                                                    <td class="data_age"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">Tác giả</th>
+                                                    <td class="data_author"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">NXB</th>
+                                                    <td class="data_publisher"></td>
+                                                </tr>
 
-                  <div class="clear"></div>
-                  <div
-                    id="desc_viewmore"
-                    class="desc_viewmore"
-                    style="display: block">
-                    <div
-                      class="fhs_center_center"
-                      style="padding: 15px 0 8px 0">
-                      <a id="btn_showmore" class="fhs_btn_default mobile_link"
-                        >Xem Thêm<span
-                          class="icon_seemore_blue mobile_only down"
-                          style="margin-left: 4px"></span
-                      ></a>
-                    </div>
-                  </div>
-                </div>
+                                                <tr>
+                                                    <th class="table-label">Ngôn Ngữ</th>
+                                                    <td class="data_languages"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">Trọng lượng (gr)</th>
+                                                    <td class="data_weight"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">Kích Thước Bao Bì</th>
+                                                    <td class="data_size"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">Số trang</th>
+                                                    <td class="data_qty_of_page"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="table-label">Hình thức</th>
+                                                    <td class="data_book_layout"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
-                <div
-                  id="product_view_review"
-                  class="content product_view_content">
-                  <div class="product_view_content-title">
-                    Đánh giá sản phẩm
-                  </div>
-                  <div
-                    id="product_view_tab_content_review"
-                    class="product_view_tab_content_review">
-                    <style></style>
-                    <div class="product-view-tab-content-rating">
-                      <div class="product-view-tab-content-rating-chart">
-                        <div>
-                          <div>
-                            <div>
-                              <div>0<span>/5</span></div>
-                              <div>
-                                <div class="rating-box">
-                                  <div
-                                    class="rating rating-total"
-                                    style="width: 0%"></div>
+                                    <div class="clear"></div>
+                                    <div id="product_tabs_description_contents">
+                                        <div class="std desc_content">
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="clear"></div>
-                              </div>
-                              <div>(0&nbsp;đánh giá)</div>
-                            </div>
-                          </div>
-                          <div>
-                            <div id="rate-5">
-                              <span>5 sao</span>
-                              <div class="review-rating">
-                                <div style="width: 0%"></div>
-                              </div>
-                              <span>0%</span>
-                            </div>
-                            <div id="rate-4">
-                              <span>4 sao</span>
-                              <div class="review-rating">
-                                <div style="width: 0%"></div>
-                              </div>
-                              <span>0%</span>
-                            </div>
-                            <div id="rate-3">
-                              <span>3 sao</span>
-                              <div class="review-rating">
-                                <div style="width: 0%"></div>
-                              </div>
-                              <span>0%</span>
-                            </div>
-                            <div id="rate-2">
-                              <span>2 sao</span>
-                              <div class="review-rating">
-                                <div style="width: 0%"></div>
-                              </div>
-                              <span>0%</span>
-                            </div>
-                            <div id="rate-1">
-                              <span>1 sao</span>
-                              <div class="review-rating">
-                                <div style="width: 0%"></div>
-                              </div>
-                              <span>0%</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <button
-                            id="btn_review_write"
-                            type="button"
-                            title="Viết nhận xét của bạn"
-                            class="fhs_btn fhs_btn_write"
-                            onclick="showReview();">
-                            <span
-                              class="fhs-icon-write"
-                              style="margin-right: 4px"></span
-                            ><span>Viết đánh giá</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div></div>
-                    <div class="product-view-tab-content-review-comment">
-                      <div class="comment_content">
-                        <ul class="comment_list"></ul>
-                      </div>
-                    </div>
-                    <div
-                      class="product-view-tab-content-review-comment"
-                      style="display: none">
-                      <div
-                        class="product-view-tab-content-review-comment_sort review_comment_tabs_swiper_container swiper-container-horizontal">
-                        <ul
-                          class="fhs-tabs review_comment_tabs swiper-wrapper"
-                          style="transition-duration: 0ms">
-                          <li
-                            class="active"
-                            onclick="prodComment.sort_change(this, 'last-review')">
-                            <a>Mới nhất</a>
-                            <hr />
-                          </li>
-                          <li
-                            onclick="prodComment.sort_change(this, 'best-like')">
-                            <a>Yêu thích nhất</a>
-                            <hr />
-                          </li>
-                        </ul>
-                        <span
-                          class="swiper-notification"
-                          aria-live="assertive"
-                          aria-atomic="true"></span>
-                      </div>
-                      <div class="comment_content" style="display: none">
-                        <ul class="comment_list"></ul>
-                      </div>
-                      <div class="toolbar toolbar-bottom">
-                        <div class="pager">
-                          <div class="pages" id="pagination"><ol></ol></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="popup-notification-msg">
-                      <div
-                        id="popup-fahasa-alert-logo"
-                        class="popup-fahasa-alert-logo">
-                        <center>
-                          <img
-                            src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo-alert-success.png?q=102163" />
-                        </center>
-                      </div>
-                      <div class="popup-fahasa-default-alert-content">
-                        <div
-                          id="popup-fahasa-default-content-text"
-                          class="popup-fahasa-default-content-text"
-                          style="padding: 0 10px"></div>
-                      </div>
-                      <div
-                        class="popup-fahasa-default-footer-small btn-submit col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <button
-                          type="button"
-                          onclick="prodComment.closeAlert();"
-                          class="popup-fahasa-default-alert-confirm lg-close">
-                          <span> Đã hiểu </span>
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      id="popup_write_review"
-                      class="fhs_popup-default"
-                      style="width: 800px; height: 400px">
-                      <div class="fhs_popup-default-info-detail">
-                        <div class="fhs_popup-default-info-detail-title">
-                          <div class="fhs_popup-default-info-detail-title-text">
-                            <div
-                              class="fhs_popup-default-info-detail-title-left"></div>
-                            <div
-                              class="fhs_popup-default-info-detail-title-center">
-                              Viết đánh giá sản phẩm
-                            </div>
-                            <div
-                              class="fhs_popup-default-info-detail-title-right"
-                              onclick="closeReview();">
-                              <span class="icon_close_gray lg-close"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fhs_popup-default-info-detail-content">
-                          <div class="product-view-tab-content-rating-review">
-                            <div class="rating_choice fhs_center_center">
-                              <span
-                                class="rating_item rating_item_1 active"
-                                data="1"></span>
-                              <span
-                                class="rating_item rating_item_2 active"
-                                data="2"></span>
-                              <span
-                                class="rating_item rating_item_3 active"
-                                data="3"></span>
-                              <span
-                                class="rating_item rating_item_4 active"
-                                data="4"></span>
-                              <span
-                                class="rating_item rating_item_5 active"
-                                data="5"></span>
-                            </div>
-                            <div>
-                              <div class="fhs_textbox_parent">
-                                <input
-                                  type="text"
-                                  id="nickname_field"
-                                  class="input-text required-entry full-width"
-                                  placeholder="Nhập tên sẽ hiển thị khi đánh giá" />
-                              </div>
-                              <div
-                                class="validation-advice"
-                                id="advice-required-entry-nickname_field"
-                                style="display: none">
-                                Vui lòng điền ít nhất 6 ký tự!
-                              </div>
-                            </div>
-                            <div>
-                              <textarea
-                                id="review_field"
-                                cols="5"
-                                rows="3"
-                                class="required-entry full-width validate-length-minimum-100"
-                                placeholder="Nhập nhận xét của bạn về sản phẩm"
-                                style="height: 122px; resize: none"></textarea>
-                              <div
-                                class="fhs_top_space"
-                                style="max-height: 25px">
-                                <div style="width: calc(100% - 40px)">
-                                  <div
-                                    class="validation-advice fhs_nowrap_one"
-                                    id="advice-validate-length-minimum-10-review_field"
-                                    style="display: none">
-                                    Vui lòng điền ít nhất 20 ký tự!
-                                  </div>
+                                <div style="overflow-y: hidden">
+                                    <div class="product_view_tab_content_ad_more" style="">
+                                        <div class="product_view_tab_content_additional">
+                                            <table class="data-table table-additional">
+                                                <colgroup>
+                                                    <col width="25%" />
+                                                    <col />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="table-label">Mã hàng</th>
+                                                        <td class="data_sku"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">Độ Tuổi</th>
+                                                        <td class="data_age"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">Tác giả</th>
+                                                        <td class="data_author"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">NXB</th>
+                                                        <td class="data_publisher"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th class="table-label">Ngôn Ngữ</th>
+                                                        <td class="data_languages"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">Trọng lượng (gr)</th>
+                                                        <td class="data_weight"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">Kích Thước Bao Bì</th>
+                                                        <td class="data_size"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">Số trang</th>
+                                                        <td class="data_qty_of_page"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="table-label">Hình thức</th>
+                                                        <td class="data_book_layout"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div id="product_tabs_description_contents">
+                                            <div class="std desc_content">
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div
-                                  id="count-message"
-                                  class="fhs_nowrap_one"
-                                  style="width: 40px"></div>
-                              </div>
+
+                                <div class="clear"></div>
+                                <div id="desc_viewmore" class="desc_viewmore" style="display: block">
+                                    <div class="fhs_center_center" style="padding: 15px 0 8px 0">
+                                        <a id="btn_showmore" class="fhs_btn_default mobile_link">Xem Thêm<span
+                                                class="icon_seemore_blue mobile_only down"
+                                                style="margin-left: 4px"></span></a>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="fhs_center_right" style="padding: 0 8px">
-                            <button
-                              type="button"
-                              class="fhs_btn_default cancel lg-close"
-                              style="margin-right: 20px"
-                              onclick="closeReview();">
-                              <span>Hủy</span>
-                            </button>
-                            <button
-                              type="button"
-                              class="fhs_btn_default active btn_post_review"
-                              onclick="SaveCommentByBook();">
-                              <span>Gửi nhận xét</span>
-                            </button>
-                          </div>
+
+                            <div id="product_view_review" class="content product_view_content">
+                                <div class="product_view_content-title">
+                                    Đánh giá sản phẩm
+                                </div>
+                                <div id="product_view_tab_content_review" class="product_view_tab_content_review">
+                                    <style></style>
+                                    <div class="product-view-tab-content-rating">
+                                        <div class="product-view-tab-content-rating-chart">
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <div>0<span>/5</span></div>
+                                                        <div>
+                                                            <div class="rating-box">
+                                                                <div class="rating rating-total" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                        <div>(0&nbsp;đánh giá)</div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div id="rate-5">
+                                                        <span>5 sao</span>
+                                                        <div class="review-rating">
+                                                            <div style="width: 0%"></div>
+                                                        </div>
+                                                        <span>0%</span>
+                                                    </div>
+                                                    <div id="rate-4">
+                                                        <span>4 sao</span>
+                                                        <div class="review-rating">
+                                                            <div style="width: 0%"></div>
+                                                        </div>
+                                                        <span>0%</span>
+                                                    </div>
+                                                    <div id="rate-3">
+                                                        <span>3 sao</span>
+                                                        <div class="review-rating">
+                                                            <div style="width: 0%"></div>
+                                                        </div>
+                                                        <span>0%</span>
+                                                    </div>
+                                                    <div id="rate-2">
+                                                        <span>2 sao</span>
+                                                        <div class="review-rating">
+                                                            <div style="width: 0%"></div>
+                                                        </div>
+                                                        <span>0%</span>
+                                                    </div>
+                                                    <div id="rate-1">
+                                                        <span>1 sao</span>
+                                                        <div class="review-rating">
+                                                            <div style="width: 0%"></div>
+                                                        </div>
+                                                        <span>0%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button id="btn_review_write" type="button"
+                                                    title="Viết nhận xét của bạn" class="fhs_btn fhs_btn_write"
+                                                    onclick="showReview();">
+                                                    <span class="fhs-icon-write"
+                                                        style="margin-right: 4px"></span><span>Viết đánh giá</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div></div>
+                                    <div class="product-view-tab-content-review-comment">
+                                        <div class="comment_content">
+                                            <ul class="comment_list"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-view-tab-content-review-comment" style="display: none">
+                                        <div
+                                            class="product-view-tab-content-review-comment_sort review_comment_tabs_swiper_container swiper-container-horizontal">
+                                            <ul class="fhs-tabs review_comment_tabs swiper-wrapper"
+                                                style="transition-duration: 0ms">
+                                                <li class="active"
+                                                    onclick="prodComment.sort_change(this, 'last-review')">
+                                                    <a>Mới nhất</a>
+                                                    <hr />
+                                                </li>
+                                                <li onclick="prodComment.sort_change(this, 'best-like')">
+                                                    <a>Yêu thích nhất</a>
+                                                    <hr />
+                                                </li>
+                                            </ul>
+                                            <span class="swiper-notification" aria-live="assertive"
+                                                aria-atomic="true"></span>
+                                        </div>
+                                        <div class="comment_content" style="display: none">
+                                            <ul class="comment_list"></ul>
+                                        </div>
+                                        <div class="toolbar toolbar-bottom">
+                                            <div class="pager">
+                                                <div class="pages" id="pagination">
+                                                    <ol></ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="popup-notification-msg">
+                                        <div id="popup-fahasa-alert-logo" class="popup-fahasa-alert-logo">
+                                            <center>
+                                                <img
+                                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/logo-alert-success.png?q=102163" />
+                                            </center>
+                                        </div>
+                                        <div class="popup-fahasa-default-alert-content">
+                                            <div id="popup-fahasa-default-content-text"
+                                                class="popup-fahasa-default-content-text" style="padding: 0 10px"></div>
+                                        </div>
+                                        <div
+                                            class="popup-fahasa-default-footer-small btn-submit col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button type="button" onclick="prodComment.closeAlert();"
+                                                class="popup-fahasa-default-alert-confirm lg-close">
+                                                <span> Đã hiểu </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="popup_write_review" class="fhs_popup-default"
+                                        style="width: 800px; height: 400px">
+                                        <div class="fhs_popup-default-info-detail">
+                                            <div class="fhs_popup-default-info-detail-title">
+                                                <div class="fhs_popup-default-info-detail-title-text">
+                                                    <div class="fhs_popup-default-info-detail-title-left"></div>
+                                                    <div class="fhs_popup-default-info-detail-title-center">
+                                                        Viết đánh giá sản phẩm
+                                                    </div>
+                                                    <div class="fhs_popup-default-info-detail-title-right"
+                                                        onclick="closeReview();">
+                                                        <span class="icon_close_gray lg-close"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fhs_popup-default-info-detail-content">
+                                                <div class="product-view-tab-content-rating-review">
+                                                    <div class="rating_choice fhs_center_center">
+                                                        <span class="rating_item rating_item_1 active" data="1"></span>
+                                                        <span class="rating_item rating_item_2 active" data="2"></span>
+                                                        <span class="rating_item rating_item_3 active" data="3"></span>
+                                                        <span class="rating_item rating_item_4 active" data="4"></span>
+                                                        <span class="rating_item rating_item_5 active" data="5"></span>
+                                                    </div>
+                                                    <div>
+                                                        <div class="fhs_textbox_parent">
+                                                            <input type="text" id="nickname_field"
+                                                                class="input-text required-entry full-width"
+                                                                placeholder="Nhập tên sẽ hiển thị khi đánh giá" />
+                                                        </div>
+                                                        <div class="validation-advice"
+                                                            id="advice-required-entry-nickname_field"
+                                                            style="display: none">
+                                                            Vui lòng điền ít nhất 6 ký tự!
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <textarea id="review_field" cols="5" rows="3"
+                                                            class="required-entry full-width validate-length-minimum-100"
+                                                            placeholder="Nhập nhận xét của bạn về sản phẩm"
+                                                            style="height: 122px; resize: none"></textarea>
+                                                        <div class="fhs_top_space" style="max-height: 25px">
+                                                            <div style="width: calc(100% - 40px)">
+                                                                <div class="validation-advice fhs_nowrap_one"
+                                                                    id="advice-validate-length-minimum-10-review_field"
+                                                                    style="display: none">
+                                                                    Vui lòng điền ít nhất 20 ký tự!
+                                                                </div>
+                                                            </div>
+                                                            <div id="count-message" class="fhs_nowrap_one"
+                                                                style="width: 40px"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fhs_center_right" style="padding: 0 8px">
+                                                    <button type="button" class="fhs_btn_default cancel lg-close"
+                                                        style="margin-right: 20px" onclick="closeReview();">
+                                                        <span>Hủy</span>
+                                                    </button>
+                                                    <button type="button" class="fhs_btn_default active btn_post_review"
+                                                        onclick="SaveCommentByBook();">
+                                                        <span>Gửi nhận xét</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="clear"></div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/getCookie.js"></script>
     <script src="js/addcart.js"></script>
     <script src="js/product-detail.js"></script>
     <script src="js/addcart.js"></script>
-  </body>
+</body>
+
 </html>

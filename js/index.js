@@ -1,12 +1,12 @@
 function Category() {
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/FillAllCategory", {
+  fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
   })
-    .then(res => res.json())
-    .then(x => {
+    .then((res) => res.json())
+    .then((x) => {
       const data = x["#result-set-1"]
-        .map(y => {
-          return `	<a href="shop.html/?id=${y.Id}" class="fhs_column_center">
+        .map((y) => {
+          return `	<a href="shop.html?id=${y.Id}" class="fhs_column_center">
 					<img class=" lazyloaded" src="${y.ImageURL}" >
 					<div class="fhs_nowrap_two fhs_center_center" style="margin-top: 16px; font-size: 1.23em;">${y.Name}</div>
 					</a>`;
@@ -17,13 +17,13 @@ function Category() {
 }
 
 function listNewBook() {
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/listNewBook", {
+  fetch("http://localhost:8080/api/dynamic-procedure/listNewBook", {
     method: "POST",
   })
-    .then(res => res.json())
-    .then(x => {
+    .then((res) => res.json())
+    .then((x) => {
       const data = x["#result-set-1"]
-        .map(y => {
+        .map((y) => {
           return `<div class="col-sm-3">
 		<div class="product-image-wrapper">
 			<a href="product-details.html?id=${y.Id}" class="single-products">
@@ -53,15 +53,15 @@ function CategoryTabData(categoryId) {
     CategoryId: categoryId,
   };
 
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/CategoryTabData", {
+  fetch("http://localhost:8080/api/dynamic-procedure/CategoryTabData", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
   })
-    .then(res => res.json())
-    .then(x => {
+    .then((res) => res.json())
+    .then((x) => {
       const dataNewBook = x["#result-set-1"]
-        .map(y => {
+        .map((y) => {
           //   console.log(y);
           return `
              <div class="col-6">
@@ -86,7 +86,7 @@ function CategoryTabData(categoryId) {
             <div style="display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-bottom: 10px;">
+        padding-bottom: 10px;width:100%">
               <div>
                 <h2 class="product-name-no-ellipsis">
                   <a href="product-details.html?id=${y.Id}" title="${y.Name}"
@@ -127,7 +127,7 @@ function CategoryTabData(categoryId) {
         })
         .join("");
       const dataFavBook = x["#result-set-2"]
-        .map(y => {
+        .map((y) => {
           return `
             <div class="col-6">
       <li class="fhs_product_basic swiper-slide swiper-slide-active">
@@ -151,7 +151,7 @@ function CategoryTabData(categoryId) {
             <div style="display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-bottom: 10px;">
+        padding-bottom: 10px;width:100%">
               <div>
                 <h2 class="product-name-no-ellipsis">
                   <a href="product-details.html?id=${y.Id}" title="${y.Name}"
