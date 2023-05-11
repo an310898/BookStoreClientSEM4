@@ -1,5 +1,5 @@
 function Category() {
-  fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
   })
     .then(res => res.json())
@@ -17,7 +17,7 @@ function Category() {
 }
 
 function listNewBook() {
-  fetch("http://localhost:8080/api/dynamic-procedure/listNewBook", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/listNewBook", {
     method: "POST",
   })
     .then(res => res.json())
@@ -53,7 +53,7 @@ function CategoryTabData(categoryId) {
     CategoryId: categoryId,
   };
 
-  fetch("http://localhost:8080/api/dynamic-procedure/CategoryTabData", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/CategoryTabData", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

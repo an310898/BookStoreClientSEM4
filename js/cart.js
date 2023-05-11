@@ -9,7 +9,7 @@ function CheckOutCart() {
     ),
   };
 
-  fetch("http://localhost:8080/api/dynamic-procedure/CheckOutCart", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/CheckOutCart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -122,7 +122,7 @@ function totalCart() {
     ),
   };
 
-  fetch("http://localhost:8080/api/dynamic-procedure/totalCart", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/totalCart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

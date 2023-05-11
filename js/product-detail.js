@@ -19,7 +19,7 @@ function addQty() {
 const dataBook = findBookById();
 
 function findBookById() {
-  return fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
+  return fetch("http://1.52.115.73:8080/api/dynamic-procedure/FindBookById", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -78,7 +78,7 @@ dataBook.then(x => {
   }
 });
 
-// fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
+// fetch("http://1.52.115.73:8080/api/dynamic-procedure/FillAllCategory", {
 //   method: "POST",
 // })
 //   .then((res) => res.json())
@@ -95,7 +95,7 @@ dataBook.then(x => {
 //     document.getElementById("book-category").innerHTML = data;
 //   });
 function GetBookCommentByBoodId() {
-  fetch("http://localhost:8080/api/dynamic-procedure/GetBookCommentByBoodId", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/GetBookCommentByBoodId", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -182,7 +182,7 @@ function SaveCommentByBook() {
     return;
   }
 
-  fetch("http://localhost:8080/api/dynamic-procedure/SaveCommentByBook", {
+  fetch("http://1.52.115.73:8080/api/dynamic-procedure/SaveCommentByBook", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -241,7 +241,7 @@ function closeReview() {
   $(".youama-ajaxlogin-cover").fadeOut(0);
 }
 
-const bookRate = fetch("http://localhost:8080/api/dynamic-procedure/BookRate", {
+const bookRate = fetch("http://1.52.115.73:8080/api/dynamic-procedure/BookRate", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
