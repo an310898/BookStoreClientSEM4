@@ -2,19 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082" media="all" />
-    <!-- <link href="css/index.css" rel="stylesheet" /> -->
-    <link href="css/main.css" rel="stylesheet" />
     <link href="css/default.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
-    <link href="https://cdn0.fahasa.com/media/css_secure/d694102d9dd4baa3cdabd7aae770978f.css?q=102100"
-        rel="stylesheet" />
-    <link href="css/search.css" rel="stylesheet">
+    <link href="css/shop.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -151,52 +148,90 @@
             </div>
         </div>
     </section>
-    <!-- end header -->
-    <div class="main-container col1-layout">
+
+    <div class="main-container col2-left-layout no-margin-top">
         <div class="main">
-            <div class="col-main">
-                <div class="container">
-                    <div class="container-inner">
-                        <div class="fhs_checkout_block">
-                            <div class="fhs_checkout_block_title">Tìm kiếm đơn hàng</div>
-                            <div class="fhs_checkout_block_content" style="display: flex;">
-                                <div class="fhs_checkout_block_address_block" style="flex-grow:1;max-width: 100%;">
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <div class="fhs-input-item" style="width: 98%;">
-                                            <div class="fhs-input-group">
-                                                <input style="height: 40px;border-radius: 8px;border-color:#ebebeb ;"
-                                                    class="fhs-textbox require_check check_shipping_address" type="text"
-                                                    placeholder="Nhập mã đơn hàng hoặc số điện thoại để tìm kiếm"
-                                                    id="inputFindOrder" name="fullname" value="" maxlength="100">
-                                                <span class="fhs-input-icon fhs-textbox-alert"></span>
+            <div class="container">
+                <div class="container-inner">
+                    <!-- <div class="d-flex justify-content-center"> -->
+                    <div>
+                        <div class="col-left sidebar col-lg-3 col-md-3 col-sm-12 col-xs-12" style="padding-left: 0px;">
+                            <div class="mb-left">
+                                <div class="mb-mana-catalog-leftnav">
+                                    <div class="mb-mana-catalog-leftnav">
+                                        <div class="block block-layered-nav">
+                                            <div class="block-content">
+                                                <dl class="narrow-by-list" id="narrow-by-list-0">
+                                                    <dt class="odd" data-id="m_left_category_filter">Nhóm sản phẩm</dt>
+                                                    <dd class="odd">
+                                                        <ol id="parent-category" class="m-parent-category-list">
+
+                                                        </ol>
+                                                    </dd>
+                                                </dl>
                                             </div>
                                         </div>
-                                        <div class="fhs-input-alert" id="inputFindAlert"
-                                            style="margin: 6px 0 0 4px;color: red;"></div>
                                     </div>
-                                </div>
-                                <div class="fhs-btn-box" style="flex-grow: 1;display: block;">
-                                    <button onclick="findOrderByOrderIdOrPhoneNumber()">Tìm kiếm</button>
                                 </div>
                             </div>
                         </div>
-                        <div id="searchDOM">
+                        <div class="col-main col-lg-9 col-md-9 col-sm-12 col-xs-12 col-fhs-main-body">
+                            <div class="mb-content">
+                                <div class="mb-category-products">
+                                    <p class="note-msg" style="display: none;">Không có sản phẩm phù hợp với từ khóa tìm
+                                        kiếm của bạn.</p>
+                                    <div class="category-products row">
+                                        <div class="toolbar-top" style="padding:0">
+                                            <div class="toolbar" style="padding:0">
+                                                <div class="sorter">
+                                                    <div class="abc-xyz">
+                                                        <div class="dropdownfhs-text">
+                                                            <p>Sắp xếp theo :</p>
+                                                        </div>
+                                                        <div class="sort-by dropdownfhs dropdownfhs-select"><select
+                                                                name="limit" id="limit"
+                                                                style="color: black; border: 1px solid black;"
+                                                                onchange="setLimit(this)">
+                                                                <option value="12">12 sản phẩm</option>
+                                                                <option value="24">24 sản phẩm</option>
+                                                                <option value="48">48 sản phẩm</option>
+                                                            </select></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul id="products_grid" class="products-grid fhs-top">
 
+                                        </ul>
+                                        <div class="toolbar-bottom">
+                                            <div class="toolbar  col-sm-12 col-xs-12 col-md-12 ">
+                                                <div class="pager col-sm-12 col-xs-12 col-md-12">
+                                                    <div class="col-sm-12 col-xs-12 col-md-12">
+                                                        <div class="pages" id="pagination">
+                                                            <ol>
+
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-
-
-
-
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/header.js"></script>
-        <script src="js/getCookie.js"></script>
-        <script src="js/search.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/getCookie.js"></script>
+    <script src="js/addcart.js"></script>
+    <script src="js/shop.js"></script>
 </body>
 
 </html>
