@@ -41,9 +41,19 @@
                 <div class="fhs_stretch_stretch">
                   <div>
                     <div>Danh mục sản phẩm</div>
-                    <ul class="nav navbar-nav verticalmenu">
+                    <ul class="nav navbar-nav verticalmenu" id="headerCate">
                       <!-- DOM DATA -->
                     </ul>
+                  </div>
+                  <div>
+                    <div
+                      style="
+                        border-bottom: none;
+                        border-top: 1px solid #cdcfd0;
+                        padding-top: 10px;
+                      ">
+                      <a href="search.html">Tìm kiếm đơn hàng</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -132,7 +142,48 @@
         </div>
         <div class="fhs-header-top-bar">
           <div class="fhs_center_center fhs_mouse_point fhs_popup_full_click">
-            <span class="ico_menu_white" style="margin: 0 4px"></span>
+            <span
+              class="ico_menu_white"
+              onclick="openHeaderBar()"
+              style="margin: 0 4px"></span>
+            <div class="fhs_popup_full left">
+              <div class="catalog_menu_nav">
+                <div class="fhs_popup_full_head red">
+                  <div
+                    onclick="closeHeadBar()"
+                    class="fhs_mouse_point close"
+                    style="opacity: 1; padding: 16px">
+                    <span class="ico_arrow_line_white"></span>
+                  </div>
+                </div>
+                <div class="fhs_popup_full_body">
+                  <div class="catalog_menu_nav_menu">
+                    <div
+                      class="catalog_menu_nav_menu_item fhs_mouse_point active"
+                      onclick="fhs_account.changeCatagoryMenu($jq(this));">
+                      <div><hh></hh></div>
+                      <div>
+                        <i class="ico_sachtrongnuoc"></i>
+                        <div>Danh mục sách</div>
+                      </div>
+                    </div>
+                    <div
+                      class="catalog_menu_nav_menu_item fhs_mouse_point"
+                      menu_id="8"
+                      onclick="goToSearch()">
+                      <div><hh></hh></div>
+                      <div>
+                        <i class="ico_bachhoaonline"></i>
+                        <div>Tìm kiếm đơn hàng</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="catalog_menu_nav_content">
+                    <div class="catalog_menu_nav_content_items"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="search-mobile-header">
             <div class="ves-autosearch">
@@ -230,6 +281,9 @@
                     Mã đơn hàng của bạn là:
                     <span id="orderId"></span>
                   </div>
+                </div>
+                <div class="tabs-xem-them fhs_bar_bottom mobile_link" style="">
+                  <a href="/">Quay về trang chủ</a>
                 </div>
               </div>
             </div>

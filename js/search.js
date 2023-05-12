@@ -1,13 +1,13 @@
-findOrderByOrderIdOrPhoneNumber();
 function findOrderByOrderIdOrPhoneNumber() {
-  // const inputFindOrder = document.getElementById("inputFindOrder").value;
-  const inputFindOrder = "0935263945";
+  const inputFindOrder = document.getElementById("inputFindOrder").value;
+
+  //   const inputFindOrder = "0935263945";
   // console.log(inputFindOrder);
-  // if (inputFindOrder.length === 0) {
-  //   document.getElementById("inputFindAlert").innerText =
-  //     "Vui lòng điền Mã đơn hàng hoặc số điện thoại đặt hàng";
-  //   return;
-  // }
+  if (inputFindOrder.length === 0) {
+    document.getElementById("inputFindAlert").innerText =
+      "Vui lòng điền Mã đơn hàng hoặc số điện thoại đặt hàng";
+    return;
+  }
 
   const formData = {
     OrderId: inputFindOrder,

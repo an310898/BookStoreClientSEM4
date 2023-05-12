@@ -50,9 +50,9 @@ dataBook.then(x => {
   const dataSize = document.querySelectorAll(".data_size");
   const dataQtyOfPage = document.querySelectorAll(".data_qty_of_page");
   const dataBookLayout = document.querySelectorAll(".data_book_layout");
-  document
-    .querySelector(".btn-cart-to-cart")
-    .setAttribute("onclick", `addToCart(${bookId})`);
+  const btnAddToCart = document.querySelectorAll(".btn-cart-to-cart");
+  btnAddToCart[0].setAttribute("onclick", `addToCart(${bookId})`);
+  btnAddToCart[1].setAttribute("onclick", `addToCart(${bookId})`);
   image.src = x.Image;
   image.title = x.Name;
   image.alt = x.Name;
@@ -95,15 +95,18 @@ dataBook.then(x => {
 //     document.getElementById("book-category").innerHTML = data;
 //   });
 function GetBookCommentByBoodId() {
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/GetBookCommentByBoodId", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      BookId: bookId,
-    }),
-  })
+  fetch(
+    "http://1.52.115.73:8080/api/dynamic-procedure/GetBookCommentByBoodId",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        BookId: bookId,
+      }),
+    }
+  )
     .then(res => res.json())
     .then(x => {
       const data = x["#result-set-1"]
@@ -241,15 +244,18 @@ function closeReview() {
   $(".youama-ajaxlogin-cover").fadeOut(0);
 }
 
-const bookRate = fetch("http://1.52.115.73:8080/api/dynamic-procedure/BookRate", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    BookId: bookId,
-  }),
-})
+const bookRate = fetch(
+  "http://1.52.115.73:8080/api/dynamic-procedure/BookRate",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      BookId: bookId,
+    }),
+  }
+)
   .then(res => res.json())
   .then(x => {
     return x["#result-set-1"].concat(x["#result-set-2"]);

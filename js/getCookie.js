@@ -24,6 +24,10 @@ function stayLogin() {
     if (getCookie("fullName") === "null") {
       helloName = getCookie("userName");
     }
+
+    document
+      .querySelector("#mini_cart_block > div > a")
+      .setAttribute("href", "user.html");
     document.getElementById("fhs_top_account_hover").innerHTML = `
     <a href="user.html">
                   <div class="fhs_top_account_button" style="
