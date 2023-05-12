@@ -1,339 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082" media="all" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn0.fahasa.com/media/css_secure/180dfde691fce34b2e789c30f74feafe.css?q=102082"
+      media="all" />
     <!-- <link href="css/index.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" /> -->
     <link href="css/default.css" rel="stylesheet" />
     <link href="css/header.css" rel="stylesheet" />
-    <link href="https://cdn0.fahasa.com/media/css_secure/d694102d9dd4baa3cdabd7aae770978f.css?q=102100"
-        rel="stylesheet" />
+    <link
+      href="https://cdn0.fahasa.com/media/css_secure/d694102d9dd4baa3cdabd7aae770978f.css?q=102100"
+      rel="stylesheet" />
     <link href="css/checkout.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <section id="header" class="header">
-        <div class="fhs_header_desktop" style="background-color: white">
-            <div class="container">
-                <div class="fhs-header-top-second-bar" style="position: relative">
-                    <div class="icon_fahasa_logo fhs_mouse_point" onclick="location.href = '/';" title="FAHASA.COM">
-                    </div>
-                    <div class="fhs_center_right fhs_mouse_point fhs_dropdown_hover fhs_dropdown_click">
-                        <span class="icon_menu" onmouseover="displayCatalogCate()"></span>
-                        <span class="icon_seemore_gray" onmouseover="displayCatalogCate()"></span>
-                        <div class="catalog_menu_dropdown fhs_dropdown" onmouseleave="hideCatalogCate(this)">
-                            <div class="fhs_stretch_stretch">
-                                <div>
-                                    <div>
-                                        Danh mục sản phẩm </div>
-                                    <ul class="nav navbar-nav verticalmenu">
-                                        <!-- DOM DATA -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fhs_center_left">
-                        <div class="box search_box">
-                            <form id="search_mini_form_desktop" action="https://www.fahasa.com/catalogsearch/result/"
-                                method="POST">
-                                <div class="search pull-left">
-                                    <div class="form-search fhs_dropdown_hover_out"> <input id="search_desktop"
-                                            type="text" name="q" autocomplete="off"
-                                            placeholder="Tìm kiếm sản phẩm mong muốn..." value=""
-                                            class="input-search" /> <span class="fhs_btn_default active button-search">
-                                            <span class="ico_search_white"></span> </span>
-                                        <div class="form-search-form fhs_dropdown"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="fhs_center_space" style="padding-left: 24px">
-                        <div class="cart-top no_cover fhs_dropdown_hover">
-                            <div class="fhs_top_cart" style="margin-right: 5px"> <a href="cart.html">
-                                    <div class="heading heading-custom" style="display: flex">
-                                        <div class="fhs_center_center" style="margin-bottom: 3px">
-                                            <div class="icon_cart_gray">
-                                                <!-- <div class="top_menu_unseen fhs_center_center" style="visibility: visible" > <span class="cartmini_qty" style="visibility: visible" >2</span > </div> -->
-                                            </div>
-                                        </div>
-                                        <div class="top-cart-button-label fhs_top_center" style="margin-top: 4px">
-                                            <div class="top_menu_label">Giỏ Hàng</div>
-                                        </div>
-                                    </div>
-                                </a> </div>
-                        </div>
-                        <div class="fhs_top_account no_cover fhs_dropdown_hover" id="fhs_top_account_hover"> <a
-                                href="login.html">
-                                <div class="fhs_top_account_button"
-                                    style=" display: flex; flex-direction: row; justify-content: center; align-items: center; ">
-                                    <div class="icon_account_gray" style="margin-bottom: 3px"></div>
-                                    <div class="top_menu_label fhs_top_center fhs_nowrap_one"
-                                        id="loginUser fhs_top_account_title"> Tài khoản </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+      <div class="fhs_header_desktop" style="background-color: white">
+        <div class="container">
+          <div class="fhs-header-top-second-bar" style="position: relative">
+            <div
+              class="icon_fahasa_logo fhs_mouse_point"
+              onclick="location.href = '/';"
+              title="FAHASA.COM"></div>
+            <div
+              class="fhs_center_right fhs_mouse_point fhs_dropdown_hover fhs_dropdown_click">
+              <span class="icon_menu" onmouseover="displayCatalogCate()"></span>
+              <span
+                class="icon_seemore_gray"
+                onmouseover="displayCatalogCate()"></span>
+              <div
+                class="catalog_menu_dropdown fhs_dropdown"
+                onmouseleave="hideCatalogCate(this)">
+                <div class="fhs_stretch_stretch">
+                  <div>
+                    <div>Danh mục sản phẩm</div>
+                    <ul class="nav navbar-nav verticalmenu">
+                      <!-- DOM DATA -->
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="fhs_header_mobile">
-            <div class="fhs-logo" style="text-align: center"> <a href="https://www.fahasa.com/" title="FAHASA.COM"
-                    class="logo"> <strong class="logo-title">FAHASA.COM</strong> <img
-                        src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
-                        alt="FAHASA.COM" /> </a> </div>
-            <div class="fhs-header-top-bar">
-                <div class="fhs_center_center fhs_mouse_point fhs_popup_full_click"> <span class="ico_menu_white"
-                        style="margin: 0 4px"></span> </div>
-                <div class="search-mobile-header">
-                    <div class="ves-autosearch">
-                        <div class="box search_box">
-                            <form id="search_mini_form_mobile" action="https://www.fahasa.com/catalogsearch/result/"
-                                method="get">
-                                <div class="search pull-left">
-                                    <div class="form-search"> <input id="search_mobile" type="text" name="q"
-                                            autocomplete="off" placeholder="Tìm kiếm sản phẩm mong muốn..." value=""
-                                            class="input-search" /> <span class="button-search fa fa-search"></span>
-                                        <!--<button type="submit" title="Tìm kiếm" class="ves-button-search"></button>-->
-                                        <div class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
-                                            style="display: none"></div>
-                                        <div id="search_autocomplete" class="search-autocomplete"></div>
-                                        <div class="form-search-form fhs_dropdown"></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+            <div class="fhs_center_left">
+              <div class="box search_box">
+                <form id="search_mini_form_desktop" action="#">
+                  <div class="search pull-left">
+                    <div class="form-search fhs_dropdown_hover_out">
+                      <input
+                        id="search_desktop"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search" />
+                      <span class="fhs_btn_default active button-search">
+                        <input
+                          type="submit"
+                          style="border: none; width: 100%; height: 100%"
+                          value=""
+                          class="ico_search_white"
+                          onclick="search()" />
+                      </span>
+                      <!-- <div class=" form-search-form fhs_dropdown"></div> -->
                     </div>
-                </div>
-                <div>
-                    <div class="icons-mobile-header" style="position: relative">
-                        <div id="cart" class="clearfix"> <a href="cart.html">
-                                <div class="fhs_center_center">
-                                    <div class="icon_cart_white" style="margin-right: 4px">
-                                        <!-- <div> <div class="top_menu_unseen fhs_center_center cartmini_qty" style="visibility: visible"> 0 </div> </div> -->
-                                    </div>
-                                </div>
-                            </a> </div>
-                    </div>
-                    <style>
-                        .login-cutomer-icon {
-                            position: inherit;
-                            background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png) no-repeat center center;
-                            background-size: 20px !important;
-                        }
-
-                        @media (max-width: 992px) {
-                            #header .header1 .customer-top {
-                                margin-right: 5px;
-                                margin-left: 5px;
-                            }
-                        }
-
-                        #header .header1 .customer-top {
-                            padding-left: 0px;
-                        }
-                    </style>
-                    <div id="mini_cart_block" class="customer-top">
-                        <div> <a href="user.html">
-                                <div>
-                                    <div class="login-cutomer-icon" style="width: 30px; height: 35px"></div>
-                                </div>
-                            </a> </div>
-                    </div>
-                </div>
+                  </div>
+                </form>
+              </div>
             </div>
+            <div class="fhs_center_space" style="padding-left: 24px">
+              <div class="cart-top no_cover fhs_dropdown_hover">
+                <div class="fhs_top_cart" style="margin-right: 5px">
+                  <a href="cart.html">
+                    <div class="heading heading-custom" style="display: flex">
+                      <div class="fhs_center_center" style="margin-bottom: 3px">
+                        <div class="icon_cart_gray">
+                          <!-- <div class="top_menu_unseen fhs_center_center" style="visibility: visible" > <span class="cartmini_qty" style="visibility: visible" >2</span > </div> -->
+                        </div>
+                      </div>
+                      <div
+                        class="top-cart-button-label fhs_top_center"
+                        style="margin-top: 4px">
+                        <div class="top_menu_label">Giỏ Hàng</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="fhs_top_account no_cover fhs_dropdown_hover"
+                id="fhs_top_account_hover">
+                <a href="login.html">
+                  <div
+                    class="fhs_top_account_button"
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                    ">
+                    <div
+                      class="icon_account_gray"
+                      style="margin-bottom: 3px"></div>
+                    <div
+                      class="top_menu_label fhs_top_center fhs_nowrap_one"
+                      id="loginUser fhs_top_account_title">
+                      Tài khoản
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="fhs_header_mobile">
+        <div class="fhs-logo" style="text-align: center">
+          <a href="/" title="FAHASA.COM" class="logo">
+            <strong class="logo-title">FAHASA.COM</strong>
+            <img
+              src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
+              alt="FAHASA.COM" />
+          </a>
+        </div>
+        <div class="fhs-header-top-bar">
+          <div class="fhs_center_center fhs_mouse_point fhs_popup_full_click">
+            <span class="ico_menu_white" style="margin: 0 4px"></span>
+          </div>
+          <div class="search-mobile-header">
+            <div class="ves-autosearch">
+              <div class="box search_box">
+                <form id="search_mini_form_mobile" action="#">
+                  <div class="search pull-left">
+                    <div class="form-search">
+                      <input
+                        id="search_mobile"
+                        type="text"
+                        name="q"
+                        autocomplete="off"
+                        placeholder="Tìm kiếm sản phẩm mong muốn..."
+                        value=""
+                        class="input-search" />
+                      <span class="button-search fa fa-search"></span>
+                      <input
+                        style="display: none"
+                        type="submit"
+                        title="Tìm kiếm"
+                        class="ves-button-search"
+                        onclick="search()" />
+                      <div
+                        class="btn-remove btn-remove2 remove-text-search-form-mini-mobile"
+                        style="display: none"></div>
+                      <div
+                        id="search_autocomplete"
+                        class="search-autocomplete"></div>
+                      <div class="form-search-form fhs_dropdown"></div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="icons-mobile-header" style="position: relative">
+              <div id="cart" class="clearfix">
+                <a href="cart.html">
+                  <div class="fhs_center_center">
+                    <div class="icon_cart_white" style="margin-right: 4px">
+                      <!-- <div> <div class="top_menu_unseen fhs_center_center cartmini_qty" style="visibility: visible"> 0 </div> </div> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <style>
+              .login-cutomer-icon {
+                position: inherit;
+                background: url(https://cdn0.fahasa.com/skin//frontend/base/default/images/ico_customer_cam.png)
+                  no-repeat center center;
+                background-size: 20px !important;
+              }
+
+              @media (max-width: 992px) {
+                #header .header1 .customer-top {
+                  margin-right: 5px;
+                  margin-left: 5px;
+                }
+              }
+
+              #header .header1 .customer-top {
+                padding-left: 0px;
+              }
+            </style>
+            <div id="mini_cart_block" class="customer-top">
+              <div>
+                <a href="user.html">
+                  <div>
+                    <div
+                      class="login-cutomer-icon"
+                      style="width: 30px; height: 35px"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!--  -->
-    <div class="main-container col1-layout" id="completeCheckout" style="display: none">
-        <div class="main">
-            <div class="col-main">
-                <div class="container">
-                    <div class="container-inner">
-                        <div class="fhs_checkout_block">
-                            <div class="fhs_checkout_block_title">Đặt hàng thành công</div>
-                            <div class="fhs_checkout_block_content">
-                                <div>Mã đơn hàng của bạn là: <span id="orderId"></span></div>
-                            </div>
-                        </div>
-                    </div>
+    <div
+      class="main-container col1-layout"
+      id="completeCheckout"
+      style="display: none">
+      <div class="main">
+        <div class="col-main">
+          <div class="container">
+            <div class="container-inner">
+              <div class="fhs_checkout_block">
+                <div class="fhs_checkout_block_title">Đặt hàng thành công</div>
+                <div class="fhs_checkout_block_content">
+                  <div>
+                    Mã đơn hàng của bạn là:
+                    <span id="orderId"></span>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <div class="main-container col1-layout">
-        <div class="main" style="padding-bottom: 150px">
-            <div style="margin-bottom: 5px"></div>
-            <div class="col-main">
-                <div class="container">
-                    <div class="container-inner" id="checkoutSection">
-                        <div id="fhs_checkout_block_address" class="fhs_checkout_block">
-                            <div class="fhs_checkout_block_title">Địa chỉ giao hàng</div>
-                            <div class="fhs_checkout_block_content">
-                                <div class="fhs_checkout_block_address_block">
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <label>Họ và tên người nhận</label>
-                                        <div class="fhs-input-item">
-                                            <div class="fhs-input-group">
-                                                <input class="fhs-textbox require_check check_shipping_address"
-                                                    type="text" validate_type="fullname"
-                                                    placeholder="Nhập họ và tên người nhận" id="fhs_shipping_fullname"
-                                                    name="fullname" value="" maxlength="100" />
-                                                <input type="hidden" id="fhs_shipping_firstname" name="firstname"
-                                                    value="" />
-                                                <input type="hidden" id="fhs_shipping_lastname" name="lastname"
-                                                    value="" />
-                                                <span class="fhs-input-icon fhs-textbox-alert"></span>
-                                            </div>
-                                        </div>
-                                        <div class="fhs-input-alert" id="fullNameInput" style="color: red"></div>
-                                    </div>
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <label>Email</label>
-                                        <div class="fhs-input-item">
-                                            <div class="fhs-input-group">
-                                                <input class="fhs-textbox require_check check_shipping_address"
-                                                    type="text" validate_type="email" placeholder="Nhập email"
-                                                    id="fhs_shipping_email" name="email" value="" maxlength="200" />
-                                                <span class="fhs-input-icon fhs-textbox-alert"></span>
-                                            </div>
-                                        </div>
-                                        <div class="fhs-input-alert" id="emailInput"></div>
-                                    </div>
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <label>Số điện thoại</label>
-                                        <div class="fhs-input-item">
-                                            <div class="fhs-input-group">
-                                                <input class="fhs-textbox require_check check_shipping_address"
-                                                    type="text" validate_type="shipping_telephone"
-                                                    placeholder="Ví dụ: 0979123xxx (10 ký tự số)"
-                                                    id="fhs_shipping_telephone" name="telephone" value=""
-                                                    maxlength="10" />
-                                                <span class="fhs-input-icon fhs-textbox-alert"></span>
-                                            </div>
-                                        </div>
-                                        <div class="fhs-input-alert" id="phoneInput"></div>
-                                    </div>
-
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <label>Tỉnh/Thành Phố</label>
-                                        <div class="fhs-input-item">
-                                            <div class="fhs-input-group">
-                                                <select id="fhs_shipping_city_select"
-                                                    class="fhs-input-select select2-hidden-accessible"
-                                                    data-select2-id="fhs_shipping_city_select" tabindex="-1"
-                                                    aria-hidden="true" onchange="DOMDistrictCity()"></select>
-                                            </div>
-                                        </div>
-                                        <div class="fhs-input-alert" id="cityInput"></div>
-                                    </div>
-
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <label>Quận/Huyện</label>
-                                        <div class="fhs-input-item">
-                                            <div class="fhs-input-group">
-                                                <select id="fhs_shipping_district_select"
-                                                    class="fhs-input-select select2-hidden-accessible"
-                                                    data-select2-id="fhs_shipping_district_select" tabindex="-1"
-                                                    aria-hidden="true" disabled></select>
-                                            </div>
-                                        </div>
-                                        <div class="fhs-input-alert" id="districtInput"></div>
-                                    </div>
-
-                                    <div class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
-                                        <label>Địa chỉ nhận hàng</label>
-                                        <div class="fhs-input-item">
-                                            <div class="fhs-input-group">
-                                                <input class="fhs-textbox require_check check_shipping_address"
-                                                    type="text" validate_type="text"
-                                                    placeholder="Nhập địa chỉ nhận hàng" id="fhs_shipping_street"
-                                                    name="street" value="" maxlength="200" />
-                                                <span class="fhs-input-icon fhs-textbox-alert"></span>
-                                            </div>
-                                        </div>
-                                        <div class="fhs-input-alert" id="addressInput"></div>
-                                    </div>
-                                </div>
-                            </div>
+      <div class="main" style="padding-bottom: 150px">
+        <div style="margin-bottom: 5px"></div>
+        <div class="col-main">
+          <div class="container">
+            <div class="container-inner" id="checkoutSection">
+              <div id="fhs_checkout_block_address" class="fhs_checkout_block">
+                <div class="fhs_checkout_block_title">Địa chỉ giao hàng</div>
+                <div class="fhs_checkout_block_content">
+                  <div class="fhs_checkout_block_address_block">
+                    <div
+                      class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                      <label>Họ và tên người nhận</label>
+                      <div class="fhs-input-item">
+                        <div class="fhs-input-group">
+                          <input
+                            class="fhs-textbox require_check check_shipping_address"
+                            type="text"
+                            validate_type="fullname"
+                            placeholder="Nhập họ và tên người nhận"
+                            id="fhs_shipping_fullname"
+                            name="fullname"
+                            value=""
+                            maxlength="100" />
+                          <input
+                            type="hidden"
+                            id="fhs_shipping_firstname"
+                            name="firstname"
+                            value="" />
+                          <input
+                            type="hidden"
+                            id="fhs_shipping_lastname"
+                            name="lastname"
+                            value="" />
+                          <span class="fhs-input-icon fhs-textbox-alert"></span>
                         </div>
-                        <div class="fhs_checkout_block">
-                            <div class="fhs_checkout_block_title">
-                                Kiểm tra lại đơn hàng
+                      </div>
+                      <div
+                        class="fhs-input-alert"
+                        id="fullNameInput"
+                        style="color: red"></div>
+                    </div>
+                    <div
+                      class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                      <label>Email</label>
+                      <div class="fhs-input-item">
+                        <div class="fhs-input-group">
+                          <input
+                            class="fhs-textbox require_check check_shipping_address"
+                            type="text"
+                            validate_type="email"
+                            placeholder="Nhập email"
+                            id="fhs_shipping_email"
+                            name="email"
+                            value=""
+                            maxlength="200" />
+                          <span class="fhs-input-icon fhs-textbox-alert"></span>
+                        </div>
+                      </div>
+                      <div class="fhs-input-alert" id="emailInput"></div>
+                    </div>
+                    <div
+                      class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                      <label>Số điện thoại</label>
+                      <div class="fhs-input-item">
+                        <div class="fhs-input-group">
+                          <input
+                            class="fhs-textbox require_check check_shipping_address"
+                            type="text"
+                            validate_type="shipping_telephone"
+                            placeholder="Ví dụ: 0979123xxx (10 ký tự số)"
+                            id="fhs_shipping_telephone"
+                            name="telephone"
+                            value=""
+                            maxlength="10" />
+                          <span class="fhs-input-icon fhs-textbox-alert"></span>
+                        </div>
+                      </div>
+                      <div class="fhs-input-alert" id="phoneInput"></div>
+                    </div>
+
+                    <div
+                      class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                      <label>Tỉnh/Thành Phố</label>
+                      <div class="fhs-input-item">
+                        <div class="fhs-input-group">
+                          <select
+                            id="fhs_shipping_city_select"
+                            class="fhs-input-select select2-hidden-accessible"
+                            data-select2-id="fhs_shipping_city_select"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            onchange="DOMDistrictCity()"></select>
+                        </div>
+                      </div>
+                      <div class="fhs-input-alert" id="cityInput"></div>
+                    </div>
+
+                    <div
+                      class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                      <label>Quận/Huyện</label>
+                      <div class="fhs-input-item">
+                        <div class="fhs-input-group">
+                          <select
+                            id="fhs_shipping_district_select"
+                            class="fhs-input-select select2-hidden-accessible"
+                            data-select2-id="fhs_shipping_district_select"
+                            tabindex="-1"
+                            aria-hidden="true"
+                            disabled></select>
+                        </div>
+                      </div>
+                      <div class="fhs-input-alert" id="districtInput"></div>
+                    </div>
+
+                    <div
+                      class="fhs-input-box fhs-input-group-horizontal-shippingaddress">
+                      <label>Địa chỉ nhận hàng</label>
+                      <div class="fhs-input-item">
+                        <div class="fhs-input-group">
+                          <input
+                            class="fhs-textbox require_check check_shipping_address"
+                            type="text"
+                            validate_type="text"
+                            placeholder="Nhập địa chỉ nhận hàng"
+                            id="fhs_shipping_street"
+                            name="street"
+                            value=""
+                            maxlength="200" />
+                          <span class="fhs-input-icon fhs-textbox-alert"></span>
+                        </div>
+                      </div>
+                      <div class="fhs-input-alert" id="addressInput"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fhs_checkout_block">
+                <div class="fhs_checkout_block_title">
+                  Kiểm tra lại đơn hàng
+                </div>
+                <div class="fhs_checkout_block_content">
+                  <div
+                    id="fhs_checkout_products"
+                    class="fhs_checkout_products"></div>
+                  <div class="fhs_checkout_total fhs_checkout_total_mobile">
+                    <div class="fhs_checkout_total_grand_total"></div>
+                  </div>
+                  <div class="fhs-bsidebar">
+                    <div class="fhs-bsidebar-content">
+                      <div class="container">
+                        <div
+                          class="fhs_checkout_total fhs_checkout_total_desktop">
+                          <div class="fhs_checkout_total_subtotal">
+                            <div>Thành tiền</div>
+                            <div class="total-money"></div>
+                          </div>
+                          <div class="fhs_checkout_total_grand_total">
+                            <div>Tổng Số Tiền (gồm VAT)</div>
+                            <div class="total-money"></div>
+                          </div>
+                        </div>
+                        <div class="fhs_checkout_bottom">
+                          <div>
+                            <div class="fhs_checkout_total_grand_total">
+                              <div>Tổng Số Tiền (gồm VAT)</div>
+                              <div class="total-money"></div>
                             </div>
-                            <div class="fhs_checkout_block_content">
-                                <div id="fhs_checkout_products" class="fhs_checkout_products"></div>
-                                <div class="fhs_checkout_total fhs_checkout_total_mobile">
-                                    <div class="fhs_checkout_total_grand_total"></div>
-                                </div>
-                                <div class="fhs-bsidebar">
-                                    <div class="fhs-bsidebar-content">
-                                        <div class="container">
-                                            <div class="fhs_checkout_total fhs_checkout_total_desktop">
-                                                <div class="fhs_checkout_total_subtotal">
-                                                    <div>Thành tiền</div>
-                                                    <div class="total-money"></div>
-                                                </div>
-                                                <div class="fhs_checkout_total_grand_total">
-                                                    <div>Tổng Số Tiền (gồm VAT)</div>
-                                                    <div class="total-money"></div>
-                                                </div>
-                                            </div>
-                                            <div class="fhs_checkout_bottom">
-                                                <div>
-                                                    <div class="fhs_checkout_total_grand_total">
-                                                        <div>Tổng Số Tiền (gồm VAT)</div>
-                                                        <div></div>
-                                                    </div>
-                                                    <div>
-                                                        <a href="/checkout/cart/"><span style="padding-right: 8px"><img
-                                                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=102116" /></span><span>Quay
-                                                                về giỏ hàng</span></a>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="fhs-btn-box">
-                                                        <button onclick="postFormDataConfirmCheckout()" type="button"
-                                                            title="Xác nhận thanh toán"
-                                                            class="fhs-btn-confirm fhs-btn-orderconfirm">
-                                                            <span>Xác nhận thanh toán</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fhs_checkout_block_loading">
-                                    <div>
-                                        <div id="default-icon-loading" style="
+                            <div>
+                              <a href="cart.html">
+                                <span style="padding-right: 8px">
+                                  <img
+                                    src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/btn_back.svg?q=102116" />
+                                </span>
+                                <span>Quay về giỏ hàng</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="fhs-btn-box">
+                              <button
+                                onclick="postFormDataConfirmCheckout()"
+                                type="button"
+                                title="Xác nhận thanh toán"
+                                class="fhs-btn-confirm fhs-btn-orderconfirm">
+                                <span>Xác nhận thanh toán</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fhs_checkout_block_loading">
+                    <div>
+                      <div
+                        id="default-icon-loading"
+                        style="
                           height: 40px;
                           width: 40px;
                           background: url('https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fpointstore/loading.png?q=102100')
                             no-repeat center center transparent;
                           background-size: 40px;
                         "></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/getCookie.js"></script>
     <script src="js/checkOut.js"></script>
-</body>
-
+  </body>
 </html>
