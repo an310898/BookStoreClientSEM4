@@ -52,75 +52,10 @@
                             Good Morning,
                             <span class="text-black fw-bold">John Doe</span>
                         </h1>
-                        <h3 class="welcome-sub-text">
-                            Your performance summary this week
-                        </h3>
+
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown d-none d-lg-block">
-                        <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown"
-                            href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select Category
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
-                            aria-labelledby="messageDropdown">
-                            <a class="dropdown-item py-3">
-                                <p class="mb-0 font-weight-medium float-left">
-                                    Select category
-                                </p>
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-item-content flex-grow py-2">
-                                    <p class="preview-subject ellipsis font-weight-medium text-dark">
-                                        Bootstrap Bundle
-                                    </p>
-                                    <p class="fw-light small-text mb-0">
-                                        This is a Bundle featuring 16 unique dashboards
-                                    </p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-item-content flex-grow py-2">
-                                    <p class="preview-subject ellipsis font-weight-medium text-dark">
-                                        Angular Bundle
-                                    </p>
-                                    <p class="fw-light small-text mb-0">
-                                        Everything you’ll ever need for your Angular projects
-                                    </p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-item-content flex-grow py-2">
-                                    <p class="preview-subject ellipsis font-weight-medium text-dark">
-                                        VUE Bundle
-                                    </p>
-                                    <p class="fw-light small-text mb-0">
-                                        Bundle of 6 Premium Vue Admin Dashboard
-                                    </p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item preview-item">
-                                <div class="preview-item-content flex-grow py-2">
-                                    <p class="preview-subject ellipsis font-weight-medium text-dark">
-                                        React Bundle
-                                    </p>
-                                    <p class="fw-light small-text mb-0">
-                                        Bundle of 8 Premium React Admin Dashboard
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item d-none d-lg-block">
-                        <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
-                            <span class="input-group-addon input-group-prepend border-right">
-                                <span class="icon-calendar input-group-text calendar-icon"></span>
-                            </span>
-                            <input type="text" class="form-control" />
-                        </div>
-                    </li>
                     <li class="nav-item">
                         <form class="search-form" action="#">
                             <i class="icon-search"></i>
@@ -533,15 +468,24 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="row">
+                    <div class="row" style="position:relative">
                         <div class="col-lg-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Product</h4>
-                                    <p class="card-description">
-                                        <!-- Add class -->
-                                        <code>Product table</code>
-                                    </p>
+                                    <div style="display: flex;
+    justify-content: space-between;
+    align-items: center;">
+                                        <div>
+                                            <h4 class="card-title">Product</h4>
+                                            <p class="card-description">
+                                                <!-- Add class -->
+                                                <code>Product table</code>
+                                            </p>
+                                        </div>
+                                        <button type="button" class="btn btn-primary" onclick="displayAddNewForm()">Add
+                                            new
+                                            product</button>
+                                    </div>
                                     <div class="table-responsive pt-3">
                                         <table class="table table-bordered">
                                             <thead>
@@ -563,6 +507,82 @@
 
                                             </tbody>
                                         </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="formAddNew"
+                            style="display:none;position: absolute;max-width: 50%;margin-left: auto;margin-right: auto;left: 0;right: 0;">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Default form</h4>
+                                    <p class="card-description">
+                                        Basic form layout
+                                    </p>
+                                    <div class="forms-sample">
+                                        <div class="form-group">
+                                            <label for="BookName">Book name</label>
+                                            <input type="text" class="form-control" id="BookName"
+                                                placeholder="Book Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Description">Description</label>
+                                            <input type="email" class="form-control" id="Description"
+                                                placeholder="Description">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Image">Image URL</label>
+                                            <input type="text" class="form-control" id="Image" placeholder="Image URL">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Author">Author</label>
+                                            <input type="text" class="form-control" id="Author" placeholder="Author">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Price">Price</label>
+                                            <input type="text" class="form-control" id="Price" placeholder="Price">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Age">Age</label>
+                                            <input type="text" class="form-control" id="Age" placeholder="Age">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Language">Language</label>
+                                            <input type="text" class="form-control" id="Language"
+                                                placeholder="Language">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Pages">Pages</label>
+                                            <input type="text" class="form-control" id="Pages" placeholder="Pages">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PublishingCompany">PublishingCompany</label>
+                                            <input type="text" class="form-control" id="PublishingCompany"
+                                                placeholder="PublishingCompany">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="CoverType">CoverType</label>
+                                            <input type="text" class="form-control" id="CoverType"
+                                                placeholder="CoverType">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="BookWeight">BookWeight</label>
+                                            <input type="text" class="form-control" id="BookWeight"
+                                                placeholder="BookWeight">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="BookSize">BookSize</label>
+                                            <input type="text" class="form-control" id="BookSize"
+                                                placeholder="BookSize">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="CategoryIdArrays">Category</label>
+                                            <input type="text" class="form-control" id="CategoryIdArrays"
+                                                placeholder="CategoryIdArrays">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary me-2"
+                                            onclick="addNewProduct()">Submit</button>
+                                        <button class="btn btn-light" onclick="hideAddForm()">Cancel</button>
                                     </div>
                                 </div>
                             </div>
