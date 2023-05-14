@@ -55,7 +55,7 @@ function itemCheckOut() {
   const formData = {
     ArrayCart: getCookieArrayCart(),
   };
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/CheckOutCart", {
+  fetch("http://42.117.67.47:8080/api/dynamic-procedure/CheckOutCart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -101,7 +101,7 @@ function itemCheckOut() {
 }
 
 function getCity() {
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/GetCity", {
+  fetch("http://42.117.67.47:8080/api/dynamic-procedure/GetCity", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   })
@@ -126,7 +126,7 @@ function GetDistrictByCityId(cityId) {
   const formData = {
     CityId: cityId,
   };
-  fetch("http://1.52.115.73:8080/api/dynamic-procedure/GetDistrictByCityId", {
+  fetch("http://42.117.67.47:8080/api/dynamic-procedure/GetDistrictByCityId", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -172,7 +172,7 @@ function isValidEmail(email) {
 
 async function getMoneyCart() {
   const res = await fetch(
-    "http://1.52.115.73:8080/api/dynamic-procedure/totalCart",
+    "http://42.117.67.47:8080/api/dynamic-procedure/totalCart",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -222,7 +222,7 @@ async function postFormDataConfirmCheckout() {
       UserId: userId,
     };
     console.log(formData);
-    fetch("http://1.52.115.73:8080/api/dynamic-procedure/CheckOutBookOrder", {
+    fetch("http://42.117.67.47:8080/api/dynamic-procedure/CheckOutBookOrder", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
