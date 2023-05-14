@@ -1,5 +1,7 @@
 const userId = getCookie("userId");
 function SaveUserInformation() {
+  document.querySelector("#alert-fullname").innerHTML = ``;
+  document.querySelector("#alert-phone").innerHTML = ``;
   const fullName = document.querySelector("#fullName")?.value || "";
   const phoneNumber = document.querySelector("#telephone")?.value || "";
   const gender =
@@ -9,6 +11,21 @@ function SaveUserInformation() {
   const cityId = document.getElementById("city_id")?.value;
   const districtId = document.getElementById("district_id")?.value;
   const address = document.getElementById("address")?.value;
+
+  if (fullName.length === 0 || phoneNumber.length < 10) {
+    if (fullName.length === 0) {
+      document.querySelector(
+        "#alert-fullname"
+      ).innerHTML = `<span style="color:red;margin-left:5px">Vui lòng điền họ tên hợp lệ</span>`;
+    }
+    if (phoneNumber.length < 10) {
+      document.querySelector(
+        "#alert-phone"
+      ).innerHTML = `<span style="color:red;margin-left:5px">Vui lòng điền số điện thoại hợp lệ</span>`;
+    }
+    return;
+  }
+
   const formData = {
     UserId: userId,
     FullName: fullName,
