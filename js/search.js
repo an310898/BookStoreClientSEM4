@@ -25,10 +25,18 @@ function findOrderByOrderIdOrPhoneNumber() {
   )
     .then(res => res.json())
     .then(x => {
-      console.log(JSON.parse(x["#result-set-1"][0]["JSONOrder"]));
+      if (x["#result-set-1"][0]["JSONOrder"] === null) {
+        document.getElementById(
+          "searchDOM"
+        ).innerHTML = `<div class="fhs_checkout_block">
+                    <div class="fhs_checkout_block_title" style="justify-content: space-between;"><div><span>Chưa có đơn hàng nào</span></div></div>
+                    <div style="margin-top:10px;display:flex;flex-direction: column;">
+                     `;
+        return;
+      }
       const data = JSON.parse(x["#result-set-1"][0]["JSONOrder"])
         .map(y => {
-          // let formatTotalMoney = parseInt(y.TotalMoney).toLocaleString("vi-VN");
+          let formatTotalMoney = parseInt(y.TotalMoney).toLocaleString("vi-VN");
           console.log(y["OrderDetail"]);
           return (
             `
@@ -72,6 +80,7 @@ function findOrderByOrderIdOrPhoneNumber() {
               .join("") +
             `
                     </div>
+                    <div style="color: #c92127;display:flex;justify-content:flex-end;align-items:center;font-weight:bold;font-size:16px">Tổng số tiền: ${formatTotalMoney} đ</div>
                 </div>
           `
           );
