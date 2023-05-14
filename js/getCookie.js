@@ -21,7 +21,10 @@ function stayLogin() {
   if (getCookie("userId").length > 0 && getCookie("userName").length > 0) {
     let helloName = getCookie("fullName");
 
-    if (getCookie("fullName") === "null") {
+    if (
+      getCookie("fullName") === "null" ||
+      getCookie("fullName").length === 0
+    ) {
       helloName = getCookie("userName");
     }
 
