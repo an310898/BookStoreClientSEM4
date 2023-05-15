@@ -18,7 +18,7 @@ function initShop() {
   CountPagingShopByCateId(limit);
 }
 function leftCategory() {
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/FillAllCategory", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
   })
     .then(res => res.json())
@@ -40,7 +40,7 @@ function leftCategory() {
 
 function domDataByCate(limit) {
   const formData = { CategoryId: cateId, Paginate: page, Limit: limit };
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/FillDataBookByCateId", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/FillDataBookByCateId", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -115,7 +115,7 @@ function domDataByCate(limit) {
 function CountPagingShopByCateId(limit) {
   const formData = { CategoryId: cateId, Limit: limit };
   fetch(
-    "http://42.117.67.47:8080/api/dynamic-procedure/CountPagingShopByCateId",
+    "http://42.113.58.1:8080/api/dynamic-procedure/CountPagingShopByCateId",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -164,7 +164,7 @@ document.querySelectorAll("#limit option").forEach((elem, index) => {
 
 function searchBook() {
   const formData = { BookName: nameSearch, limit: limit, Paginate: page };
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/SearchBookByBookName", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/SearchBookByBookName", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

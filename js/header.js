@@ -1,5 +1,5 @@
 function headerCate() {
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/FillAllCategory", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
   })
     .then(res => res.json())

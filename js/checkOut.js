@@ -55,7 +55,7 @@ function itemCheckOut() {
   const formData = {
     ArrayCart: getCookieArrayCart(),
   };
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/CheckOutCart", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/CheckOutCart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -100,57 +100,6 @@ function itemCheckOut() {
     });
 }
 
-function getCity() {
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/GetCity", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  })
-    .then(res => res.json())
-    .then(x => {
-      // console.log(x["#result-set-1"]);
-
-      const data = x["#result-set-1"]
-        .map(y => {
-          return `
-        <option value="${y.Id}">${y.CityName}</option>
-        `;
-        })
-        .join("");
-      document.getElementById("fhs_shipping_city_select").innerHTML =
-        `<option value="" selected="" data-select2-id="9">Chọn tỉnh/thành Phố</option>` +
-        data;
-    });
-}
-
-function GetDistrictByCityId(cityId) {
-  const formData = {
-    CityId: cityId,
-  };
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/GetDistrictByCityId", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  })
-    .then(res => res.json())
-    .then(x => {
-      // console.log(x["#result-set-1"]);
-      const data = x["#result-set-1"].map(y => {
-        return `
-          <option value="${y.Id}">${y.DistrictName}</option>
-        `;
-      });
-      document.getElementById("fhs_shipping_district_select").innerHTML = data;
-    });
-}
-
-function DOMDistrictCity() {
-  document
-    .getElementById("fhs_shipping_district_select")
-    .removeAttribute("disabled");
-  GetDistrictByCityId(
-    document.getElementById("fhs_shipping_city_select").value
-  );
-}
 initCheckOut();
 
 function initCheckOut() {
@@ -159,7 +108,6 @@ function initCheckOut() {
     alert("Bạn chưa có sản phẩm nào trong giỏ hàng");
   }
 
-  getCity();
   itemCheckOut();
   totalMoneyCart();
 }
@@ -172,7 +120,7 @@ function isValidEmail(email) {
 
 async function getMoneyCart() {
   const res = await fetch(
-    "http://42.117.67.47:8080/api/dynamic-procedure/totalCart",
+    "http://42.113.58.1:8080/api/dynamic-procedure/totalCart",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -222,7 +170,7 @@ async function postFormDataConfirmCheckout() {
       UserId: userId,
     };
     console.log(formData);
-    fetch("http://42.117.67.47:8080/api/dynamic-procedure/CheckOutBookOrder", {
+    fetch("http://42.113.58.1:8080/api/dynamic-procedure/CheckOutBookOrder", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -236,4 +184,104 @@ async function postFormDataConfirmCheckout() {
         deleteCookie("arrayCart");
       });
   }
+}
+
+getUserDetail();
+async function getUserDetail() {
+  await getCity();
+  const userId = getCookie("userId");
+  const formData = { UserId: userId };
+  await fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetUserDetail", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  })
+    .then(res => res.json())
+    .then(x => {
+      if (x["#result-set-1"].length === 0) {
+        return;
+      }
+      const user = x["#result-set-1"][0];
+      console.log(user);
+      document.getElementById("fhs_shipping_fullname").value = user.FullName;
+      document.getElementById("fhs_shipping_telephone").value =
+        user.PhoneNumber;
+      document.getElementById("fhs_shipping_email").value = user.Email;
+      document.getElementById("fhs_shipping_city_select").value = user.CityId;
+      processGetDistrictByCityId(user);
+
+      document.getElementById("fhs_shipping_street").value = user.Address;
+    });
+}
+async function getCity() {
+  await fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetCity", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  })
+    .then(res => res.json())
+    .then(x => {
+      //   console.log(x["#result-set-1"]);
+
+      const data = x["#result-set-1"]
+        .map(y => {
+          return `
+        <option value="${y.Id}">${y.CityName}</option>
+        `;
+        })
+        .join("");
+      document.getElementById("fhs_shipping_city_select").innerHTML =
+        `<option value="" selected="" data-select2-id="9">Chọn tỉnh/thành Phố</option>` +
+        data;
+    });
+}
+
+async function GetDistrictByCityId(cityId) {
+  const formData = {
+    CityId: cityId,
+  };
+  const res = await fetch(
+    "http://42.113.58.1:8080/api/dynamic-procedure/GetDistrictByCityId",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    }
+  );
+  const data = await res.json();
+  return data;
+}
+async function processGetDistrictByCityId(user) {
+  const data = await GetDistrictByCityId(user.CityId);
+  document
+    .getElementById("fhs_shipping_district_select")
+    .removeAttribute("disabled");
+
+  document.getElementById("fhs_shipping_district_select").innerHTML = data[
+    "#result-set-1"
+  ].map(y => {
+    {
+      return `
+          <option value="${y.Id}">${y.DistrictName}</option>
+        `;
+    }
+  });
+
+  document.getElementById("fhs_shipping_district_select").value =
+    user.DistrictId;
+}
+
+async function DOMDistrictCity(elem) {
+  const data = await GetDistrictByCityId(elem.value);
+  document
+    .getElementById("fhs_shipping_district_select")
+    .removeAttribute("disabled");
+  document.getElementById("fhs_shipping_district_select").innerHTML = data[
+    "#result-set-1"
+  ].map(y => {
+    {
+      return `
+          <option value="${y.Id}">${y.DistrictName}</option>
+        `;
+    }
+  });
 }

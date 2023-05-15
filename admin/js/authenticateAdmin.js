@@ -74,7 +74,7 @@ function loginAdmin() {
   }
   const formData = { UserName: userName, Password: password };
 
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/AdminLogin", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/AdminLogin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -92,7 +92,7 @@ function loginAdmin() {
 }
 
 function authToken() {
-  fetch("http://42.117.67.47:8080/api/dynamic-procedure/AuthToken", {
+  fetch("http://42.113.58.1:8080/api/dynamic-procedure/AuthToken", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ Token: getCookie("token") }),
