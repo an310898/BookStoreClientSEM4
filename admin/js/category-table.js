@@ -1,5 +1,5 @@
 function getCategoryTable() {
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetCategoryTable", {
+  fetch("http://localhost:8080/api/dynamic-procedure/GetCategoryTable", {
     method: "POST",
   })
     .then(res => res.json())
@@ -38,7 +38,7 @@ function hideCate(cateId) {
   const formData = {
     CateId: cateId,
   };
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/HideCate", {
+  fetch("http://localhost:8080/api/dynamic-procedure/HideCate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -58,7 +58,7 @@ function displayCate(cateId) {
   const formData = {
     CateId: cateId,
   };
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/DisplayCate", {
+  fetch("http://localhost:8080/api/dynamic-procedure/DisplayCate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -95,7 +95,7 @@ function addNewCategory() {
   };
   console.log(formData);
   //   return;
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/AddNewCategory", {
+  fetch("http://localhost:8080/api/dynamic-procedure/AddNewCategory", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -116,7 +116,7 @@ function addNewCategory() {
 function editCate(cateId) {
   showLayerForm();
   document.querySelector("#formEdit").style.display = "block";
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetCategoryById", {
+  fetch("http://localhost:8080/api/dynamic-procedure/GetCategoryById", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ CateId: cateId }),
@@ -143,7 +143,7 @@ function editSubmit(cateId) {
   }
   const formData = { CateId: cateId, CategoryName: categoryName };
 
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/UpdateCategory", {
+  fetch("http://localhost:8080/api/dynamic-procedure/UpdateCategory", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

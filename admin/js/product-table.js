@@ -1,5 +1,5 @@
 function getBookTable() {
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetBookTable", {
+  fetch("http://localhost:8080/api/dynamic-procedure/GetBookTable", {
     method: "POST",
   })
     .then(res => res.json())
@@ -44,7 +44,7 @@ function hideProduct(bookId) {
   const formData = {
     BookId: bookId,
   };
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/HideBook", {
+  fetch("http://localhost:8080/api/dynamic-procedure/HideBook", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -66,7 +66,7 @@ function displayBook(bookId) {
   };
   //   console.log(formData);
   //   return;
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/DisplayBook", {
+  fetch("http://localhost:8080/api/dynamic-procedure/DisplayBook", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -138,7 +138,7 @@ function addNewProduct() {
   };
   console.log(formData);
   //   return;
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/AddNewBook", {
+  fetch("http://localhost:8080/api/dynamic-procedure/AddNewBook", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -160,7 +160,7 @@ function addNewProduct() {
 
 async function fillCateDataAddForm() {
   const res = await fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/FillAllCategory",
+    "http://localhost:8080/api/dynamic-procedure/FillAllCategory",
     {
       method: "POST",
     }
@@ -173,7 +173,7 @@ async function editBook(bookId) {
   showLayerForm();
 
   const formData = { BookId: bookId };
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/FindBookById", {
+  fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -258,7 +258,7 @@ function editSubmit(bookId) {
   };
   //   console.log(formData);
   //   return;
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/UpdateBook", {
+  fetch("http://localhost:8080/api/dynamic-procedure/UpdateBook", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

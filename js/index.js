@@ -1,5 +1,5 @@
 function Category() {
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/FillAllCategory", {
+  fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
     method: "POST",
   })
     .then(res => res.json())
@@ -27,7 +27,7 @@ function CategoryTabData(categoryId) {
     CategoryId: categoryId,
   };
 
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/CategoryTabData", {
+  fetch("http://localhost:8080/api/dynamic-procedure/CategoryTabData", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

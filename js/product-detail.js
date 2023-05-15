@@ -19,7 +19,7 @@ function addQty() {
 const dataBook = findBookById();
 
 function findBookById() {
-  return fetch("http://42.113.58.1:8080/api/dynamic-procedure/FindBookById", {
+  return fetch("http://localhost:8080/api/dynamic-procedure/FindBookById", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -78,7 +78,7 @@ dataBook.then(x => {
   }
 });
 
-// fetch("http://42.113.58.1:8080/api/dynamic-procedure/FillAllCategory", {
+// fetch("http://localhost:8080/api/dynamic-procedure/FillAllCategory", {
 //   method: "POST",
 // })
 //   .then((res) => res.json())
@@ -95,18 +95,15 @@ dataBook.then(x => {
 //     document.getElementById("book-category").innerHTML = data;
 //   });
 function GetBookCommentByBoodId() {
-  fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/GetBookCommentByBoodId",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        BookId: bookId,
-      }),
-    }
-  )
+  fetch("http://localhost:8080/api/dynamic-procedure/GetBookCommentByBoodId", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      BookId: bookId,
+    }),
+  })
     .then(res => res.json())
     .then(x => {
       const data = x["#result-set-1"]
@@ -185,7 +182,7 @@ function SaveCommentByBook() {
     return;
   }
 
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/SaveCommentByBook", {
+  fetch("http://localhost:8080/api/dynamic-procedure/SaveCommentByBook", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -244,18 +241,15 @@ function closeReview() {
   $(".youama-ajaxlogin-cover").fadeOut(0);
 }
 
-const bookRate = fetch(
-  "http://42.113.58.1:8080/api/dynamic-procedure/BookRate",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      BookId: bookId,
-    }),
-  }
-)
+const bookRate = fetch("http://localhost:8080/api/dynamic-procedure/BookRate", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    BookId: bookId,
+  }),
+})
   .then(res => res.json())
   .then(x => {
     return x["#result-set-1"].concat(x["#result-set-2"]);

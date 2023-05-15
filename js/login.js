@@ -44,7 +44,7 @@ function login() {
     Password: password,
   };
 
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/UserLogin", {
+  fetch("http://localhost:8080/api/dynamic-procedure/UserLogin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -89,7 +89,7 @@ function UserRegister() {
 
   console.log(formData);
 
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/UserRegister", {
+  fetch("http://localhost:8080/api/dynamic-procedure/UserRegister", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

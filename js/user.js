@@ -37,7 +37,7 @@ function SaveUserInformation() {
   };
   console.log(formData);
   //   return;
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/SaveUserInformation", {
+  fetch("http://localhost:8080/api/dynamic-procedure/SaveUserInformation", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -60,7 +60,7 @@ async function getUserDetail() {
   await getCity();
 
   const formData = { UserId: userId };
-  await fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetUserDetail", {
+  await fetch("http://localhost:8080/api/dynamic-procedure/GetUserDetail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -87,7 +87,7 @@ async function getUserDetail() {
     });
 }
 async function getCity() {
-  await fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetCity", {
+  await fetch("http://localhost:8080/api/dynamic-procedure/GetCity", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   })
@@ -113,7 +113,7 @@ async function GetDistrictByCityId(cityId) {
     CityId: cityId,
   };
   const res = await fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/GetDistrictByCityId",
+    "http://localhost:8080/api/dynamic-procedure/GetDistrictByCityId",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -207,7 +207,7 @@ function changeUserPassword() {
     NewPassword: password,
   };
   console.log(formData);
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/ChangeUserPassword", {
+  fetch("http://localhost:8080/api/dynamic-procedure/ChangeUserPassword", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

@@ -1,5 +1,5 @@
 function getOrderTable() {
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetOrderTable", {
+  fetch("http://localhost:8080/api/dynamic-procedure/GetOrderTable", {
     method: "POST",
   })
     .then(res => res.json())
@@ -55,7 +55,7 @@ function hideEditForm() {
 
 async function getStatusOrder() {
   const res = await fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/GetEnumOrderStatus",
+    "http://localhost:8080/api/dynamic-procedure/GetEnumOrderStatus",
     {
       method: "POST",
     }
@@ -84,7 +84,7 @@ function submitEditForm(orderId) {
     Status: selectedValue,
   };
   //   console.log(formData);
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/UpdateOrderStatus", {
+  fetch("http://localhost:8080/api/dynamic-procedure/UpdateOrderStatus", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),

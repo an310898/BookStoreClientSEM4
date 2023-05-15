@@ -16,7 +16,7 @@ function findOrderByOrderIdOrPhoneNumber() {
   };
 
   fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/findOrderByOrderIdOrPhoneNumber",
+    "http://localhost:8080/api/dynamic-procedure/findOrderByOrderIdOrPhoneNumber",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },

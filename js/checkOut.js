@@ -55,7 +55,7 @@ function itemCheckOut() {
   const formData = {
     ArrayCart: getCookieArrayCart(),
   };
-  fetch("http://42.113.58.1:8080/api/dynamic-procedure/CheckOutCart", {
+  fetch("http://localhost:8080/api/dynamic-procedure/CheckOutCart", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -120,7 +120,7 @@ function isValidEmail(email) {
 
 async function getMoneyCart() {
   const res = await fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/totalCart",
+    "http://localhost:8080/api/dynamic-procedure/totalCart",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -170,7 +170,7 @@ async function postFormDataConfirmCheckout() {
       UserId: userId,
     };
     console.log(formData);
-    fetch("http://42.113.58.1:8080/api/dynamic-procedure/CheckOutBookOrder", {
+    fetch("http://localhost:8080/api/dynamic-procedure/CheckOutBookOrder", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -191,7 +191,7 @@ async function getUserDetail() {
   await getCity();
   const userId = getCookie("userId");
   const formData = { UserId: userId };
-  await fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetUserDetail", {
+  await fetch("http://localhost:8080/api/dynamic-procedure/GetUserDetail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -214,7 +214,7 @@ async function getUserDetail() {
     });
 }
 async function getCity() {
-  await fetch("http://42.113.58.1:8080/api/dynamic-procedure/GetCity", {
+  await fetch("http://localhost:8080/api/dynamic-procedure/GetCity", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   })
@@ -240,7 +240,7 @@ async function GetDistrictByCityId(cityId) {
     CityId: cityId,
   };
   const res = await fetch(
-    "http://42.113.58.1:8080/api/dynamic-procedure/GetDistrictByCityId",
+    "http://localhost:8080/api/dynamic-procedure/GetDistrictByCityId",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
